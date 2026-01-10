@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Класс SecurityManager::LogAnalyzer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classSecurityManager_1_1LogAnalyzer.html','','classSecurityManager_1_1LogAnalyzer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс SecurityManager::LogAnalyzer</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс анализатора логов  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="smlog__api_8h_source.html">smlog_api.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:Impl" id="r_Impl"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurityManager_1_1LogAnalyzer_1_1Impl.html">Impl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация для <a class="el" href="classSecurityManager_1_1LogAnalyzer.html" title="Класс анализатора логов">LogAnalyzer</a>.  <a href="classSecurityManager_1_1LogAnalyzer_1_1Impl.html#details">Подробнее...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1a5c3ad591abae6132e014235dafd144" id="r_a1a5c3ad591abae6132e014235dafd144"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a5c3ad591abae6132e014235dafd144">LogAnalyzer</a> ()</td></tr>
+<tr class="memdesc:a1a5c3ad591abae6132e014235dafd144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор  <br /></td></tr>
+<tr class="memitem:aaf3ad81fc9c35a54782bef43b145daa0" id="r_aaf3ad81fc9c35a54782bef43b145daa0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf3ad81fc9c35a54782bef43b145daa0">~LogAnalyzer</a> ()</td></tr>
+<tr class="memdesc:aaf3ad81fc9c35a54782bef43b145daa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор  <br /></td></tr>
+<tr class="memitem:a8decca912b56285c33f81a64b76df895" id="r_a8decca912b56285c33f81a64b76df895"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; std::vector&lt; <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8decca912b56285c33f81a64b76df895">readLogFile</a> (const std::string &amp;filepath, const <a class="el" href="structSecurityManager_1_1LogFilter.html">LogFilter</a> &amp;filter={}, size_t max_lines=0)</td></tr>
+<tr class="memdesc:a8decca912b56285c33f81a64b76df895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прочитать лог файл с фильтрами  <br /></td></tr>
+<tr class="memitem:a440b9ee009c81fbdf787b163658de63a" id="r_a440b9ee009c81fbdf787b163658de63a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; std::vector&lt; <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a440b9ee009c81fbdf787b163658de63a">searchLogFile</a> (const std::string &amp;filepath, const std::string &amp;keyword, const <a class="el" href="structSecurityManager_1_1LogFilter.html">LogFilter</a> &amp;filter={})</td></tr>
+<tr class="memdesc:a440b9ee009c81fbdf787b163658de63a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск в лог файле  <br /></td></tr>
+<tr class="memitem:a3af6af73f3f4f80fbf84aea92a5c06d3" id="r_a3af6af73f3f4f80fbf84aea92a5c06d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; <a class="el" href="structSecurityManager_1_1LogStats.html">LogStats</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3af6af73f3f4f80fbf84aea92a5c06d3">getLogStats</a> (const std::string &amp;filepath)</td></tr>
+<tr class="memdesc:a3af6af73f3f4f80fbf84aea92a5c06d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить статистику по логу  <br /></td></tr>
+<tr class="memitem:ab205dd43aa0216161156be1dfaedd173" id="r_ab205dd43aa0216161156be1dfaedd173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab205dd43aa0216161156be1dfaedd173">monitorLogFile</a> (const std::string &amp;filepath, std::function&lt; void(const <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:ab205dd43aa0216161156be1dfaedd173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Мониторинга лога  <br /></td></tr>
+<tr class="memitem:a0f0c5a37b68e2490f097fa19fff85f02" id="r_a0f0c5a37b68e2490f097fa19fff85f02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f0c5a37b68e2490f097fa19fff85f02">stopMonitoring</a> (const std::string &amp;filepath)</td></tr>
+<tr class="memdesc:a0f0c5a37b68e2490f097fa19fff85f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Остановка мониторинга лога  <br /></td></tr>
+<tr class="memitem:aabe0bf81e471fe5dac2bacc6aea34a66" id="r_aabe0bf81e471fe5dac2bacc6aea34a66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; std::vector&lt; <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabe0bf81e471fe5dac2bacc6aea34a66">readJournal</a> (const std::string &amp;unit=&quot;&quot;, const <a class="el" href="structSecurityManager_1_1LogFilter.html">LogFilter</a> &amp;filter={}, size_t max_lines=100)</td></tr>
+<tr class="memdesc:aabe0bf81e471fe5dac2bacc6aea34a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Парс systemd журнала  <br /></td></tr>
+<tr class="memitem:adfb7b09c18fef20dd537a79dd9b962e2" id="r_adfb7b09c18fef20dd537a79dd9b962e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfb7b09c18fef20dd537a79dd9b962e2">exportLogs</a> (const std::vector&lt; <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &gt; &amp;entries, const std::string &amp;format, const std::string &amp;output_file)</td></tr>
+<tr class="memdesc:adfb7b09c18fef20dd537a79dd9b962e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Экспорт лога  <br /></td></tr>
+<tr class="memitem:ae26778c775029735b6380bb509b88e19" id="r_ae26778c775029735b6380bb509b88e19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae26778c775029735b6380bb509b88e19">stopAllMonitoring</a> ()</td></tr>
+<tr class="memdesc:ae26778c775029735b6380bb509b88e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Остановка мониторинга всех логов  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс анализатора логов </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a1a5c3ad591abae6132e014235dafd144" name="a1a5c3ad591abae6132e014235dafd144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5c3ad591abae6132e014235dafd144">&#9670;&#160;</a></span>LogAnalyzer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SecurityManager::LogAnalyzer::LogAnalyzer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор </p>
+
+</div>
+</div>
+<a id="aaf3ad81fc9c35a54782bef43b145daa0" name="aaf3ad81fc9c35a54782bef43b145daa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf3ad81fc9c35a54782bef43b145daa0">&#9670;&#160;</a></span>~LogAnalyzer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SecurityManager::LogAnalyzer::~LogAnalyzer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деструктор </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="adfb7b09c18fef20dd537a79dd9b962e2" name="adfb7b09c18fef20dd537a79dd9b962e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb7b09c18fef20dd537a79dd9b962e2">&#9670;&#160;</a></span>exportLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; bool &gt; SecurityManager::LogAnalyzer::exportLogs </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>entries</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Экспорт лога </p>
+<p>Экспорт лог строк в файл</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entries</td><td>Лог строки для экспорта </td></tr>
+    <tr><td class="paramname">format</td><td>Формат экспорта (json, csv, txt) </td></tr>
+    <tr><td class="paramname">output_file</td><td>Выходной файл </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Удача/Неудача</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entries</td><td>Лог строки </td></tr>
+    <tr><td class="paramname">output_file</td><td>Выходной файл </td></tr>
+    <tr><td class="paramname">format</td><td>Формат экспорта </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Удача/Неудача </dd></dl>
+
+</div>
+</div>
+<a id="a3af6af73f3f4f80fbf84aea92a5c06d3" name="a3af6af73f3f4f80fbf84aea92a5c06d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af6af73f3f4f80fbf84aea92a5c06d3">&#9670;&#160;</a></span>getLogStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; <a class="el" href="structSecurityManager_1_1LogStats.html">LogStats</a> &gt; SecurityManager::LogAnalyzer::getLogStats </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить статистику по логу </p>
+<p>Получить статистику лога</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Статистика по логу</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Статистика лога </dd></dl>
+
+</div>
+</div>
+<a id="ab205dd43aa0216161156be1dfaedd173" name="ab205dd43aa0216161156be1dfaedd173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab205dd43aa0216161156be1dfaedd173">&#9670;&#160;</a></span>monitorLogFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; bool &gt; SecurityManager::LogAnalyzer::monitorLogFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(const <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &amp;)&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Мониторинга лога </p>
+<p>Начать мониторинг лога</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+    <tr><td class="paramname">callback</td><td>Функция которая будет вызвана при новой лог строке </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Удача/Неудача</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+    <tr><td class="paramname">callback</td><td>Вызываемая функция при новой лог строке </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Удачно/Неудачно </dd></dl>
+
+</div>
+</div>
+<a id="aabe0bf81e471fe5dac2bacc6aea34a66" name="aabe0bf81e471fe5dac2bacc6aea34a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabe0bf81e471fe5dac2bacc6aea34a66">&#9670;&#160;</a></span>readJournal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; std::vector&lt; <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &gt; &gt; SecurityManager::LogAnalyzer::readJournal </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>unit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structSecurityManager_1_1LogFilter.html">LogFilter</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>filter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>max_lines</em></span><span class="paramdefsep"> = </span><span class="paramdefval">100</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Парс systemd журнала </p>
+<p>Прочитать systemd лог</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>Имя юнита (опционально) </td></tr>
+    <tr><td class="paramname">filter</td><td>Фильтры </td></tr>
+    <tr><td class="paramname">max_lines</td><td>Максимальное количество строк (0 = все) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>std::vector с лог строками</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>systemd юнит (если нужны все то оставить пустым) </td></tr>
+    <tr><td class="paramname">max_entries</td><td>Максимальное количество лог строк </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>std::vector с лог строками </dd></dl>
+
+</div>
+</div>
+<a id="a8decca912b56285c33f81a64b76df895" name="a8decca912b56285c33f81a64b76df895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8decca912b56285c33f81a64b76df895">&#9670;&#160;</a></span>readLogFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; std::vector&lt; <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &gt; &gt; SecurityManager::LogAnalyzer::readLogFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structSecurityManager_1_1LogFilter.html">LogFilter</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>filter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>max_lines</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прочитать лог файл с фильтрами </p>
+<p>Прочитать лог</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+    <tr><td class="paramname">filter</td><td>Фильтры </td></tr>
+    <tr><td class="paramname">max_lines</td><td>Количество строчек к чтению (0 = все) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>std::vector c лог строками</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+    <tr><td class="paramname">max_entries</td><td>Количество строк к чтению (0 = все) </td></tr>
+    <tr><td class="paramname">filter</td><td>Фильтры(опционально) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>std::vector с лог строками </dd></dl>
+
+</div>
+</div>
+<a id="a440b9ee009c81fbdf787b163658de63a" name="a440b9ee009c81fbdf787b163658de63a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440b9ee009c81fbdf787b163658de63a">&#9670;&#160;</a></span>searchLogFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; std::vector&lt; <a class="el" href="structSecurityManager_1_1LogEntry.html">LogEntry</a> &gt; &gt; SecurityManager::LogAnalyzer::searchLogFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>keyword</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structSecurityManager_1_1LogFilter.html">LogFilter</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>filter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поиск в лог файле </p>
+<p>Поиск лог строк по критериям</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+    <tr><td class="paramname">keyword</td><td>Ключевое слово(поддерживает regex) </td></tr>
+    <tr><td class="paramname">filter</td><td>Фильтры(опционально) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>std::vector с лог строками подходящими условию</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+    <tr><td class="paramname">keyword</td><td>Ключевое слово </td></tr>
+    <tr><td class="paramname">filter</td><td>Фильтры </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>std::vector с лог строками </dd></dl>
+
+</div>
+</div>
+<a id="ae26778c775029735b6380bb509b88e19" name="ae26778c775029735b6380bb509b88e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae26778c775029735b6380bb509b88e19">&#9670;&#160;</a></span>stopAllMonitoring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; bool &gt; SecurityManager::LogAnalyzer::stopAllMonitoring </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Остановка мониторинга всех логов </p>
+<p>Остановить мониторинг всех логов</p>
+<dl class="section return"><dt>Возвращает</dt><dd>Удача/Неудача </dd></dl>
+
+</div>
+</div>
+<a id="a0f0c5a37b68e2490f097fa19fff85f02" name="a0f0c5a37b68e2490f097fa19fff85f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f0c5a37b68e2490f097fa19fff85f02">&#9670;&#160;</a></span>stopMonitoring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1LogResult.html">LogResult</a>&lt; bool &gt; SecurityManager::LogAnalyzer::stopMonitoring </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Остановка мониторинга лога </p>
+<p>Остановить мониторинг лога</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Путь к логу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Удача/Неудача </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>api/include/<a class="el" href="smlog__api_8h_source.html">smlog_api.h</a></li>
+<li>api/src/<a class="el" href="smlog__api_8cpp.html">smlog_api.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceSecurityManager.html">SecurityManager</a></li><li class="navelem"><a href="classSecurityManager_1_1LogAnalyzer.html">LogAnalyzer</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

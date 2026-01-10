@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Класс SSHConfig</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classSSHConfig.html','','classSSHConfig-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс SSHConfig</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>SSH configuration management class.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sshConfig_8h_source.html">sshConfig.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a80b7601d5bf5b87c68013c0970e3591a" id="r_a80b7601d5bf5b87c68013c0970e3591a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80b7601d5bf5b87c68013c0970e3591a">SSHConfig</a> ()</td></tr>
+<tr class="memdesc:a80b7601d5bf5b87c68013c0970e3591a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor - uses default SSH config path.  <br /></td></tr>
+<tr class="memitem:a45286c2d719e8d4ab0d08aa9cf8cd71f" id="r_a45286c2d719e8d4ab0d08aa9cf8cd71f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45286c2d719e8d4ab0d08aa9cf8cd71f">SSHConfig</a> (const std::string &amp;configPath)</td></tr>
+<tr class="memdesc:a45286c2d719e8d4ab0d08aa9cf8cd71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with custom config path.  <br /></td></tr>
+<tr class="memitem:ae0c045a18815355047017de898b31286" id="r_ae0c045a18815355047017de898b31286"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0c045a18815355047017de898b31286">loadConfig</a> ()</td></tr>
+<tr class="memdesc:ae0c045a18815355047017de898b31286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load SSH configuration from file.  <br /></td></tr>
+<tr class="memitem:a8801f76a7cc772d8b816cac23ff61409" id="r_a8801f76a7cc772d8b816cac23ff61409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8801f76a7cc772d8b816cac23ff61409">saveConfig</a> (const std::string &amp;outputPath=&quot;&quot;)</td></tr>
+<tr class="memdesc:a8801f76a7cc772d8b816cac23ff61409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save SSH configuration to file.  <br /></td></tr>
+<tr class="memitem:ad6507f0387f3f67fa45e403bdd5d5af3" id="r_ad6507f0387f3f67fa45e403bdd5d5af3"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6507f0387f3f67fa45e403bdd5d5af3">getCurrentSettings</a> () const</td></tr>
+<tr class="memdesc:ad6507f0387f3f67fa45e403bdd5d5af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current SSH configuration settings.  <br /></td></tr>
+<tr class="memitem:a571aa117420a2ee5554c0e9ab5ac5edd" id="r_a571aa117420a2ee5554c0e9ab5ac5edd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structSSHSecurityRecommendation.html">SSHSecurityRecommendation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571aa117420a2ee5554c0e9ab5ac5edd">analyzeSecurity</a> ()</td></tr>
+<tr class="memdesc:a571aa117420a2ee5554c0e9ab5ac5edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyze SSH configuration for security issues.  <br /></td></tr>
+<tr class="memitem:ae70c752322c5047935b7127e054c93ac" id="r_ae70c752322c5047935b7127e054c93ac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae70c752322c5047935b7127e054c93ac">generateSecureConfig</a> ()</td></tr>
+<tr class="memdesc:ae70c752322c5047935b7127e054c93ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate secure SSH configuration.  <br /></td></tr>
+<tr class="memitem:acc73c9791530ec10f2702bf945d3059f" id="r_acc73c9791530ec10f2702bf945d3059f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc73c9791530ec10f2702bf945d3059f">setSetting</a> (const std::string &amp;key, const std::string &amp;value)</td></tr>
+<tr class="memitem:a8bd932d032376e66acd5455a285d5f18" id="r_a8bd932d032376e66acd5455a285d5f18"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bd932d032376e66acd5455a285d5f18">getSetting</a> (const std::string &amp;key) const</td></tr>
+<tr class="memitem:a892d0b54e60bf700c079fe45df5a9fe3" id="r_a892d0b54e60bf700c079fe45df5a9fe3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a892d0b54e60bf700c079fe45df5a9fe3">hasSetting</a> (const std::string &amp;key) const</td></tr>
+<tr class="memitem:a5a8db457aec9d851d5d9c8355869fb01" id="r_a5a8db457aec9d851d5d9c8355869fb01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a8db457aec9d851d5d9c8355869fb01">removeSetting</a> (const std::string &amp;key)</td></tr>
+<tr class="memitem:a2a9c59141299cc69e229233734bc564e" id="r_a2a9c59141299cc69e229233734bc564e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a9c59141299cc69e229233734bc564e">getConfigPath</a> () const</td></tr>
+<tr class="memitem:a4eb5b7881d29f3334ba975860f97f69e" id="r_a4eb5b7881d29f3334ba975860f97f69e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb5b7881d29f3334ba975860f97f69e">getLastError</a> () const</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>SSH configuration management class. </p>
+<p>Handles SSH server configuration loading, analysis, and security hardening. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a80b7601d5bf5b87c68013c0970e3591a" name="a80b7601d5bf5b87c68013c0970e3591a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b7601d5bf5b87c68013c0970e3591a">&#9670;&#160;</a></span>SSHConfig() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSHConfig::SSHConfig </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor - uses default SSH config path. </p>
+
+</div>
+</div>
+<a id="a45286c2d719e8d4ab0d08aa9cf8cd71f" name="a45286c2d719e8d4ab0d08aa9cf8cd71f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45286c2d719e8d4ab0d08aa9cf8cd71f">&#9670;&#160;</a></span>SSHConfig() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSHConfig::SSHConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>configPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor with custom config path. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configPath</td><td>Path to SSH configuration file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a571aa117420a2ee5554c0e9ab5ac5edd" name="a571aa117420a2ee5554c0e9ab5ac5edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a571aa117420a2ee5554c0e9ab5ac5edd">&#9670;&#160;</a></span>analyzeSecurity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structSSHSecurityRecommendation.html">SSHSecurityRecommendation</a> &gt; SSHConfig::analyzeSecurity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Analyze SSH configuration for security issues. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Vector of security recommendations </dd></dl>
+
+</div>
+</div>
+<a id="ae70c752322c5047935b7127e054c93ac" name="ae70c752322c5047935b7127e054c93ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70c752322c5047935b7127e054c93ac">&#9670;&#160;</a></span>generateSecureConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHConfig::generateSecureConfig </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate secure SSH configuration. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>String containing secure SSH config </dd></dl>
+
+</div>
+</div>
+<a id="a2a9c59141299cc69e229233734bc564e" name="a2a9c59141299cc69e229233734bc564e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a9c59141299cc69e229233734bc564e">&#9670;&#160;</a></span>getConfigPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHConfig::getConfigPath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6507f0387f3f67fa45e403bdd5d5af3" name="ad6507f0387f3f67fa45e403bdd5d5af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6507f0387f3f67fa45e403bdd5d5af3">&#9670;&#160;</a></span>getCurrentSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, std::string &gt; SSHConfig::getCurrentSettings </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get current SSH configuration settings. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Map of setting key-value pairs </dd></dl>
+
+</div>
+</div>
+<a id="a4eb5b7881d29f3334ba975860f97f69e" name="a4eb5b7881d29f3334ba975860f97f69e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb5b7881d29f3334ba975860f97f69e">&#9670;&#160;</a></span>getLastError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHConfig::getLastError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bd932d032376e66acd5455a285d5f18" name="a8bd932d032376e66acd5455a285d5f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd932d032376e66acd5455a285d5f18">&#9670;&#160;</a></span>getSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHConfig::getSetting </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a892d0b54e60bf700c079fe45df5a9fe3" name="a892d0b54e60bf700c079fe45df5a9fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892d0b54e60bf700c079fe45df5a9fe3">&#9670;&#160;</a></span>hasSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSHConfig::hasSetting </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0c045a18815355047017de898b31286" name="ae0c045a18815355047017de898b31286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c045a18815355047017de898b31286">&#9670;&#160;</a></span>loadConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSHConfig::loadConfig </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load SSH configuration from file. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>True if loading successful </dd></dl>
+
+</div>
+</div>
+<a id="a5a8db457aec9d851d5d9c8355869fb01" name="a5a8db457aec9d851d5d9c8355869fb01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a8db457aec9d851d5d9c8355869fb01">&#9670;&#160;</a></span>removeSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSHConfig::removeSetting </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8801f76a7cc772d8b816cac23ff61409" name="a8801f76a7cc772d8b816cac23ff61409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8801f76a7cc772d8b816cac23ff61409">&#9670;&#160;</a></span>saveConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSHConfig::saveConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>outputPath</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Save SSH configuration to file. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputPath</td><td>Output file path (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True if saving successful </dd></dl>
+
+</div>
+</div>
+<a id="acc73c9791530ec10f2702bf945d3059f" name="acc73c9791530ec10f2702bf945d3059f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc73c9791530ec10f2702bf945d3059f">&#9670;&#160;</a></span>setSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSHConfig::setSetting </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>smssh/<a class="el" href="sshConfig_8h_source.html">sshConfig.h</a></li>
+<li>smssh/<a class="el" href="sshConfig_8cpp.html">sshConfig.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classSSHConfig.html">SSHConfig</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

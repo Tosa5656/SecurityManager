@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Исходный файл smpass/storage.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('storage_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">storage.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="storage_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;format&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;../json/json.hpp&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="sha256_8h.html">sha256.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="aes256_8h.html">aes256.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="storage_8h.html#ab701e3ac61a85b337ec5c1abaad6742d">   22</a></span><span class="keyword">using </span><a class="code hl_typedef" href="storage_8h.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = nlohmann::json;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span>fs = std::filesystem;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="storage_8h.html#a906fa5c61e5d57c4995f34b95d040610">   26</a></span><span class="preprocessor">#define STORAGE_DIR std::format(&quot;{}/.sm/storage&quot;, std::getenv(&quot;HOME&quot;))</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structPasswordEntry.html">   31</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structPasswordEntry.html">PasswordEntry</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structPasswordEntry.html#afdaf3e08428d813f39bb5eca82bc47e3">   33</a></span>    std::string <a class="code hl_variable" href="structPasswordEntry.html#afdaf3e08428d813f39bb5eca82bc47e3">name</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structPasswordEntry.html#adf4322dadb1937bd52e74f58f6f5450f">   34</a></span>    std::string <a class="code hl_variable" href="structPasswordEntry.html#adf4322dadb1937bd52e74f58f6f5450f">login</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structPasswordEntry.html#a0e61c67ba17e89b9363494d279120d32">   35</a></span>    std::string <a class="code hl_variable" href="structPasswordEntry.html#a0e61c67ba17e89b9363494d279120d32">password</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structPasswordEntry.html#ae239c71d60ea23d8d8e19a2784b29a4a">   36</a></span>    std::string <a class="code hl_variable" href="structPasswordEntry.html#ae239c71d60ea23d8d8e19a2784b29a4a">password_key</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structPasswordEntry.html#a418b6274758df8f12136522889a23edf">   37</a></span>    std::string <a class="code hl_variable" href="structPasswordEntry.html#a418b6274758df8f12136522889a23edf">message</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structPasswordEntry.html#ab32df730087f1f352853d01248c73ced">   39</a></span>    <a class="code hl_typedef" href="storage_8h.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> <a class="code hl_function" href="structPasswordEntry.html#ab32df730087f1f352853d01248c73ced">to_json</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="storage_8h.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            {<span class="stringliteral">&quot;name&quot;</span>, <a class="code hl_variable" href="structPasswordEntry.html#afdaf3e08428d813f39bb5eca82bc47e3">name</a>},</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            {<span class="stringliteral">&quot;login&quot;</span>, <a class="code hl_variable" href="structPasswordEntry.html#adf4322dadb1937bd52e74f58f6f5450f">login</a>},</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            {<span class="stringliteral">&quot;password&quot;</span>, <a class="code hl_variable" href="structPasswordEntry.html#a0e61c67ba17e89b9363494d279120d32">password</a>},</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            {<span class="stringliteral">&quot;password_key&quot;</span>, <a class="code hl_variable" href="structPasswordEntry.html#ae239c71d60ea23d8d8e19a2784b29a4a">password_key</a>},</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            {<span class="stringliteral">&quot;message&quot;</span>, <a class="code hl_variable" href="structPasswordEntry.html#a418b6274758df8f12136522889a23edf">message</a>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        };</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structPasswordEntry.html#a3e886a021705a40c9cc2ce1ede289ea7">   56</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structPasswordEntry.html">PasswordEntry</a> <a class="code hl_function" href="structPasswordEntry.html#a3e886a021705a40c9cc2ce1ede289ea7">from_json</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="storage_8h.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a>&amp; j)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_struct" href="structPasswordEntry.html">PasswordEntry</a> entry;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        entry.<a class="code hl_variable" href="structPasswordEntry.html#afdaf3e08428d813f39bb5eca82bc47e3">name</a> = j.value(<span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        entry.<a class="code hl_variable" href="structPasswordEntry.html#adf4322dadb1937bd52e74f58f6f5450f">login</a> = j.value(<span class="stringliteral">&quot;login&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        entry.<a class="code hl_variable" href="structPasswordEntry.html#a0e61c67ba17e89b9363494d279120d32">password</a> = j.value(<span class="stringliteral">&quot;password&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        entry.<a class="code hl_variable" href="structPasswordEntry.html#ae239c71d60ea23d8d8e19a2784b29a4a">password_key</a> = j.value(<span class="stringliteral">&quot;password_key&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        entry.<a class="code hl_variable" href="structPasswordEntry.html#a418b6274758df8f12136522889a23edf">message</a> = j.value(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> entry;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classStorage.html">   68</a></span><span class="keyword">class </span><a class="code hl_function" href="classStorage.html#a80ef6af5e4c9fd4424ae16e808d05291">Storage</a></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="classStorage.html#a80ef6af5e4c9fd4424ae16e808d05291">Storage</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classStorage.html#ae024a062fbd6265ed3bf4381409c75d6">createStandardBases</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classStorage.html#a3120b5ca0f97313b60033f83f1653d38">   86</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStorage.html#a3120b5ca0f97313b60033f83f1653d38">createBase</a>(<span class="keyword">const</span> std::string baseName);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classStorage.html#a724ffdb6960f3fd1ce3ed72f57987f79">   92</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStorage.html#a724ffdb6960f3fd1ce3ed72f57987f79">removeBase</a>(<span class="keyword">const</span> std::string baseName);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    std::vector&lt;PasswordEntry&gt; <a class="code hl_function" href="classStorage.html#aa3570f4c3d351706580933545645cb14">loadPasswords</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStorage.html#aba5ecace4bffab415f9182482cc0260a">savePasswords</a>(<span class="keyword">const</span> std::vector&lt;PasswordEntry&gt;&amp; entries);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStorage.html#aa017faa01152aa4291a731fd80ac237b">addNewPassword</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; login, <span class="keyword">const</span> std::string&amp; password, <span class="keyword">const</span> std::string&amp; msg);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    std::string <a class="code hl_function" href="classStorage.html#a860e753679a1ec680348e7e4f048e4e5">getPassword</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; masterKey = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classStorage.html#aba2407a5780539cef5b32e068b161990">deletePassword</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStorage.html#affc134bf060990a1f803f9f899b506e6">deletePasswords</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    std::string passwordsStorage = std::format(<span class="stringliteral">&quot;{}/passwords.smdb&quot;</span>, <a class="code hl_define" href="storage_8h.html#a906fa5c61e5d57c4995f34b95d040610">STORAGE_DIR</a>);  </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    std::vector&lt;PasswordEntry&gt; passwords;  </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>};</div>
+</div>
+<div class="ttc" id="aaes256_8h_html"><div class="ttname"><a href="aes256_8h.html">aes256.h</a></div><div class="ttdoc">AES-256 encryption/decryption implementation.</div></div>
+<div class="ttc" id="aclassStorage_html_a3120b5ca0f97313b60033f83f1653d38"><div class="ttname"><a href="classStorage.html#a3120b5ca0f97313b60033f83f1653d38">Storage::createBase</a></div><div class="ttdeci">void createBase(const std::string baseName)</div><div class="ttdoc">Создать новую базу хранения</div></div>
+<div class="ttc" id="aclassStorage_html_a724ffdb6960f3fd1ce3ed72f57987f79"><div class="ttname"><a href="classStorage.html#a724ffdb6960f3fd1ce3ed72f57987f79">Storage::removeBase</a></div><div class="ttdeci">void removeBase(const std::string baseName)</div><div class="ttdoc">Удалить базу хранения</div></div>
+<div class="ttc" id="aclassStorage_html_a80ef6af5e4c9fd4424ae16e808d05291"><div class="ttname"><a href="classStorage.html#a80ef6af5e4c9fd4424ae16e808d05291">Storage::Storage</a></div><div class="ttdeci">Storage()</div><div class="ttdoc">Конструктор - инициализирует хранилище</div><div class="ttdef"><b>Определения</b> storage.cpp:11</div></div>
+<div class="ttc" id="aclassStorage_html_a860e753679a1ec680348e7e4f048e4e5"><div class="ttname"><a href="classStorage.html#a860e753679a1ec680348e7e4f048e4e5">Storage::getPassword</a></div><div class="ttdeci">std::string getPassword(const std::string &amp;name, const std::string &amp;masterKey=&quot;&quot;)</div><div class="ttdoc">Получить расшифрованный пароль</div><div class="ttdef"><b>Определения</b> storage.cpp:110</div></div>
+<div class="ttc" id="aclassStorage_html_aa017faa01152aa4291a731fd80ac237b"><div class="ttname"><a href="classStorage.html#aa017faa01152aa4291a731fd80ac237b">Storage::addNewPassword</a></div><div class="ttdeci">void addNewPassword(const std::string &amp;name, const std::string &amp;login, const std::string &amp;password, const std::string &amp;msg)</div><div class="ttdoc">Добавить новую запись пароля</div><div class="ttdef"><b>Определения</b> storage.cpp:86</div></div>
+<div class="ttc" id="aclassStorage_html_aa3570f4c3d351706580933545645cb14"><div class="ttname"><a href="classStorage.html#aa3570f4c3d351706580933545645cb14">Storage::loadPasswords</a></div><div class="ttdeci">std::vector&lt; PasswordEntry &gt; loadPasswords()</div><div class="ttdoc">Загрузить пароли из хранилища</div><div class="ttdef"><b>Определения</b> storage.cpp:40</div></div>
+<div class="ttc" id="aclassStorage_html_aba2407a5780539cef5b32e068b161990"><div class="ttname"><a href="classStorage.html#aba2407a5780539cef5b32e068b161990">Storage::deletePassword</a></div><div class="ttdeci">bool deletePassword(const std::string &amp;name)</div><div class="ttdoc">Удалить запись пароля</div><div class="ttdef"><b>Определения</b> storage.cpp:135</div></div>
+<div class="ttc" id="aclassStorage_html_aba5ecace4bffab415f9182482cc0260a"><div class="ttname"><a href="classStorage.html#aba5ecace4bffab415f9182482cc0260a">Storage::savePasswords</a></div><div class="ttdeci">void savePasswords(const std::vector&lt; PasswordEntry &gt; &amp;entries)</div><div class="ttdoc">Сохранить пароли в хранилище</div><div class="ttdef"><b>Определения</b> storage.cpp:69</div></div>
+<div class="ttc" id="aclassStorage_html_ae024a062fbd6265ed3bf4381409c75d6"><div class="ttname"><a href="classStorage.html#ae024a062fbd6265ed3bf4381409c75d6">Storage::createStandardBases</a></div><div class="ttdeci">int createStandardBases()</div><div class="ttdoc">Создать стандартные базы хранения</div><div class="ttdef"><b>Определения</b> storage.cpp:20</div></div>
+<div class="ttc" id="aclassStorage_html_affc134bf060990a1f803f9f899b506e6"><div class="ttname"><a href="classStorage.html#affc134bf060990a1f803f9f899b506e6">Storage::deletePasswords</a></div><div class="ttdeci">void deletePasswords()</div><div class="ttdoc">Удалить все пароли</div><div class="ttdef"><b>Определения</b> storage.cpp:158</div></div>
+<div class="ttc" id="asha256_8h_html"><div class="ttname"><a href="sha256_8h.html">sha256.h</a></div><div class="ttdoc">SHA-256 hashing implementation with salt.</div></div>
+<div class="ttc" id="astorage_8h_html_a906fa5c61e5d57c4995f34b95d040610"><div class="ttname"><a href="storage_8h.html#a906fa5c61e5d57c4995f34b95d040610">STORAGE_DIR</a></div><div class="ttdeci">#define STORAGE_DIR</div><div class="ttdef"><b>Определения</b> storage.h:26</div></div>
+<div class="ttc" id="astorage_8h_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="storage_8h.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Определения</b> storage.h:22</div></div>
+<div class="ttc" id="astructPasswordEntry_html"><div class="ttname"><a href="structPasswordEntry.html">PasswordEntry</a></div><div class="ttdoc">Структура, представляющая запись пароля</div><div class="ttdef"><b>Определения</b> storage.h:32</div></div>
+<div class="ttc" id="astructPasswordEntry_html_a0e61c67ba17e89b9363494d279120d32"><div class="ttname"><a href="structPasswordEntry.html#a0e61c67ba17e89b9363494d279120d32">PasswordEntry::password</a></div><div class="ttdeci">std::string password</div><div class="ttdef"><b>Определения</b> storage.h:35</div></div>
+<div class="ttc" id="astructPasswordEntry_html_a3e886a021705a40c9cc2ce1ede289ea7"><div class="ttname"><a href="structPasswordEntry.html#a3e886a021705a40c9cc2ce1ede289ea7">PasswordEntry::from_json</a></div><div class="ttdeci">static PasswordEntry from_json(const json &amp;j)</div><div class="ttdoc">Создать запись из JSON.</div><div class="ttdef"><b>Определения</b> storage.h:56</div></div>
+<div class="ttc" id="astructPasswordEntry_html_a418b6274758df8f12136522889a23edf"><div class="ttname"><a href="structPasswordEntry.html#a418b6274758df8f12136522889a23edf">PasswordEntry::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Определения</b> storage.h:37</div></div>
+<div class="ttc" id="astructPasswordEntry_html_ab32df730087f1f352853d01248c73ced"><div class="ttname"><a href="structPasswordEntry.html#ab32df730087f1f352853d01248c73ced">PasswordEntry::to_json</a></div><div class="ttdeci">json to_json() const</div><div class="ttdef"><b>Определения</b> storage.h:39</div></div>
+<div class="ttc" id="astructPasswordEntry_html_adf4322dadb1937bd52e74f58f6f5450f"><div class="ttname"><a href="structPasswordEntry.html#adf4322dadb1937bd52e74f58f6f5450f">PasswordEntry::login</a></div><div class="ttdeci">std::string login</div><div class="ttdef"><b>Определения</b> storage.h:34</div></div>
+<div class="ttc" id="astructPasswordEntry_html_ae239c71d60ea23d8d8e19a2784b29a4a"><div class="ttname"><a href="structPasswordEntry.html#ae239c71d60ea23d8d8e19a2784b29a4a">PasswordEntry::password_key</a></div><div class="ttdeci">std::string password_key</div><div class="ttdef"><b>Определения</b> storage.h:36</div></div>
+<div class="ttc" id="astructPasswordEntry_html_afdaf3e08428d813f39bb5eca82bc47e3"><div class="ttname"><a href="structPasswordEntry.html#afdaf3e08428d813f39bb5eca82bc47e3">PasswordEntry::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Определения</b> storage.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_9be199ce02127eb19340ba2b4b2d0688.html">smpass</a></li><li class="navelem"><a href="storage_8h.html">storage.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

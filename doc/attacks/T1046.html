@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1046 - Network Service Scanning</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1046 - Network Service Scanning</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Сканирование сети для обнаружения доступных сервисов, открытых портов и потенциальных уязвимостей. Атакующие используют различные инструменты сканирования для картирования сети и идентификации целей.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>Сканирование TCP/UDP портов</li>
+        <li>Определение версий сервисов (banner grabbing)</li>
+        <li>Обнаружение открытых портов и служб</li>
+        <li>Картирование сети и топологии</li>
+        <li>Идентификация потенциальных уязвимостей</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1046/" target="_blank">T1046 - Network Service Scanning</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Сканирование портов:</strong> smnet scan - показывает открытые порты</li>
+        <li><strong>Мониторинг соединений:</strong> smnet connection</li>
+        <li><strong>Статистика сети:</strong> smnet stats</li>
+        <li><strong>Регулярный мониторинг:</strong> помогает обнаруживать подозрительную активность</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Мониторинг нестандартных портов:</strong> smssh monitor</li>
+        <li><strong>Анализ логов:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Защита от сканирования:</strong> использование нестандартных портов SSH</li>
+    </ul>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Мониторинг сетевой активности:</strong> smlog monitor</li>
+        <li><strong>Анализ необычного трафика:</strong> smlog search "connection" /var/log/syslog</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Использование firewall для ограничения открытых портов</li>
+        <li>Регулярное сканирование собственной сети</li>
+        <li>Отключение ненужных сервисов</li>
+        <li>Использование IDS/IPS систем</li>
+        <li>Сегментация сети</li>
+        <li>Мониторинг сетевого трафика</li>
+    </ul>
+
+    <h2>Пример сканирования</h2>
+    <pre>
+$ smnet scan
+Scanning local ports...
+Open ports:
+  22/tcp    ssh        OpenSSH 8.9p1
+  80/tcp    http       Apache httpd 2.4.52
+  443/tcp   https      Apache httpd 2.4.52
+
+$ smnet connection
+Active connections:
+  tcp  192.168.1.100:22    -> 192.168.1.1:54321    ESTABLISHED
+  tcp  192.168.1.100:443   -> 8.8.8.8:443          ESTABLISHED
+    </pre>
+</body>
+</html>

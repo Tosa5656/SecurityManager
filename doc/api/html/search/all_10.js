@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['rationale_0',['rationale',['../structSecurityManager_1_1SSHSecurityRecommendation.html#ac6b0597347fa8cc98e1ec2139c939f66',1,'SecurityManager::SSHSecurityRecommendation']]],
+  ['raw_5fline_1',['raw_line',['../structSecurityManager_1_1LogEntry.html#a5e56ce5ad7bb171c13cfe50d85401871',1,'SecurityManager::LogEntry']]],
+  ['readjournal_2',['readJournal',['../classSystemLogger.html#a2a29512793f33dc44f4cde6ebadbda34',1,'SystemLogger::readJournal()'],['../classSecurityManager_1_1LogAnalyzer.html#aabe0bf81e471fe5dac2bacc6aea34a66',1,'SecurityManager::LogAnalyzer::readJournal()'],['../classSecurityManager_1_1LogAnalyzer_1_1Impl.html#aa9230e907a400158dde8a1c78d3a7320',1,'SecurityManager::LogAnalyzer::Impl::readJournal()']]],
+  ['readlog_3',['readLog',['../classSystemLogger.html#a86422bd1b2311f636674f543b2a23eb9',1,'SystemLogger']]],
+  ['readlogfile_4',['readLogFile',['../classSecurityManager_1_1LogAnalyzer.html#a8decca912b56285c33f81a64b76df895',1,'SecurityManager::LogAnalyzer::readLogFile()'],['../classSecurityManager_1_1LogAnalyzer_1_1Impl.html#a96d46e44cab89c271b79f578296d0b47',1,'SecurityManager::LogAnalyzer::Impl::readLogFile()']]],
+  ['recommendations_5',['recommendations',['../structSecurityManager_1_1AttackInfo.html#a835123b3df55f380802ba31590093cb7',1,'SecurityManager::AttackInfo::recommendations'],['../structSecurityManager_1_1SSHSecurityReport.html#aa58a0c5cc58794d7c8abb4ee5b181997',1,'SecurityManager::SSHSecurityReport::recommendations']]],
+  ['recommended_5faction_6',['recommended_action',['../structSecurityManager_1_1SSHAttackAlert.html#ac8063ea55a56df0d0559ef8c96ffeaa5',1,'SecurityManager::SSHAttackAlert']]],
+  ['recommended_5fvalue_7',['recommended_value',['../structSSHSecurityRecommendation.html#ab3960124435fec15381a098aaf03c383',1,'SSHSecurityRecommendation::recommended_value'],['../structSecurityManager_1_1SSHConfigIssue.html#a1df1a97a1a100c638467caf2794b9f3b',1,'SecurityManager::SSHConfigIssue::recommended_value'],['../structSecurityManager_1_1SSHSecurityRecommendation.html#ac300df11f35dffdbb70a3703450b1fa7',1,'SecurityManager::SSHSecurityRecommendation::recommended_value']]],
+  ['refreshstats_8',['RefreshStats',['../classNetworkStats.html#a2e34ff1ac38eac14e61f1a6f1aff0f57',1,'NetworkStats']]],
+  ['relevance_5fscore_9',['relevance_score',['../structSecurityManager_1_1AttackSearchResult.html#a5d19621bc0ea55cc9a7aa483745c9b51',1,'SecurityManager::AttackSearchResult']]],
+  ['remote_5faddress_10',['remote_address',['../structSecurityManager_1_1ConnectionInfo.html#a2894ccb0700b8e9f683459262b07b218',1,'SecurityManager::ConnectionInfo']]],
+  ['remote_5fport_11',['remote_port',['../structSecurityManager_1_1ConnectionInfo.html#a5a442d7efdda26884c879da7a59d6cab',1,'SecurityManager::ConnectionInfo']]],
+  ['removebase_12',['removeBase',['../classStorage.html#a724ffdb6960f3fd1ce3ed72f57987f79',1,'Storage']]],
+  ['removesetting_13',['removeSetting',['../classSSHConfig.html#a5a8db457aec9d851d5d9c8355869fb01',1,'SSHConfig']]],
+  ['removewatchrule_14',['removeWatchRule',['../classSystemLogger.html#a0e4b52b719deae18eedea9be54842d8a',1,'SystemLogger']]],
+  ['requires_5fprivileges_15',['requires_privileges',['../structSecurityManager_1_1AttackInfo.html#a41ba98694d7f913678b5cac1a662ab0e',1,'SecurityManager::AttackInfo']]],
+  ['resolvehostname_16',['resolveHostname',['../classSecurityManager_1_1NetworkMonitor.html#a5ecfcf1e059cb0b96308fd3fbbc311dc',1,'SecurityManager::NetworkMonitor::resolveHostname()'],['../classSecurityManager_1_1NetworkMonitor_1_1Impl.html#adaaf7cc19b19562e46e95052d25d7d46',1,'SecurityManager::NetworkMonitor::Impl::resolveHostname()']]],
+  ['response_5factions_17',['response_actions',['../structSecurityManager_1_1ProtectionGuidance.html#a399867ed84cb5c715d6bad44434db19f',1,'SecurityManager::ProtectionGuidance']]],
+  ['risk_5flevel_18',['risk_level',['../structSecurityManager_1_1ProtectionGuidance.html#a25a1939a765f9bd458d633b481721ca4',1,'SecurityManager::ProtectionGuidance']]],
+  ['rotatelog_19',['rotateLog',['../classSystemLogger.html#ae0e8883c5d55099cf1881cc6354c9857',1,'SystemLogger']]],
+  ['rx_5fbytes_20',['rx_bytes',['../structSecurityManager_1_1InterfaceInfo.html#ac70c708f916c73f171dc4301a17755c9',1,'SecurityManager::InterfaceInfo']]]
+];

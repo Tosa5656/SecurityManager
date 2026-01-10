@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1078 - Valid Accounts</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1078 - Valid Accounts</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Использование валидных учетных данных для получения доступа к системам, приложениям или сетевым ресурсам. Это может быть результатом кражи учетных данных, использования стандартных/умолчательных паролей или компрометации легитимных аккаунтов.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>Кража учетных данных через фишинг</li>
+        <li>Использование найденных/угаданных паролей</li>
+        <li>Эксплуатация стандартных учетных записей</li>
+        <li>Pass-the-hash атаки</li>
+        <li>Использование украденных токенов/ключей</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1078/" target="_blank">T1078 - Valid Accounts</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smpass - Password Management</h3>
+    <ul>
+        <li><strong>Генерация безопасных паролей:</strong> smpass add-password</li>
+        <li><strong>Хеширование:</strong> smpass hash-sha256, smpass hash-aes256</li>
+        <li><strong>Хранение:</strong> Безопасное хранение учетных данных</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Отключение password auth:</strong> smssh apply /etc/ssh/sshd_config</li>
+        <li><strong>Мониторинг необычной активности:</strong> smssh monitor</li>
+        <li><strong>Генерация ключей:</strong> smssh gen-key</li>
+    </ul>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Анализ входов:</strong> smlog search "Accepted" /var/log/auth.log</li>
+        <li><strong>Мониторинг подозрительной активности:</strong> smlog monitor</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Регулярная смена паролей</li>
+        <li>Многофакторная аутентификация (MFA)</li>
+        <li>Принцип наименьших привилегий</li>
+        <li>Мониторинг использования аккаунтов</li>
+        <li>Использование ключевой аутентификации</li>
+    </ul>
+</body>
+</html>

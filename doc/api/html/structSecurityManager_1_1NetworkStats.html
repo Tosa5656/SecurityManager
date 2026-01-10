@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Структура SecurityManager::NetworkStats</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('structSecurityManager_1_1NetworkStats.html','','structSecurityManager_1_1NetworkStats-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура SecurityManager::NetworkStats</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Сетевая статистика  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="smnet__api_8h_source.html">smnet_api.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a9a223408e49a6ec8125b5a1547e88d3d" id="r_a9a223408e49a6ec8125b5a1547e88d3d"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a223408e49a6ec8125b5a1547e88d3d">total_bytes_received</a></td></tr>
+<tr class="memitem:addd3f4c970ce599a41f82dbbee4cfea4" id="r_addd3f4c970ce599a41f82dbbee4cfea4"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addd3f4c970ce599a41f82dbbee4cfea4">total_bytes_sent</a></td></tr>
+<tr class="memitem:a0daf61fffca981876dbf8c51162f2743" id="r_a0daf61fffca981876dbf8c51162f2743"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0daf61fffca981876dbf8c51162f2743">total_packets_received</a></td></tr>
+<tr class="memitem:ac6fa69bd2881febf2c2682ae1cd5ab1a" id="r_ac6fa69bd2881febf2c2682ae1cd5ab1a"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6fa69bd2881febf2c2682ae1cd5ab1a">total_packets_sent</a></td></tr>
+<tr class="memitem:a2e6d70056538954b8ed83b46e981c647" id="r_a2e6d70056538954b8ed83b46e981c647"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structSecurityManager_1_1InterfaceInfo.html">InterfaceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e6d70056538954b8ed83b46e981c647">interfaces</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Сетевая статистика </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a2e6d70056538954b8ed83b46e981c647" name="a2e6d70056538954b8ed83b46e981c647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6d70056538954b8ed83b46e981c647">&#9670;&#160;</a></span>interfaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structSecurityManager_1_1InterfaceInfo.html">InterfaceInfo</a>&gt; SecurityManager::NetworkStats::interfaces</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a223408e49a6ec8125b5a1547e88d3d" name="a9a223408e49a6ec8125b5a1547e88d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a223408e49a6ec8125b5a1547e88d3d">&#9670;&#160;</a></span>total_bytes_received</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long SecurityManager::NetworkStats::total_bytes_received</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addd3f4c970ce599a41f82dbbee4cfea4" name="addd3f4c970ce599a41f82dbbee4cfea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd3f4c970ce599a41f82dbbee4cfea4">&#9670;&#160;</a></span>total_bytes_sent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long SecurityManager::NetworkStats::total_bytes_sent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0daf61fffca981876dbf8c51162f2743" name="a0daf61fffca981876dbf8c51162f2743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0daf61fffca981876dbf8c51162f2743">&#9670;&#160;</a></span>total_packets_received</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long SecurityManager::NetworkStats::total_packets_received</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6fa69bd2881febf2c2682ae1cd5ab1a" name="ac6fa69bd2881febf2c2682ae1cd5ab1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6fa69bd2881febf2c2682ae1cd5ab1a">&#9670;&#160;</a></span>total_packets_sent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long SecurityManager::NetworkStats::total_packets_sent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>api/include/<a class="el" href="smnet__api_8h_source.html">smnet_api.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceSecurityManager.html">SecurityManager</a></li><li class="navelem"><a href="structSecurityManager_1_1NetworkStats.html">NetworkStats</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[Unit]
+Description=SSH Security Manager - SSH Attack Detection Service
+After=network.target sshd.service
+Wants=sshd.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/smssh monitor
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

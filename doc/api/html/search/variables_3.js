@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['data_0',['data',['../structSecurityManager_1_1DatabaseResult.html#a63bf40cf7f0070b06c59d4f51749de7b',1,'SecurityManager::DatabaseResult::data'],['../structSecurityManager_1_1LogResult.html#acad590c431474a7784a51f3d289ae585',1,'SecurityManager::LogResult::data'],['../structSecurityManager_1_1NetworkResult.html#af608c836011f9107dc33febb41fffc79',1,'SecurityManager::NetworkResult::data'],['../structSecurityManager_1_1PasswordResult.html#a11e0d7ada7e464600e1995251547afd3',1,'SecurityManager::PasswordResult::data'],['../structSecurityManager_1_1SSHResult.html#a8c6cc7371a281205bbe4fad6ff287540',1,'SecurityManager::SSHResult::data']]],
+  ['data_5fsources_1',['data_sources',['../structSecurityManager_1_1AttackInfo.html#a4d925ee505f24b6d387354bd924f88d9',1,'SecurityManager::AttackInfo']]],
+  ['description_2',['DESCRIPTION',['../namespaceSecurityManager.html#a9773ba13d4d06e0428b8a2aa788ee598',1,'SecurityManager']]],
+  ['description_3',['description',['../structAttackAlert.html#a55fb87e0f11ff9cde6d8e0cc2fab443a',1,'AttackAlert::description'],['../structSSHSecurityRecommendation.html#a1e051dfcb475ddf5b3a1108c2c4ebb3e',1,'SSHSecurityRecommendation::description'],['../structSecurityManager_1_1AttackInfo.html#af2bd9444ddb71d3d97deeb45217fb1d9',1,'SecurityManager::AttackInfo::description'],['../structSecurityManager_1_1SSHConfigIssue.html#a6671d92a6ad9a4b900cc1529102992cc',1,'SecurityManager::SSHConfigIssue::description'],['../structSecurityManager_1_1SSHAttackAlert.html#a16725df1dcbd74c86f86fab62ce71550',1,'SecurityManager::SSHAttackAlert::description']]],
+  ['details_4',['details',['../structAttackAlert.html#a7e3f20622b3f70e8f2ec691fdea21c4e',1,'AttackAlert::details'],['../structSecurityManager_1_1SSHAttackAlert.html#aace2d565d38fd4e7dfe9b8a654d6526c',1,'SecurityManager::SSHAttackAlert::details']]],
+  ['detection_5fmethods_5',['detection_methods',['../structSecurityManager_1_1ProtectionGuidance.html#a9e7e7df6e167cabf408036968d3e7c19',1,'SecurityManager::ProtectionGuidance']]],
+  ['difficulty_6',['difficulty',['../structSecurityManager_1_1AttackInfo.html#a2b3eb89a5c1d139818a94e80f728a7c1',1,'SecurityManager::AttackInfo']]]
+];

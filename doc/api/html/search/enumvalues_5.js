@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['parse_5ferror_0',['PARSE_ERROR',['../namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76a551530ec1af53eaa77c1bde0ca457b4b',1,'SecurityManager::PARSE_ERROR'],['../namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa551530ec1af53eaa77c1bde0ca457b4b',1,'SecurityManager::PARSE_ERROR'],['../namespaceSecurityManager.html#a96e40123050b14c96adf0c9170216412a551530ec1af53eaa77c1bde0ca457b4b',1,'SecurityManager::PARSE_ERROR']]],
+  ['permission_5fdenied_1',['PERMISSION_DENIED',['../namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9',1,'SecurityManager::PERMISSION_DENIED'],['../namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63a255df50c140519133f1489ab44a389d9',1,'SecurityManager::PERMISSION_DENIED'],['../namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a255df50c140519133f1489ab44a389d9',1,'SecurityManager::PERMISSION_DENIED'],['../namespaceSecurityManager.html#a96e40123050b14c96adf0c9170216412a255df50c140519133f1489ab44a389d9',1,'SecurityManager::PERMISSION_DENIED']]]
+];

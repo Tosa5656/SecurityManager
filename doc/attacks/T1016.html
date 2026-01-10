@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1016 - System Network Configuration Discovery</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1016 - System Network Configuration Discovery</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Сбор информации о сетевой конфигурации системы для понимания топологии сети, доступных ресурсов и потенциальных путей латерального перемещения. Атакующие анализируют сетевые настройки, маршруты, ARP таблицы и другие сетевые параметры.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>Анализ сетевых интерфейсов (ifconfig, ip addr)</li>
+        <li>Изучение routing таблиц (route, ip route)</li>
+        <li>ARP таблиц сканирование (arp -a)</li>
+        <li>DNS конфигурации (resolv.conf, dig)</li>
+        <li>NetworkManager и systemd-networkd анализ</li>
+        <li>Firewall правил исследование</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1016/" target="_blank">T1016 - System Network Configuration Discovery</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Базовый network discovery:</strong> smnet scan показывает текущую конфигурацию</li>
+        <li><strong>Мониторинг сетевых команд:</strong> smnet connection | grep "route\|arp\|dns"</li>
+        <li><strong>Анализ network changes:</strong> smnet stats для baseline</li>
+        <li><strong>Обнаружение enumeration:</strong> monitoring unusual network queries</li>
+    </ul>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Мониторинг network commands:</strong> smlog search "ifconfig|ip addr|route|arp" /var/log/audit/audit.log</li>
+        <li><strong>Анализ DNS запросов:</strong> smlog read /var/log/named/query.log</li>
+        <li><strong>Отслеживание network config access:</strong> smlog search "/etc/resolv.conf|/etc/network" /var/log/syslog</li>
+        <li><strong>Real-time monitoring:</strong> smlog monitor для network enumeration</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Мониторинг network recon через SSH:</strong> smssh monitor</li>
+        <li><strong>Анализ command patterns:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Защита от lateral movement:</strong> smssh apply /etc/ssh/sshd_config</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Ограничение доступа к network configuration</li>
+        <li>Использование network segmentation</li>
+        <li>Регулярный audit сетевых настроек</li>
+        <li>Мониторинг на unauthorized network scanning</li>
+        <li>Использование NAC (Network Access Control)</li>
+        <li>Внедрение network policy enforcement</li>
+        <li>Регулярные network assessments</li>
+        <li>Использование SIEM для correlation</li>
+    </ul>
+
+    <h2>Пример обнаружения</h2>
+    <pre>
+$ smlog search "network.*discovery" /var/log/audit/audit.log
+[2026-01-04 22:15:10] audit: user 'recon' executed 'ip addr show'
+[2026-01-04 22:15:12] audit: user 'recon' executed 'ip route show'
+[2026-01-04 22:15:15] audit: user 'recon' executed 'arp -a'
+[2026-01-04 22:15:18] audit: user 'recon' executed 'cat /etc/resolv.conf'
+[2026-01-04 22:15:20] audit: user 'recon' executed 'netstat -rn'
+
+$ smnet scan
+Network Configuration Discovery:
+Interface eth0: 192.168.1.100/24, gateway 192.168.1.1
+Interface eth1: 10.0.0.100/24, gateway 10.0.0.1
+DNS servers: 8.8.8.8, 8.8.4.4
+ARP table: 192.168.1.1 -> aa:bb:cc:dd:ee:ff (gateway)
+
+$ smlog monitor
+[2026-01-04 22:20:15] ALERT: Network configuration enumeration detected
+[2026-01-04 22:20:18] ALERT: ARP table scanning activity
+[2026-01-04 22:20:22] ALERT: DNS configuration access detected
+    </pre>
+</body>
+</html>

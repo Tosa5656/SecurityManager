@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1133 - External Remote Services</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1133 - External Remote Services</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Использование внешних облачных сервисов и платформ для обхода традиционных сетевых защит и получения доступа к внутренней сети. Атакующие могут использовать легитимные облачные сервисы (AWS, Azure, GCP) через украденные учетные данные или compromised аккаунты.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>Компрометация облачных учетных данных</li>
+        <li>Использование stolen cloud credentials</li>
+        <li>Эксплуатация misconfigured облачных сервисов</li>
+        <li>Создание backdoors через cloud APIs</li>
+        <li>Использование cloud storage для C2 коммуникаций</li>
+        <li>Латеральное перемещение через cloud resources</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1133/" target="_blank">T1133 - External Remote Services</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Мониторинг облачных подключений:</strong> smlog search "aws|azure|gcp|s3|blob" /var/log/syslog</li>
+        <li><strong>Анализ API вызовов:</strong> smlog search "api|token|credential" /var/log/auth.log</li>
+        <li><strong>Отслеживание необычных аутентификаций:</strong> smlog monitor</li>
+        <li><strong>Мониторинг сетевых подключений к облакам:</strong> smlog search "169.254." /var/log/syslog (AWS metadata)</li>
+    </ul>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Обнаружение C2 через облака:</strong> smnet connection | grep -E "(s3.amazonaws.com|azure|cloudflare|gcp)"</li>
+        <li><strong>Мониторинг исходящего трафика:</strong> smnet stats</li>
+        <li><strong>Анализ DNS запросов к облачным сервисам:</strong> smnet connection</li>
+    </ul>
+
+    <h3>smpass - Password Management</h3>
+    <ul>
+        <li><strong>Управление облачными credential:</strong> smpass add-password для API ключей</li>
+        <li><strong>Шифрование секретов:</strong> smpass hash-aes256 для токенов</li>
+        <li><strong>Безопасное хранение access keys:</strong> AES256 зашифрованное хранилище</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Мониторинг SSH туннелей к облакам:</strong> smssh monitor</li>
+        <li><strong>Анализ подозрительных подключений:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Защита от pivot через SSH:</strong> smssh apply /etc/ssh/sshd_config</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Регулярная ротация облачных учетных данных</li>
+        <li>Использование MFA для всех облачных аккаунтов</li>
+        <li>Применение principle of least privilege</li>
+        <li>Мониторинг cloud API usage</li>
+        <li>Использование Cloud Security Posture Management (CSPM)</li>
+        <li>Регулярные аудиты облачных ресурсов</li>
+        <li>Сегментация сети от облачных сервисов</li>
+        <li>Использование VPC security groups</li>
+        <li>Мониторинг на необычную активность в облаке</li>
+    </ul>
+
+    <h2>Пример обнаружения</h2>
+    <pre>
+$ smlog search "aws" /var/log/auth.log
+[2026-01-04 16:20:15] user systemd: AWS CLI authentication attempt
+[2026-01-04 16:20:18] user aws: API call to ec2.describe-instances
+[2026-01-04 16:21:02] user aws: S3 bucket enumeration detected
+
+$ smnet connection | grep amazonaws
+tcp  192.168.1.100:443   -> 52.216.8.1:443     ESTABLISHED (s3.amazonaws.com)
+tcp  192.168.1.100:443   -> 3.5.16.123:443     ESTABLISHED (ec2.amazonaws.com)
+
+$ smpass hash-aes256 "AKIAIOSFODNN7EXAMPLE"
+[2026-01-04 16:22:15.123] [INFO] Encrypted string: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6
+    </pre>
+</body>
+</html>

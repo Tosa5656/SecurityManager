@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Класс Logger</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classLogger.html','','classLogger-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Logger</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Потокобезопасный синглтон класс логгера  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="logger_8h_source.html">logger.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0fb96ad46f381d47aa96685d82f9f9a2" id="r_a0fb96ad46f381d47aa96685d82f9f9a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fb96ad46f381d47aa96685d82f9f9a2">setLogToFile</a> (bool enable)</td></tr>
+<tr class="memdesc:a0fb96ad46f381d47aa96685d82f9f9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Включить или отключить логирование в файл  <br /></td></tr>
+<tr class="memitem:affb88388d1a26995c14a28f8f79440ee" id="r_affb88388d1a26995c14a28f8f79440ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affb88388d1a26995c14a28f8f79440ee">setLogToConsole</a> (bool enable)</td></tr>
+<tr class="memdesc:affb88388d1a26995c14a28f8f79440ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Включить или отключить логирование в консоль  <br /></td></tr>
+<tr class="memitem:a06329e719fe9c9f3d69896d05e13719c" id="r_a06329e719fe9c9f3d69896d05e13719c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06329e719fe9c9f3d69896d05e13719c">getLogFilePath</a> () const</td></tr>
+<tr class="memdesc:a06329e719fe9c9f3d69896d05e13719c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить текущий путь к файлу лога  <br /></td></tr>
+<tr class="memitem:a3b2e97470572358030fa427c649cf8d5" id="r_a3b2e97470572358030fa427c649cf8d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b2e97470572358030fa427c649cf8d5">logInfo</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a3b2e97470572358030fa427c649cf8d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записать информационное сообщение  <br /></td></tr>
+<tr class="memitem:ab786d664f4aef11f9457e17cbeb93b38" id="r_ab786d664f4aef11f9457e17cbeb93b38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab786d664f4aef11f9457e17cbeb93b38">logWarning</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:ab786d664f4aef11f9457e17cbeb93b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записать предупреждающее сообщение  <br /></td></tr>
+<tr class="memitem:a00cc5c454a6af6300e5457ae277897d9" id="r_a00cc5c454a6af6300e5457ae277897d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00cc5c454a6af6300e5457ae277897d9">logError</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a00cc5c454a6af6300e5457ae277897d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записать сообщение об ошибке  <br /></td></tr>
+<tr class="memitem:a1849db0f1e4e823220e57156642301ff" id="r_a1849db0f1e4e823220e57156642301ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1849db0f1e4e823220e57156642301ff">logDebug</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a1849db0f1e4e823220e57156642301ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записать отладочное сообщение  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ab34b3a7fd8a65cb2bbad722b4f6ec3d0" id="r_ab34b3a7fd8a65cb2bbad722b4f6ec3d0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classLogger.html">Logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab34b3a7fd8a65cb2bbad722b4f6ec3d0">getInstance</a> ()</td></tr>
+<tr class="memdesc:ab34b3a7fd8a65cb2bbad722b4f6ec3d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить синглтон экземпляр логгера  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Потокобезопасный синглтон класс логгера </p>
+<p>Предоставляет функциональность логирования с поддержкой вывода в консоль и файл. Использует паттерн синглтон для обеспечения единственного экземпляра логгера. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ab34b3a7fd8a65cb2bbad722b4f6ec3d0" name="ab34b3a7fd8a65cb2bbad722b4f6ec3d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab34b3a7fd8a65cb2bbad722b4f6ec3d0">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLogger.html">Logger</a> * Logger::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить синглтон экземпляр логгера </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на экземпляр логгера </dd></dl>
+
+</div>
+</div>
+<a id="a06329e719fe9c9f3d69896d05e13719c" name="a06329e719fe9c9f3d69896d05e13719c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06329e719fe9c9f3d69896d05e13719c">&#9670;&#160;</a></span>getLogFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Logger::getLogFilePath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить текущий путь к файлу лога </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Путь к файлу лога </dd></dl>
+
+</div>
+</div>
+<a id="a1849db0f1e4e823220e57156642301ff" name="a1849db0f1e4e823220e57156642301ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1849db0f1e4e823220e57156642301ff">&#9670;&#160;</a></span>logDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::logDebug </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Записать отладочное сообщение </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Сообщение для логирования </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a00cc5c454a6af6300e5457ae277897d9" name="a00cc5c454a6af6300e5457ae277897d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00cc5c454a6af6300e5457ae277897d9">&#9670;&#160;</a></span>logError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::logError </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Записать сообщение об ошибке </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Сообщение для логирования </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3b2e97470572358030fa427c649cf8d5" name="a3b2e97470572358030fa427c649cf8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2e97470572358030fa427c649cf8d5">&#9670;&#160;</a></span>logInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::logInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Записать информационное сообщение </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Сообщение для логирования </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab786d664f4aef11f9457e17cbeb93b38" name="ab786d664f4aef11f9457e17cbeb93b38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab786d664f4aef11f9457e17cbeb93b38">&#9670;&#160;</a></span>logWarning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::logWarning </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Записать предупреждающее сообщение </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Сообщение для логирования </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="affb88388d1a26995c14a28f8f79440ee" name="affb88388d1a26995c14a28f8f79440ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb88388d1a26995c14a28f8f79440ee">&#9670;&#160;</a></span>setLogToConsole()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::setLogToConsole </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Включить или отключить логирование в консоль </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>True для включения логирования в консоль, false для отключения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0fb96ad46f381d47aa96685d82f9f9a2" name="a0fb96ad46f381d47aa96685d82f9f9a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb96ad46f381d47aa96685d82f9f9a2">&#9670;&#160;</a></span>setLogToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::setLogToFile </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Включить или отключить логирование в файл </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>True для включения логирования в файл, false для отключения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>logger/<a class="el" href="logger_8h_source.html">logger.h</a></li>
+<li>logger/<a class="el" href="logger_8cpp.html">logger.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classLogger.html">Logger</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

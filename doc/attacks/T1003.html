@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1003 - OS Credential Dumping</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1003 - OS Credential Dumping</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Извлечение учетных данных из памяти операционной системы, реестра, файлов или других хранилищ. Атакующие используют различные инструменты для дампинга паролей, хэшей и других credential из системы после получения первоначального доступа.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>LSASS memory dumping (Windows)</li>
+        <li>/etc/shadow и /etc/passwd чтение (Linux)</li>
+        <li>Mimikatz-like инструменты</li>
+        <li>Keychain и credential manager exploitation</li>
+        <li>Memory scraping атак</li>
+        <li>Registry dumping</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1003/" target="_blank">T1003 - OS Credential Dumping</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Мониторинг доступа к credential файлам:</strong> smlog search "/etc/shadow|/etc/passwd" /var/log/audit/audit.log</li>
+        <li><strong>Анализ необычных процессов:</strong> smlog search "mimikatz|pwdump|memory" /var/log/syslog</li>
+        <li><strong>Отслеживание privilege escalation:</strong> smlog monitor</li>
+        <li><strong>Audit логи анализа:</strong> smlog read /var/log/audit/audit.log</li>
+    </ul>
+
+    <h3>smpass - Password Management</h3>
+    <ul>
+        <li><strong>Безопасное хранение credential:</strong> smpass add-password вместо plaintext</li>
+        <li><strong>Шифрование чувствительных данных:</strong> smpass hash-aes256</li>
+        <li><strong>Регулярная ротация паролей:</strong> управление lifecycle</li>
+        <li><strong>Изоляция credential:</strong> separate storage от OS</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Мониторинг SSH key access:</strong> smssh monitor</li>
+        <li><strong>Анализ key usage patterns:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Генерация strong keys:</strong> smssh gen-key с 4096-bit RSA</li>
+        <li><strong>Отключение password auth:</strong> smssh apply /etc/ssh/sshd_config</li>
+    </ul>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Обнаружение data exfiltration:</strong> smnet stats | grep "large.*transfer"</li>
+        <li><strong>Мониторинг suspicious downloads:</strong> smnet connection</li>
+        <li><strong>Анализ traffic patterns:</strong> после credential theft</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Использование strong password policies</li>
+        <li>Регулярная ротация учетных данных</li>
+        <li>Внедрение MFA (Multi-Factor Authentication)</li>
+        <li>Мониторинг доступа к чувствительным файлам</li>
+        <li>Использование password managers</li>
+        <li>Регулярные security audits</li>
+        <li>Внедрение EDR/XDR решений</li>
+        <li>Использование LSA protection (Windows)</li>
+        <li>Credential Guard implementation</li>
+    </ul>
+
+    <h2>Пример обнаружения</h2>
+    <pre>
+$ smlog search "/etc/shadow" /var/log/audit/audit.log
+[2026-01-04 20:15:30] audit: type=SYSCALL msg=audit(1704395730.123:456): arch=x86_64 syscall=openat success=yes
+[2026-01-04 20:15:30] audit: type=PATH msg=audit(1704395730.123:456): item=0 name="/etc/shadow" mode=0400
+[2026-01-04 20:15:30] audit: type=CWD msg=audit(1704395730.123:456): cwd="/tmp"
+[2026-01-04 20:15:32] audit: suspicious process 'malware' accessed /etc/shadow
+
+$ smpass hash-sha256 "compromised_password"
+[2026-01-04 20:16:15.456] [INFO] Hashed string: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+$ smlog monitor
+[2026-01-04 20:17:22] ALERT: Suspicious process accessing credential files
+[2026-01-04 20:17:25] ALERT: Memory dumping activity detected
+[2026-01-04 20:17:28] ALERT: Privilege escalation attempt
+    </pre>
+</body>
+</html>

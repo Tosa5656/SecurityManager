@@ -1,0 +1,7 @@
+Jan 04 10:15:30 localhost systemd[1]: Started SSH Daemon.
+Jan 04 10:15:35 localhost sshd[1234]: Server listening on 0.0.0.0 port 22.
+Jan 04 10:16:01 localhost sshd[1235]: Failed password for root from 192.168.1.100 port 22 ssh2
+Jan 04 10:16:05 localhost sshd[1236]: Accepted publickey for user from 192.168.1.101 port 22 ssh2
+Jan 04 10:17:12 localhost sudo[1237]: user : TTY=pts/0 ; PWD=/home/user ; USER=root ; COMMAND=/bin/ls
+Jan 04 10:17:15 localhost kernel: [12345.678901] CPU0: Core temperature above threshold
+Jan 04 10:18:20 localhost sshd[1238]: Invalid user admin from 10.0.0.5 port 22

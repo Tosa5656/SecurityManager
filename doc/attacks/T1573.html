@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1573 - Encrypted Channel</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1573 - Encrypted Channel</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Создание зашифрованных каналов коммуникации между compromised хостами и command and control серверами для обхода сетевых защит и обеспечения конфиденциальности команд и данных. Атакующие используют различные протоколы шифрования для маскировки вредоносного трафика.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>HTTPS для C2 коммуникаций</li>
+        <li>SSH tunneling для обхода firewall</li>
+        <li>DNS over HTTPS/TLS tunneling</li>
+        <li>VPN-like encrypted tunnels</li>
+        <li>SSL/TLS certificate abuse</li>
+        <li>Protocol encryption abuse</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1573/" target="_blank">T1573 - Encrypted Channel</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Анализ HTTPS трафика:</strong> smnet connection | grep ":443"</li>
+        <li><strong>Мониторинг SSL/TLS соединений:</strong> smnet stats по encrypted traffic</li>
+        <li><strong>Обнаружение туннелей:</strong> анализ payload sizes и patterns</li>
+        <li><strong>DNS over HTTPS detection:</strong> monitoring unusual DNS patterns</li>
+    </ul>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Анализ SSL handshake логов:</strong> smlog search "ssl|tls" /var/log/nginx/ssl.log</li>
+        <li><strong>Мониторинг SSH туннелей:</strong> smlog search "tunnel|forward" /var/log/auth.log</li>
+        <li><strong>Отслеживание certificate validation:</strong> smlog read /var/log/apache2/ssl_error.log</li>
+        <li><strong>DNS tunneling detection:</strong> smlog search "doh|dot" /var/log/named/query.log</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Мониторинг SSH tunneling:</strong> smssh monitor</li>
+        <li><strong>Анализ port forwarding:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Защита от SSH abuse:</strong> smssh apply /etc/ssh/sshd_config (disable tunneling)</li>
+        <li><strong>Генерация ключей:</strong> smssh gen-key для legitimate access</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Использование SSL/TLS inspection</li>
+        <li>Настройка certificate pinning</li>
+        <li>Мониторинг на self-signed certificates</li>
+        <li>Отключение SSH tunneling где не нужно</li>
+        <li>Использование DLP для encrypted traffic</li>
+        <li>Регулярный анализ traffic patterns</li>
+        <li>Настройка firewall для inspection</li>
+        <li>Мониторинг certificate transparency logs</li>
+    </ul>
+
+    <h2>Пример обнаружения</h2>
+    <pre>
+$ smnet connection | grep ":443" | sort | uniq -c | sort -nr | head -5
+      25 tcp  192.168.1.100:443   -> 203.0.113.1:443    ESTABLISHED
+      18 tcp  192.168.1.100:443   -> 198.51.100.1:443   ESTABLISHED
+      12 tcp  192.168.1.100:443   -> 192.0.2.1:443      ESTABLISHED
+       8 tcp  192.168.1.100:443   -> 203.0.113.195:443  ESTABLISHED
+
+$ smlog search "tunnel" /var/log/auth.log
+[2026-01-04 19:05:15] sshd: SSH tunnel established to 203.0.113.1:8080
+[2026-01-04 19:05:18] sshd: Port forwarding detected: local 8080 -> remote 80
+[2026-01-04 19:06:22] sshd: Reverse tunnel created from 203.0.113.1:22
+
+$ smssh parse-log /var/log/auth.log | grep tunnel
+SSH tunnel activity detected:
+- User 'attacker' established tunnel to suspicious IP
+- Multiple port forwarding sessions active
+- Potential data exfiltration through encrypted channel
+    </pre>
+</body>
+</html>

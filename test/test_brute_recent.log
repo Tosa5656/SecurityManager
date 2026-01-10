@@ -1,0 +1,6 @@
+Jan 04 15:46:10 server sshd[123]: Failed password for root from 8.8.8.8 port 22 ssh2
+Jan 04 15:47:10 server sshd[124]: Failed password for root from 8.8.8.8 port 22 ssh2
+Jan 04 15:48:10 server sshd[125]: Failed password for root from 8.8.8.8 port 22 ssh2
+Jan 04 15:49:10 server sshd[126]: Failed password for root from 8.8.8.8 port 22 ssh2
+Jan 04 15:50:10 server sshd[127]: Failed password for root from 8.8.8.8 port 22 ssh2
+Jan 04 15:51:10 server sshd[128]: Failed password for root from 8.8.8.8 port 22 ssh2

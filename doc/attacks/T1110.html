@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1110 - Brute Force</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1110 - Brute Force</h1>
+
+    <h2>Attack Description</h2>
+    <p>Brute Force attack involves systematically trying all possible combinations of passwords or keys to gain unauthorized access to a system.</p>
+
+    <h2>How It Works</h2>
+    <ul>
+        <li>Automated credential enumeration</li>
+        <li>Use of common password dictionaries</li>
+        <li>Generation of combinations based on rules</li>
+        <li>Distributed attack from multiple IP addresses</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1110/" target="_blank">T1110 - Brute Force</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smssh - SSH Attack Detection</h3>
+    <ul>
+        <li><strong>Обнаружение:</strong> smssh monitor автоматически обнаруживает brute force атаки</li>
+        <li><strong>Анализ логов:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Конфигурация:</strong> smssh apply /etc/ssh/sshd_config для отключения password auth</li>
+    </ul>
+
+    <h3>Рекомендации</h3>
+    <ul>
+        <li>Использовать ключевую аутентификацию вместо паролей</li>
+        <li>Внедрить fail2ban для блокировки IP</li>
+        <li>Установить лимиты на количество попыток входа</li>
+        <li>Использовать сложные пароли</li>
+    </ul>
+
+    <h2>Пример обнаружения</h2>
+    <pre>
+$ smssh parse-log /var/log/auth.log
+Parsing SSH log file: /var/log/auth.log
+Log parsing completed. Analyzing attacks...
+
+SSH Security Analysis Results:
+=================================
+brute_force: 3 incidents
+
+Detailed Alerts:
+[high] brute_force from 192.168.1.100
+  Brute force attack detected: High number of failed attempts. Failed: 15/15 attempts in 10 minutes
+    </pre>
+</body>
+</html>

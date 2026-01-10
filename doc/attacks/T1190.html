@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1190 - Exploit Public-Facing Application</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1190 - Exploit Public-Facing Application</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Эксплуатация уязвимостей в публично доступных приложениях, таких как веб-серверы, сервисы баз данных, приложения для совместной работы. Атакующие ищут и используют известные уязвимости (CVEs) в публичном ПО для получения первоначального доступа к сети.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>Сканирование на наличие уязвимых приложений</li>
+        <li>Использование известных эксплойтов (метасплойт и т.п.)</li>
+        <li>Эксплуатация zero-day уязвимостей</li>
+        <li>SQL инъекции, XSS, RCE в веб-приложениях</li>
+        <li>Уязвимости в CMS (WordPress, Joomla, etc.)</li>
+        <li>Эксплуатация уязвимостей в сетевых сервисах</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1190/" target="_blank">T1190 - Exploit Public-Facing Application</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Мониторинг внешних подключений:</strong> smnet connection</li>
+        <li><strong>Обнаружение подозрительного трафика:</strong> smnet stats</li>
+        <li><strong>Сканирование открытых портов:</strong> smnet scan</li>
+        <li><strong>Регулярный аудит сетевой активности:</strong> помогает обнаруживать эксплойты</li>
+    </ul>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Анализ веб-сервер логов:</strong> smlog search "error|exploit" /var/log/apache2/access.log</li>
+        <li><strong>Мониторинг системных ошибок:</strong> smlog monitor</li>
+        <li><strong>Отслеживание подозрительных запросов:</strong> smlog search "union|select|script" /var/log/nginx/access.log</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Защита от secondary access:</strong> smssh apply /etc/ssh/sshd_config</li>
+        <li><strong>Мониторинг SSH после компрометации:</strong> smssh monitor</li>
+        <li><strong>Генерация ключей для безопасного доступа:</strong> smssh gen-key</li>
+    </ul>
+
+    <h3>smpass - Password Management</h3>
+    <ul>
+        <li><strong>Управление учетными данными приложений:</strong> smpass add-password</li>
+        <li><strong>Безопасное хранение credential:</strong> smpass с AES256 шифрованием</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Регулярное обновление всех публичных приложений</li>
+        <li>Использование WAF (Web Application Firewall)</li>
+        <li>Сканирование на уязвимости (Nessus, OpenVAS)</li>
+        <li>Минимизация attack surface</li>
+        <li>Использование контейнеризации для изоляции</li>
+        <li>Регулярные пентесты и аудиты безопасности</li>
+        <li>Мониторинг на аномальную активность</li>
+        <li>Использование principle of least privilege</li>
+    </ul>
+
+    <h2>Пример обнаружения</h2>
+    <pre>
+$ smlog search "exploit" /var/log/apache2/error.log
+[2026-01-04 15:30:22] [error] PHP Warning: Invalid argument in /var/www/html/index.php:45
+[2026-01-04 15:30:25] [error] SQL injection attempt detected
+[2026-01-04 15:31:01] [error] Command injection in upload.php
+
+$ smnet connection | grep -v "ESTABLISHED"
+Active suspicious connections:
+  tcp  203.0.113.195:443   -> 192.168.1.100:8080  SYN_SENT (Possible C2)
+  tcp  198.51.100.45:80    -> 192.168.1.100:80    TIME_WAIT (Multiple connections)
+    </pre>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Класс SecurityManager::SSHSecurity::Impl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classSecurityManager_1_1SSHSecurity_1_1Impl.html','','classSecurityManager_1_1SSHSecurity_1_1Impl-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс SecurityManager::SSHSecurity::Impl</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Приватная реализация класса <a class="el" href="classSecurityManager_1_1SSHSecurity.html" title="Класс менеджера безопасности SSH.">SSHSecurity</a>.  
+ <a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae6941a3c59e4e826da87144ad982ba00" id="r_ae6941a3c59e4e826da87144ad982ba00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1SSHSecurityReport.html">SSHSecurityReport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6941a3c59e4e826da87144ad982ba00">analyzeConfiguration</a> (const std::string &amp;config_path)</td></tr>
+<tr class="memitem:aa9e2d0ff9b426c87c8b83c0eed7b542c" id="r_aa9e2d0ff9b426c87c8b83c0eed7b542c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9e2d0ff9b426c87c8b83c0eed7b542c">applySecurityHardening</a> (const std::string &amp;config_path, const std::string &amp;backup_path)</td></tr>
+<tr class="memitem:a866f4de4df489fb30c709cdd3115f40e" id="r_a866f4de4df489fb30c709cdd3115f40e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a866f4de4df489fb30c709cdd3115f40e">generateSecureConfig</a> (const std::string &amp;output_path)</td></tr>
+<tr class="memitem:a647b5daacd752c4639b38669d0e05a09" id="r_a647b5daacd752c4639b38669d0e05a09"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structSecurityManager_1_1SSHAttackAlert.html">SSHAttackAlert</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a647b5daacd752c4639b38669d0e05a09">detectAttacks</a> (const std::string &amp;log_path)</td></tr>
+<tr class="memitem:acfb8d147ff4c2acb3a4ac3bd04ef09a8" id="r_acfb8d147ff4c2acb3a4ac3bd04ef09a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfb8d147ff4c2acb3a4ac3bd04ef09a8">monitorAttacks</a> (const std::string &amp;log_path, std::function&lt; void(const <a class="el" href="structSecurityManager_1_1SSHAttackAlert.html">SSHAttackAlert</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:a1232dbe4e720a550dad1aa03bf23e352" id="r_a1232dbe4e720a550dad1aa03bf23e352"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1232dbe4e720a550dad1aa03bf23e352">stopMonitoring</a> ()</td></tr>
+<tr class="memitem:ab9d5df8d471c9470372c8cc16a49b1f6" id="r_ab9d5df8d471c9470372c8cc16a49b1f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d5df8d471c9470372c8cc16a49b1f6">generateKeyPair</a> (const std::string &amp;key_name, const std::string &amp;key_path, const std::string &amp;key_type, int key_size)</td></tr>
+<tr class="memitem:a227bf3e0c882bbaec883eec998ab0a43" id="r_a227bf3e0c882bbaec883eec998ab0a43"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a227bf3e0c882bbaec883eec998ab0a43">getServerStatus</a> ()</td></tr>
+<tr class="memitem:ae9537e70266776774c68c93bce51d298" id="r_ae9537e70266776774c68c93bce51d298"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9537e70266776774c68c93bce51d298">testConnectivity</a> (const std::string &amp;host, int port, int timeout)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Приватная реализация класса <a class="el" href="classSecurityManager_1_1SSHSecurity.html" title="Класс менеджера безопасности SSH.">SSHSecurity</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ae6941a3c59e4e826da87144ad982ba00" name="ae6941a3c59e4e826da87144ad982ba00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6941a3c59e4e826da87144ad982ba00">&#9670;&#160;</a></span>analyzeConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1SSHSecurityReport.html">SSHSecurityReport</a> SecurityManager::SSHSecurity::Impl::analyzeConfiguration </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>config_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9e2d0ff9b426c87c8b83c0eed7b542c" name="aa9e2d0ff9b426c87c8b83c0eed7b542c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e2d0ff9b426c87c8b83c0eed7b542c">&#9670;&#160;</a></span>applySecurityHardening()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityManager::SSHSecurity::Impl::applySecurityHardening </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>config_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>backup_path</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a647b5daacd752c4639b38669d0e05a09" name="a647b5daacd752c4639b38669d0e05a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a647b5daacd752c4639b38669d0e05a09">&#9670;&#160;</a></span>detectAttacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structSecurityManager_1_1SSHAttackAlert.html">SSHAttackAlert</a> &gt; SecurityManager::SSHSecurity::Impl::detectAttacks </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>log_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9d5df8d471c9470372c8cc16a49b1f6" name="ab9d5df8d471c9470372c8cc16a49b1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d5df8d471c9470372c8cc16a49b1f6">&#9670;&#160;</a></span>generateKeyPair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityManager::SSHSecurity::Impl::generateKeyPair </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a866f4de4df489fb30c709cdd3115f40e" name="a866f4de4df489fb30c709cdd3115f40e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866f4de4df489fb30c709cdd3115f40e">&#9670;&#160;</a></span>generateSecureConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityManager::SSHSecurity::Impl::generateSecureConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>output_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a227bf3e0c882bbaec883eec998ab0a43" name="a227bf3e0c882bbaec883eec998ab0a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a227bf3e0c882bbaec883eec998ab0a43">&#9670;&#160;</a></span>getServerStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, std::string &gt; SecurityManager::SSHSecurity::Impl::getServerStatus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfb8d147ff4c2acb3a4ac3bd04ef09a8" name="acfb8d147ff4c2acb3a4ac3bd04ef09a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb8d147ff4c2acb3a4ac3bd04ef09a8">&#9670;&#160;</a></span>monitorAttacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityManager::SSHSecurity::Impl::monitorAttacks </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>log_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(const <a class="el" href="structSecurityManager_1_1SSHAttackAlert.html">SSHAttackAlert</a> &amp;)&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1232dbe4e720a550dad1aa03bf23e352" name="a1232dbe4e720a550dad1aa03bf23e352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1232dbe4e720a550dad1aa03bf23e352">&#9670;&#160;</a></span>stopMonitoring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityManager::SSHSecurity::Impl::stopMonitoring </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9537e70266776774c68c93bce51d298" name="ae9537e70266776774c68c93bce51d298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9537e70266776774c68c93bce51d298">&#9670;&#160;</a></span>testConnectivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityManager::SSHSecurity::Impl::testConnectivity </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>host</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>port</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>api/src/<a class="el" href="smssh__api_8cpp.html">smssh_api.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceSecurityManager.html">SecurityManager</a></li><li class="navelem"><a href="classSecurityManager_1_1SSHSecurity.html">SSHSecurity</a></li><li class="navelem"><a href="classSecurityManager_1_1SSHSecurity_1_1Impl.html">Impl</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

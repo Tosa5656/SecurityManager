@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1021 - Remote Services</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1021 - Remote Services</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Использование легитимных учетных данных для доступа к удаленным сервисам, таким как RDP, SSH, SMB, VNC и другим протоколам удаленного доступа. Атакующие используют украденные или найденные учетные данные для латерального перемещения в сети.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>Доступ к RDP (Remote Desktop Protocol)</li>
+        <li>SSH tunneling и pivoting</li>
+        <li>SMB/Windows file sharing exploitation</li>
+        <li>VNC (Virtual Network Computing) access</li>
+        <li>Database remote access (MySQL, PostgreSQL, etc.)</li>
+        <li>Использование легитимных учетных данных</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1021/" target="_blank">T1021 - Remote Services</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Мониторинг SSH подключений:</strong> smssh monitor</li>
+        <li><strong>Анализ логов аутентификации:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Защита от несанкционированного доступа:</strong> smssh apply /etc/ssh/sshd_config</li>
+        <li><strong>Генерация ключей:</strong> smssh gen-key</li>
+    </ul>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Мониторинг удаленных подключений:</strong> smlog search "Accepted" /var/log/auth.log</li>
+        <li><strong>Анализ необычных подключений:</strong> smlog monitor</li>
+        <li><strong>Отслеживание RDP/SSH активности:</strong> smlog read /var/log/auth.log</li>
+    </ul>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Мониторинг сетевых подключений:</strong> smnet connection</li>
+        <li><strong>Обнаружение подозрительного трафика:</strong> smnet stats</li>
+        <li><strong>Сканирование портов:</strong> smnet scan</li>
+    </ul>
+
+    <h3>smpass - Password Management</h3>
+    <ul>
+        <li><strong>Безопасное хранение учетных данных:</strong> smpass add-password</li>
+        <li><strong>Генерация сложных паролей:</strong> встроенные инструменты</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Отключение ненужных удаленных сервисов</li>
+        <li>Использование ключевой аутентификации вместо паролей</li>
+        <li>Внедрение многофакторной аутентификации (MFA)</li>
+        <li>Ограничение доступа по IP адресам</li>
+        <li>Регулярный аудит учетных записей</li>
+        <li>Мониторинг и логирование всех подключений</li>
+        <li>Использование VPN для удаленного доступа</li>
+    </ul>
+
+    <h2>Пример анализа SSH подключений</h2>
+    <pre>
+$ smlog search "Accepted" /var/log/auth.log
+[2026-01-04 10:15:30] user from 192.168.1.100 port 22
+[2026-01-04 10:16:01] admin from 10.0.0.5 port 22
+[2026-01-04 11:30:15] root from 203.0.113.1 port 22
+
+$ smssh parse-log /var/log/auth.log
+SSH Security Analysis Results:
+=================================
+geo_ip_anomaly: 1 incidents
+
+Detailed Alerts:
+[medium] geo_ip_anomaly from 203.0.113.1
+  GeoIP anomaly detected: Successful connections from unusual geographic location
+    </pre>
+</body>
+</html>

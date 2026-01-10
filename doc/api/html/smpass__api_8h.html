@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Файл api/include/smpass_api.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('smpass__api_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл smpass_api.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Password Manager API - Работа с шифрованием и хранением пароля  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+</div>
+<p><a href="smpass__api_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:SecurityManager_3A_3APasswordResult_3C_20T_20_3E" id="r_SecurityManager_3A_3APasswordResult_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSecurityManager_1_1PasswordResult.html">SecurityManager::PasswordResult&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обвертка результатов работы с паролями  <a href="structSecurityManager_1_1PasswordResult.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:SecurityManager_3A_3APasswordEntry" id="r_SecurityManager_3A_3APasswordEntry"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSecurityManager_1_1PasswordEntry.html">SecurityManager::PasswordEntry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура строки пароля  <a href="structSecurityManager_1_1PasswordEntry.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:SecurityManager_3A_3APasswordManager" id="r_SecurityManager_3A_3APasswordManager"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurityManager_1_1PasswordManager.html">SecurityManager::PasswordManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс менеджера паролей  <a href="classSecurityManager_1_1PasswordManager.html#details">Подробнее...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:SecurityManager" id="r_SecurityManager"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSecurityManager.html">SecurityManager</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a332c3b1c0062e31f9be29430014bf8f9" id="r_a332c3b1c0062e31f9be29430014bf8f9"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">SecurityManager::PasswordError</a> { <br />
+&#160;&#160;<a class="el" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9ad0749aaba8b833466dfcbb0428e4f89c">SecurityManager::SUCCESS</a> = 0
+, <a class="el" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9acd54d99c8efb3c2db794197045f5b83c">SecurityManager::FILE_NOT_FOUND</a> = 1
+, <a class="el" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a255df50c140519133f1489ab44a389d9">SecurityManager::PERMISSION_DENIED</a> = 2
+, <a class="el" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9af295a0c3e37c94f078e1c5476479132d">SecurityManager::INVALID_ARGUMENT</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a201c6bb72da0325054ce69d755dafbe5">SecurityManager::ENCRYPTION_ERROR</a> = 5
+, <a class="el" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a7ae7f2a13f0d5a18b0db91af9c5aef34">SecurityManager::STORAGE_ERROR</a> = 6
+<br />
+ }</td></tr>
+<tr class="memdesc:a332c3b1c0062e31f9be29430014bf8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коды ошибок  <a href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">Подробнее...</a><br /></td></tr>
+<tr class="memitem:aea837ea823c05b3e6a327dcaad62d7b3" id="r_aea837ea823c05b3e6a327dcaad62d7b3"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3">SecurityManager::HashAlgorithm</a> { <a class="el" href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3ab505df5aa812b4f320420b8a952f20e5">SecurityManager::SHA256</a>
+, <a class="el" href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3a91a6b83597d72bb96fe15edf9688bc2d">SecurityManager::AES256</a>
+ }</td></tr>
+<tr class="memdesc:aea837ea823c05b3e6a327dcaad62d7b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступные алгоритмы хеширования  <a href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3">Подробнее...</a><br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Password Manager API - Работа с шифрованием и хранением пароля </p>
+<dl class="section author"><dt>Автор</dt><dd>Tosa5656 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>4 января, 2026 </dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_0188a3e6da905bc60aceb35bf790b8c9.html">api</a></li><li class="navelem"><a href="dir_cf4c4a12eb9d2821032e40f1ddeaaf89.html">include</a></li><li class="navelem"><a href="smpass__api_8h.html">smpass_api.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

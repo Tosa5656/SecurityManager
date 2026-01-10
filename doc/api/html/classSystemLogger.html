@@ -1,0 +1,1240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Класс SystemLogger</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classSystemLogger.html','','classSystemLogger-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс SystemLogger</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Продвинутый системный логгер, поддерживающий множественные источники логов  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="SystemLogger_8h_source.html">SystemLogger.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af76ba18449e6ae475e6b410ec6c619d4" id="r_af76ba18449e6ae475e6b410ec6c619d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af76ba18449e6ae475e6b410ec6c619d4">SystemLogger</a> ()</td></tr>
+<tr class="memdesc:af76ba18449e6ae475e6b410ec6c619d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по умолчанию  <br /></td></tr>
+<tr class="memitem:a037a86fb8eb17d3537a4afc78dea13fc" id="r_a037a86fb8eb17d3537a4afc78dea13fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a037a86fb8eb17d3537a4afc78dea13fc">SystemLogger</a> (const std::string &amp;configPath)</td></tr>
+<tr class="memdesc:a037a86fb8eb17d3537a4afc78dea13fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор с путем к файлу конфигурации  <br /></td></tr>
+<tr class="memitem:abf5fa72429af6ef6af87d58ac54a5bc9" id="r_abf5fa72429af6ef6af87d58ac54a5bc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf5fa72429af6ef6af87d58ac54a5bc9">~SystemLogger</a> ()</td></tr>
+<tr class="memdesc:abf5fa72429af6ef6af87d58ac54a5bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор  <br /></td></tr>
+<tr class="memitem:a29a901d14bf4595cafc76583d2616f0b" id="r_a29a901d14bf4595cafc76583d2616f0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29a901d14bf4595cafc76583d2616f0b">initialize</a> ()</td></tr>
+<tr class="memdesc:a29a901d14bf4595cafc76583d2616f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализировать логгер с настройками по умолчанию  <br /></td></tr>
+<tr class="memitem:a19530240e7da8e046be794935503e65a" id="r_a19530240e7da8e046be794935503e65a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19530240e7da8e046be794935503e65a">startMonitoring</a> ()</td></tr>
+<tr class="memdesc:a19530240e7da8e046be794935503e65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Начать мониторинг логов в реальном времени  <br /></td></tr>
+<tr class="memitem:ad7ab4ab42aca33305ad158a840fe7e94" id="r_ad7ab4ab42aca33305ad158a840fe7e94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7ab4ab42aca33305ad158a840fe7e94">stopMonitoring</a> ()</td></tr>
+<tr class="memdesc:ad7ab4ab42aca33305ad158a840fe7e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Остановить мониторинг логов в реальном времени  <br /></td></tr>
+<tr class="memitem:a86422bd1b2311f636674f543b2a23eb9" id="r_a86422bd1b2311f636674f543b2a23eb9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86422bd1b2311f636674f543b2a23eb9">readLog</a> (const std::string &amp;logPath, int lines=100)</td></tr>
+<tr class="memdesc:a86422bd1b2311f636674f543b2a23eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прочитать строки из файла лога  <br /></td></tr>
+<tr class="memitem:aa7904c99a024132037434fa99222c1c8" id="r_aa7904c99a024132037434fa99222c1c8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7904c99a024132037434fa99222c1c8">searchLog</a> (const std::string &amp;logPath, const std::string &amp;keyword, const std::string &amp;timeFrom=&quot;&quot;, const std::string &amp;timeTo=&quot;&quot;)</td></tr>
+<tr class="memdesc:aa7904c99a024132037434fa99222c1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск в файле лога по ключевым словам в диапазоне времени  <br /></td></tr>
+<tr class="memitem:a6ae0d2fbe6fb6e7c7fcf9ee6f1110c07" id="r_a6ae0d2fbe6fb6e7c7fcf9ee6f1110c07"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ae0d2fbe6fb6e7c7fcf9ee6f1110c07">tailLog</a> (const std::string &amp;logPath, int lines=50)</td></tr>
+<tr class="memdesc:a6ae0d2fbe6fb6e7c7fcf9ee6f1110c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить последние N строк из файла лога (функциональность tail).  <br /></td></tr>
+<tr class="memitem:a2a29512793f33dc44f4cde6ebadbda34" id="r_a2a29512793f33dc44f4cde6ebadbda34"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a29512793f33dc44f4cde6ebadbda34">readJournal</a> (const std::string &amp;unit=&quot;&quot;, int lines=100)</td></tr>
+<tr class="memdesc:a2a29512793f33dc44f4cde6ebadbda34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прочитать записи из журнала systemd.  <br /></td></tr>
+<tr class="memitem:a24d0360d8f20937568d298e351e6edd3" id="r_a24d0360d8f20937568d298e351e6edd3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d0360d8f20937568d298e351e6edd3">searchJournal</a> (const std::string &amp;keyword, const std::string &amp;unit=&quot;&quot;, const std::string &amp;timeFrom=&quot;&quot;, const std::string &amp;timeTo=&quot;&quot;, const std::string &amp;priority=&quot;&quot;)</td></tr>
+<tr class="memdesc:a24d0360d8f20937568d298e351e6edd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск в журнале systemd по ключевым словам  <br /></td></tr>
+<tr class="memitem:aa7e24a1ec59aacb1921408277e71bfa7" id="r_aa7e24a1ec59aacb1921408277e71bfa7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7e24a1ec59aacb1921408277e71bfa7">getJournalUnits</a> ()</td></tr>
+<tr class="memdesc:aa7e24a1ec59aacb1921408277e71bfa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить список доступных юнитов systemd.  <br /></td></tr>
+<tr class="memitem:aacf6683b087d9be930111c207e09d70c" id="r_aacf6683b087d9be930111c207e09d70c"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacf6683b087d9be930111c207e09d70c">getJournalStats</a> ()</td></tr>
+<tr class="memdesc:aacf6683b087d9be930111c207e09d70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить статистику журнала systemd.  <br /></td></tr>
+<tr class="memitem:a6fc5107fd5e98ba5486a2927df24d9c9" id="r_a6fc5107fd5e98ba5486a2927df24d9c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fc5107fd5e98ba5486a2927df24d9c9">clearJournal</a> (const std::string &amp;unit=&quot;&quot;)</td></tr>
+<tr class="memdesc:a6fc5107fd5e98ba5486a2927df24d9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистить журнал systemd.  <br /></td></tr>
+<tr class="memitem:ab6c3a8f6a1e53d9b7a6255888d966a80" id="r_ab6c3a8f6a1e53d9b7a6255888d966a80"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6c3a8f6a1e53d9b7a6255888d966a80">countByLevel</a> (const std::string &amp;logPath, const std::string &amp;timeRange=&quot;today&quot;)</td></tr>
+<tr class="memdesc:ab6c3a8f6a1e53d9b7a6255888d966a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подсчитать записи по уровням логирования  <br /></td></tr>
+<tr class="memitem:aba25df56529504c22702f499f5097238" id="r_aba25df56529504c22702f499f5097238"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba25df56529504c22702f499f5097238">findTopIPs</a> (const std::string &amp;logPath, int topN=10)</td></tr>
+<tr class="memdesc:aba25df56529504c22702f499f5097238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Найти топ IP адресов по частоте появления  <br /></td></tr>
+<tr class="memitem:a7d4cf30504f515e1222cbcd5ed3b3bb5" id="r_a7d4cf30504f515e1222cbcd5ed3b3bb5"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d4cf30504f515e1222cbcd5ed3b3bb5">findTopUsers</a> (const std::string &amp;logPath, int topN=10)</td></tr>
+<tr class="memdesc:a7d4cf30504f515e1222cbcd5ed3b3bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Найти топ пользователей по частоте появления  <br /></td></tr>
+<tr class="memitem:a1fdad8807dd5f0362b893865b51bbc6a" id="r_a1fdad8807dd5f0362b893865b51bbc6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fdad8807dd5f0362b893865b51bbc6a">addWatchRule</a> (const std::string &amp;ruleName, const std::string &amp;pattern, const std::string &amp;action, bool checkJournal=true)</td></tr>
+<tr class="memdesc:a1fdad8807dd5f0362b893865b51bbc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавить правило наблюдения за логами  <br /></td></tr>
+<tr class="memitem:a0e4b52b719deae18eedea9be54842d8a" id="r_a0e4b52b719deae18eedea9be54842d8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e4b52b719deae18eedea9be54842d8a">removeWatchRule</a> (const std::string &amp;ruleName)</td></tr>
+<tr class="memdesc:a0e4b52b719deae18eedea9be54842d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удалить правило наблюдения  <br /></td></tr>
+<tr class="memitem:a892d592b4c25ab4d437fd99131d53b9d" id="r_a892d592b4c25ab4d437fd99131d53b9d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a892d592b4c25ab4d437fd99131d53b9d">listWatchRules</a> () const</td></tr>
+<tr class="memdesc:a892d592b4c25ab4d437fd99131d53b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить список всех правил наблюдения  <br /></td></tr>
+<tr class="memitem:ae0e8883c5d55099cf1881cc6354c9857" id="r_ae0e8883c5d55099cf1881cc6354c9857"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0e8883c5d55099cf1881cc6354c9857">rotateLog</a> (const std::string &amp;logPath)</td></tr>
+<tr class="memdesc:ae0e8883c5d55099cf1881cc6354c9857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повернуть (ротировать) файл лога  <br /></td></tr>
+<tr class="memitem:a3baaddbb46bc66a63b87b5bff6f1f462" id="r_a3baaddbb46bc66a63b87b5bff6f1f462"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3baaddbb46bc66a63b87b5bff6f1f462">compressLog</a> (const std::string &amp;logPath)</td></tr>
+<tr class="memdesc:a3baaddbb46bc66a63b87b5bff6f1f462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сжать файл лога  <br /></td></tr>
+<tr class="memitem:a4851b07c01bf587dca14eee8747456e1" id="r_a4851b07c01bf587dca14eee8747456e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4851b07c01bf587dca14eee8747456e1">cleanOldLogs</a> (const std::string &amp;logDir, int daysToKeep=30)</td></tr>
+<tr class="memdesc:a4851b07c01bf587dca14eee8747456e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистить старые логи  <br /></td></tr>
+<tr class="memitem:ad3332920e984e5afbc50d683bde7ae37" id="r_ad3332920e984e5afbc50d683bde7ae37"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3332920e984e5afbc50d683bde7ae37">generateDailyReport</a> ()</td></tr>
+<tr class="memdesc:ad3332920e984e5afbc50d683bde7ae37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сгенерировать ежедневный отчет  <br /></td></tr>
+<tr class="memitem:a51b6aae9f07eac4b95a01b8257fcddd3" id="r_a51b6aae9f07eac4b95a01b8257fcddd3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51b6aae9f07eac4b95a01b8257fcddd3">generateSecurityReport</a> ()</td></tr>
+<tr class="memdesc:a51b6aae9f07eac4b95a01b8257fcddd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сгенерировать отчет по безопасности  <br /></td></tr>
+<tr class="memitem:a755494686546d32f082ffb6b41bdb0e5" id="r_a755494686546d32f082ffb6b41bdb0e5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a755494686546d32f082ffb6b41bdb0e5">generateSystemReport</a> ()</td></tr>
+<tr class="memdesc:a755494686546d32f082ffb6b41bdb0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сгенерировать системный отчет  <br /></td></tr>
+<tr class="memitem:a6bb09be28bd265b91a7d8674896f3ae7" id="r_a6bb09be28bd265b91a7d8674896f3ae7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bb09be28bd265b91a7d8674896f3ae7">generateJournalReport</a> ()</td></tr>
+<tr class="memdesc:a6bb09be28bd265b91a7d8674896f3ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сгенерировать отчет по журналу systemd.  <br /></td></tr>
+<tr class="memitem:ad3b58a6d3eaa9ce65033ac80b34428f6" id="r_ad3b58a6d3eaa9ce65033ac80b34428f6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3b58a6d3eaa9ce65033ac80b34428f6">generateFullReport</a> ()</td></tr>
+<tr class="memdesc:ad3b58a6d3eaa9ce65033ac80b34428f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сгенерировать полный отчет  <br /></td></tr>
+<tr class="memitem:a90563811bd7f233b7778fac3280bacfe" id="r_a90563811bd7f233b7778fac3280bacfe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90563811bd7f233b7778fac3280bacfe">detectDistribution</a> ()</td></tr>
+<tr class="memdesc:a90563811bd7f233b7778fac3280bacfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определить дистрибутив Linux.  <br /></td></tr>
+<tr class="memitem:a11a9c105892295c3e89fc0eb5179b33f" id="r_a11a9c105892295c3e89fc0eb5179b33f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a9c105892295c3e89fc0eb5179b33f">getAvailableLogs</a> ()</td></tr>
+<tr class="memdesc:a11a9c105892295c3e89fc0eb5179b33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить список доступных файлов логов  <br /></td></tr>
+<tr class="memitem:abbbecc59a1d491d6840937996380872c" id="r_abbbecc59a1d491d6840937996380872c"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbbecc59a1d491d6840937996380872c">getLogStats</a> ()</td></tr>
+<tr class="memdesc:abbbecc59a1d491d6840937996380872c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить статистику логов  <br /></td></tr>
+<tr class="memitem:aae8c025c0332747e1b8b1041fe38a133" id="r_aae8c025c0332747e1b8b1041fe38a133"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae8c025c0332747e1b8b1041fe38a133">hasJournalSupport</a> () const</td></tr>
+<tr class="memitem:a5db8c9d4a6eb438661b33bc3c429aebc" id="r_a5db8c9d4a6eb438661b33bc3c429aebc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5db8c9d4a6eb438661b33bc3c429aebc">isRunning</a> () const</td></tr>
+<tr class="memdesc:a5db8c9d4a6eb438661b33bc3c429aebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить, запущен ли логгер  <br /></td></tr>
+<tr class="memitem:a5bd027921552771603f5a4ad1cc15caa" id="r_a5bd027921552771603f5a4ad1cc15caa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bd027921552771603f5a4ad1cc15caa">isMonitoring</a> () const</td></tr>
+<tr class="memdesc:a5bd027921552771603f5a4ad1cc15caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить, активен ли мониторинг  <br /></td></tr>
+<tr class="memitem:a71a594e7e6fc1ac81acc8777031d0bf0" id="r_a71a594e7e6fc1ac81acc8777031d0bf0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71a594e7e6fc1ac81acc8777031d0bf0">getLastError</a> () const</td></tr>
+<tr class="memdesc:a71a594e7e6fc1ac81acc8777031d0bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить последнюю ошибку  <br /></td></tr>
+<tr class="memitem:a97d888e77002a3ec1cd2502e82fc861d" id="r_a97d888e77002a3ec1cd2502e82fc861d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97d888e77002a3ec1cd2502e82fc861d">getConfigPath</a> () const</td></tr>
+<tr class="memdesc:a97d888e77002a3ec1cd2502e82fc861d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить путь к конфигурации  <br /></td></tr>
+<tr class="memitem:a9fc37cbf2b333a2b4bf56d48f41fc27c" id="r_a9fc37cbf2b333a2b4bf56d48f41fc27c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fc37cbf2b333a2b4bf56d48f41fc27c">getDistribution</a> () const</td></tr>
+<tr class="memdesc:a9fc37cbf2b333a2b4bf56d48f41fc27c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить название дистрибутива  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a20027fe7f35077743657d252ea3569b3" id="r_a20027fe7f35077743657d252ea3569b3"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20027fe7f35077743657d252ea3569b3">getSystemLogPaths</a> ()</td></tr>
+<tr class="memdesc:a20027fe7f35077743657d252ea3569b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить стандартные пути к системным логам  <br /></td></tr>
+<tr class="memitem:a0bd12ca09e40e0fdc3ad116797826ceb" id="r_a0bd12ca09e40e0fdc3ad116797826ceb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bd12ca09e40e0fdc3ad116797826ceb">isLogFile</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a0bd12ca09e40e0fdc3ad116797826ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить, является ли файл лог-файлом  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Продвинутый системный логгер, поддерживающий множественные источники логов </p>
+<p>Предоставляет всесторонние возможности логирования включая файловые логи, журнал systemd, мониторинг в реальном времени и анализ логов. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="af76ba18449e6ae475e6b410ec6c619d4" name="af76ba18449e6ae475e6b410ec6c619d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af76ba18449e6ae475e6b410ec6c619d4">&#9670;&#160;</a></span>SystemLogger() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemLogger::SystemLogger </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор по умолчанию </p>
+
+</div>
+</div>
+<a id="a037a86fb8eb17d3537a4afc78dea13fc" name="a037a86fb8eb17d3537a4afc78dea13fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a037a86fb8eb17d3537a4afc78dea13fc">&#9670;&#160;</a></span>SystemLogger() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemLogger::SystemLogger </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>configPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор с путем к файлу конфигурации </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configPath</td><td>Путь к файлу конфигурации </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abf5fa72429af6ef6af87d58ac54a5bc9" name="abf5fa72429af6ef6af87d58ac54a5bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf5fa72429af6ef6af87d58ac54a5bc9">&#9670;&#160;</a></span>~SystemLogger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemLogger::~SystemLogger </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деструктор </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a1fdad8807dd5f0362b893865b51bbc6a" name="a1fdad8807dd5f0362b893865b51bbc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdad8807dd5f0362b893865b51bbc6a">&#9670;&#160;</a></span>addWatchRule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemLogger::addWatchRule </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>ruleName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>action</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>checkJournal</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавить правило наблюдения за логами </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ruleName</td><td>Имя правила </td></tr>
+    <tr><td class="paramname">pattern</td><td>Шаблон для поиска </td></tr>
+    <tr><td class="paramname">action</td><td>Действие при срабатывании </td></tr>
+    <tr><td class="paramname">checkJournal</td><td>Проверять ли journal (по умолчанию true) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4851b07c01bf587dca14eee8747456e1" name="a4851b07c01bf587dca14eee8747456e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4851b07c01bf587dca14eee8747456e1">&#9670;&#160;</a></span>cleanOldLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemLogger::cleanOldLogs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logDir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>daysToKeep</em></span><span class="paramdefsep"> = </span><span class="paramdefval">30</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Очистить старые логи </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logDir</td><td>Директория с логами </td></tr>
+    <tr><td class="paramname">daysToKeep</td><td>Количество дней для хранения (по умолчанию 30) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6fc5107fd5e98ba5486a2927df24d9c9" name="a6fc5107fd5e98ba5486a2927df24d9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc5107fd5e98ba5486a2927df24d9c9">&#9670;&#160;</a></span>clearJournal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SystemLogger::clearJournal </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>unit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Очистить журнал systemd. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>Имя юнита для очистки (опционально) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True если успешно очищено </dd></dl>
+
+</div>
+</div>
+<a id="a3baaddbb46bc66a63b87b5bff6f1f462" name="a3baaddbb46bc66a63b87b5bff6f1f462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3baaddbb46bc66a63b87b5bff6f1f462">&#9670;&#160;</a></span>compressLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SystemLogger::compressLog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сжать файл лога </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logPath</td><td>Путь к файлу лога </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True если успешно сжато </dd></dl>
+
+</div>
+</div>
+<a id="ab6c3a8f6a1e53d9b7a6255888d966a80" name="ab6c3a8f6a1e53d9b7a6255888d966a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c3a8f6a1e53d9b7a6255888d966a80">&#9670;&#160;</a></span>countByLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, int &gt; SystemLogger::countByLevel </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>timeRange</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;today&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подсчитать записи по уровням логирования </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logPath</td><td>Путь к файлу лога </td></tr>
+    <tr><td class="paramname">timeRange</td><td>Диапазон времени (по умолчанию "today") </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Карта уровень -&gt; количество </dd></dl>
+
+</div>
+</div>
+<a id="a90563811bd7f233b7778fac3280bacfe" name="a90563811bd7f233b7778fac3280bacfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90563811bd7f233b7778fac3280bacfe">&#9670;&#160;</a></span>detectDistribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::detectDistribution </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Определить дистрибутив Linux. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Название дистрибутива </dd></dl>
+
+</div>
+</div>
+<a id="aba25df56529504c22702f499f5097238" name="aba25df56529504c22702f499f5097238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba25df56529504c22702f499f5097238">&#9670;&#160;</a></span>findTopIPs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, int &gt; SystemLogger::findTopIPs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>topN</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Найти топ IP адресов по частоте появления </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logPath</td><td>Путь к файлу лога </td></tr>
+    <tr><td class="paramname">topN</td><td>Количество топ записей (по умолчанию 10) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Карта IP -&gt; количество </dd></dl>
+
+</div>
+</div>
+<a id="a7d4cf30504f515e1222cbcd5ed3b3bb5" name="a7d4cf30504f515e1222cbcd5ed3b3bb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d4cf30504f515e1222cbcd5ed3b3bb5">&#9670;&#160;</a></span>findTopUsers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, int &gt; SystemLogger::findTopUsers </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>topN</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Найти топ пользователей по частоте появления </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logPath</td><td>Путь к файлу лога </td></tr>
+    <tr><td class="paramname">topN</td><td>Количество топ записей (по умолчанию 10) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Карта пользователь -&gt; количество </dd></dl>
+
+</div>
+</div>
+<a id="ad3332920e984e5afbc50d683bde7ae37" name="ad3332920e984e5afbc50d683bde7ae37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3332920e984e5afbc50d683bde7ae37">&#9670;&#160;</a></span>generateDailyReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::generateDailyReport </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сгенерировать ежедневный отчет </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с отчетом </dd></dl>
+
+</div>
+</div>
+<a id="ad3b58a6d3eaa9ce65033ac80b34428f6" name="ad3b58a6d3eaa9ce65033ac80b34428f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b58a6d3eaa9ce65033ac80b34428f6">&#9670;&#160;</a></span>generateFullReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::generateFullReport </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сгенерировать полный отчет </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с отчетом </dd></dl>
+
+</div>
+</div>
+<a id="a6bb09be28bd265b91a7d8674896f3ae7" name="a6bb09be28bd265b91a7d8674896f3ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb09be28bd265b91a7d8674896f3ae7">&#9670;&#160;</a></span>generateJournalReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::generateJournalReport </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сгенерировать отчет по журналу systemd. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с отчетом </dd></dl>
+
+</div>
+</div>
+<a id="a51b6aae9f07eac4b95a01b8257fcddd3" name="a51b6aae9f07eac4b95a01b8257fcddd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b6aae9f07eac4b95a01b8257fcddd3">&#9670;&#160;</a></span>generateSecurityReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::generateSecurityReport </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сгенерировать отчет по безопасности </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с отчетом </dd></dl>
+
+</div>
+</div>
+<a id="a755494686546d32f082ffb6b41bdb0e5" name="a755494686546d32f082ffb6b41bdb0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a755494686546d32f082ffb6b41bdb0e5">&#9670;&#160;</a></span>generateSystemReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::generateSystemReport </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сгенерировать системный отчет </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с отчетом </dd></dl>
+
+</div>
+</div>
+<a id="a11a9c105892295c3e89fc0eb5179b33f" name="a11a9c105892295c3e89fc0eb5179b33f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a9c105892295c3e89fc0eb5179b33f">&#9670;&#160;</a></span>getAvailableLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::getAvailableLogs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить список доступных файлов логов </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор путей к файлам логов </dd></dl>
+
+</div>
+</div>
+<a id="a97d888e77002a3ec1cd2502e82fc861d" name="a97d888e77002a3ec1cd2502e82fc861d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97d888e77002a3ec1cd2502e82fc861d">&#9670;&#160;</a></span>getConfigPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::getConfigPath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить путь к конфигурации </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Путь к файлу конфигурации </dd></dl>
+
+</div>
+</div>
+<a id="a9fc37cbf2b333a2b4bf56d48f41fc27c" name="a9fc37cbf2b333a2b4bf56d48f41fc27c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc37cbf2b333a2b4bf56d48f41fc27c">&#9670;&#160;</a></span>getDistribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::getDistribution </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить название дистрибутива </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Название дистрибутива </dd></dl>
+
+</div>
+</div>
+<a id="aacf6683b087d9be930111c207e09d70c" name="aacf6683b087d9be930111c207e09d70c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf6683b087d9be930111c207e09d70c">&#9670;&#160;</a></span>getJournalStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, int &gt; SystemLogger::getJournalStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить статистику журнала systemd. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Карта с статистикой </dd></dl>
+
+</div>
+</div>
+<a id="aa7e24a1ec59aacb1921408277e71bfa7" name="aa7e24a1ec59aacb1921408277e71bfa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e24a1ec59aacb1921408277e71bfa7">&#9670;&#160;</a></span>getJournalUnits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::getJournalUnits </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить список доступных юнитов systemd. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор имен юнитов </dd></dl>
+
+</div>
+</div>
+<a id="a71a594e7e6fc1ac81acc8777031d0bf0" name="a71a594e7e6fc1ac81acc8777031d0bf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71a594e7e6fc1ac81acc8777031d0bf0">&#9670;&#160;</a></span>getLastError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SystemLogger::getLastError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить последнюю ошибку </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Сообщение об ошибке </dd></dl>
+
+</div>
+</div>
+<a id="abbbecc59a1d491d6840937996380872c" name="abbbecc59a1d491d6840937996380872c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbbecc59a1d491d6840937996380872c">&#9670;&#160;</a></span>getLogStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, std::string &gt; SystemLogger::getLogStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить статистику логов </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Карта с статистикой </dd></dl>
+
+</div>
+</div>
+<a id="a20027fe7f35077743657d252ea3569b3" name="a20027fe7f35077743657d252ea3569b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20027fe7f35077743657d252ea3569b3">&#9670;&#160;</a></span>getSystemLogPaths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::getSystemLogPaths </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить стандартные пути к системным логам </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор путей к файлам логов </dd></dl>
+
+</div>
+</div>
+<a id="aae8c025c0332747e1b8b1041fe38a133" name="aae8c025c0332747e1b8b1041fe38a133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8c025c0332747e1b8b1041fe38a133">&#9670;&#160;</a></span>hasJournalSupport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SystemLogger::hasJournalSupport </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29a901d14bf4595cafc76583d2616f0b" name="a29a901d14bf4595cafc76583d2616f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29a901d14bf4595cafc76583d2616f0b">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SystemLogger::initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализировать логгер с настройками по умолчанию </p>
+<dl class="section return"><dt>Возвращает</dt><dd>True если инициализация успешна </dd></dl>
+
+</div>
+</div>
+<a id="a0bd12ca09e40e0fdc3ad116797826ceb" name="a0bd12ca09e40e0fdc3ad116797826ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bd12ca09e40e0fdc3ad116797826ceb">&#9670;&#160;</a></span>isLogFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SystemLogger::isLogFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверить, является ли файл лог-файлом </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Путь к файлу для проверки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True если является лог-файлом </dd></dl>
+
+</div>
+</div>
+<a id="a5bd027921552771603f5a4ad1cc15caa" name="a5bd027921552771603f5a4ad1cc15caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd027921552771603f5a4ad1cc15caa">&#9670;&#160;</a></span>isMonitoring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SystemLogger::isMonitoring </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверить, активен ли мониторинг </p>
+<dl class="section return"><dt>Возвращает</dt><dd>True если активен </dd></dl>
+
+</div>
+</div>
+<a id="a5db8c9d4a6eb438661b33bc3c429aebc" name="a5db8c9d4a6eb438661b33bc3c429aebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db8c9d4a6eb438661b33bc3c429aebc">&#9670;&#160;</a></span>isRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SystemLogger::isRunning </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверить, запущен ли логгер </p>
+<dl class="section return"><dt>Возвращает</dt><dd>True если запущен </dd></dl>
+
+</div>
+</div>
+<a id="a892d592b4c25ab4d437fd99131d53b9d" name="a892d592b4c25ab4d437fd99131d53b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892d592b4c25ab4d437fd99131d53b9d">&#9670;&#160;</a></span>listWatchRules()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::listWatchRules </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить список всех правил наблюдения </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор имен правил </dd></dl>
+
+</div>
+</div>
+<a id="a2a29512793f33dc44f4cde6ebadbda34" name="a2a29512793f33dc44f4cde6ebadbda34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a29512793f33dc44f4cde6ebadbda34">&#9670;&#160;</a></span>readJournal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::readJournal </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>unit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>lines</em></span><span class="paramdefsep"> = </span><span class="paramdefval">100</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прочитать записи из журнала systemd. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>Имя юнита systemd (опционально) </td></tr>
+    <tr><td class="paramname">lines</td><td>Количество строк для чтения (по умолчанию 100) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор записей журнала </dd></dl>
+
+</div>
+</div>
+<a id="a86422bd1b2311f636674f543b2a23eb9" name="a86422bd1b2311f636674f543b2a23eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86422bd1b2311f636674f543b2a23eb9">&#9670;&#160;</a></span>readLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::readLog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>lines</em></span><span class="paramdefsep"> = </span><span class="paramdefval">100</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прочитать строки из файла лога </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logPath</td><td>Путь к файлу лога </td></tr>
+    <tr><td class="paramname">lines</td><td>Количество строк для чтения (по умолчанию 100) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор строк лога </dd></dl>
+
+</div>
+</div>
+<a id="a0e4b52b719deae18eedea9be54842d8a" name="a0e4b52b719deae18eedea9be54842d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4b52b719deae18eedea9be54842d8a">&#9670;&#160;</a></span>removeWatchRule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemLogger::removeWatchRule </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>ruleName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удалить правило наблюдения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ruleName</td><td>Имя правила для удаления </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0e8883c5d55099cf1881cc6354c9857" name="ae0e8883c5d55099cf1881cc6354c9857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e8883c5d55099cf1881cc6354c9857">&#9670;&#160;</a></span>rotateLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SystemLogger::rotateLog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Повернуть (ротировать) файл лога </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logPath</td><td>Путь к файлу лога </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True если успешно ротировано </dd></dl>
+
+</div>
+</div>
+<a id="a24d0360d8f20937568d298e351e6edd3" name="a24d0360d8f20937568d298e351e6edd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d0360d8f20937568d298e351e6edd3">&#9670;&#160;</a></span>searchJournal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::searchJournal </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>keyword</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>unit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>timeFrom</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>timeTo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>priority</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поиск в журнале systemd по ключевым словам </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyword</td><td>Ключевое слово для поиска </td></tr>
+    <tr><td class="paramname">unit</td><td>Имя юнита systemd (опционально) </td></tr>
+    <tr><td class="paramname">timeFrom</td><td>Фильтр времени начала (опционально) </td></tr>
+    <tr><td class="paramname">timeTo</td><td>Фильтр времени окончания (опционально) </td></tr>
+    <tr><td class="paramname">priority</td><td>Фильтр приоритета (опционально) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор соответствующих записей журнала </dd></dl>
+
+</div>
+</div>
+<a id="aa7904c99a024132037434fa99222c1c8" name="aa7904c99a024132037434fa99222c1c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7904c99a024132037434fa99222c1c8">&#9670;&#160;</a></span>searchLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::searchLog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>keyword</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>timeFrom</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>timeTo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поиск в файле лога по ключевым словам в диапазоне времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logPath</td><td>Путь к файлу лога </td></tr>
+    <tr><td class="paramname">keyword</td><td>Ключевое слово для поиска </td></tr>
+    <tr><td class="paramname">timeFrom</td><td>Фильтр времени начала (опционально) </td></tr>
+    <tr><td class="paramname">timeTo</td><td>Фильтр времени окончания (опционально) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор соответствующих строк лога </dd></dl>
+
+</div>
+</div>
+<a id="a19530240e7da8e046be794935503e65a" name="a19530240e7da8e046be794935503e65a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19530240e7da8e046be794935503e65a">&#9670;&#160;</a></span>startMonitoring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemLogger::startMonitoring </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Начать мониторинг логов в реальном времени </p>
+
+</div>
+</div>
+<a id="ad7ab4ab42aca33305ad158a840fe7e94" name="ad7ab4ab42aca33305ad158a840fe7e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ab4ab42aca33305ad158a840fe7e94">&#9670;&#160;</a></span>stopMonitoring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemLogger::stopMonitoring </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Остановить мониторинг логов в реальном времени </p>
+
+</div>
+</div>
+<a id="a6ae0d2fbe6fb6e7c7fcf9ee6f1110c07" name="a6ae0d2fbe6fb6e7c7fcf9ee6f1110c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae0d2fbe6fb6e7c7fcf9ee6f1110c07">&#9670;&#160;</a></span>tailLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SystemLogger::tailLog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>logPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>lines</em></span><span class="paramdefsep"> = </span><span class="paramdefval">50</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить последние N строк из файла лога (функциональность tail). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logPath</td><td>Путь к файлу лога </td></tr>
+    <tr><td class="paramname">lines</td><td>Количество строк для получения (по умолчанию 50) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор последних строк лога </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>smlog/<a class="el" href="SystemLogger_8h_source.html">SystemLogger.h</a></li>
+<li>smlog/<a class="el" href="SystemLogger_8cpp.html">SystemLogger.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classSystemLogger.html">SystemLogger</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

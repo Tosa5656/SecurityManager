@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1095 - Non-Application Layer Protocol</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1095 - Non-Application Layer Protocol</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Использование сетевых протоколов низкого уровня (не прикладного уровня) для обхода традиционных систем обнаружения и коммуникации с command and control серверами. Это включает протоколы вроде ICMP, DNS, NTP и другие, которые обычно не мониторятся глубоко.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>DNS tunneling для скрытой коммуникации</li>
+        <li>ICMP tunneling (ping tunnels)</li>
+        <li>NTP amplification attacks</li>
+        <li>Использование протоколов вроде SNMP, NetBIOS</li>
+        <li>Protocol abuse для data exfiltration</li>
+        <li>Covert channels через legitimate протоколы</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1095/" target="_blank">T1095 - Non-Application Layer Protocol</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Мониторинг нестандартного трафика:</strong> smnet stats | grep -E "(icmp|dns|ntp|snmp)"</li>
+        <li><strong>Анализ пакетов низкого уровня:</strong> smnet connection с детальным анализом</li>
+        <li><strong>Обнаружение туннелей:</strong> smnet scan для выявления подозрительных соединений</li>
+        <li><strong>Мониторинг DNS запросов:</strong> анализ необычных DNS паттернов</li>
+    </ul>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Анализ сетевых протоколов:</strong> smlog search "icmp|dns|ntp" /var/log/syslog</li>
+        <li><strong>Мониторинг DNS логов:</strong> smlog read /var/log/named/query.log</li>
+        <li><strong>Отслеживание необычных соединений:</strong> smlog search "unusual|protocol" /var/log/kern.log</li>
+        <li><strong>Анализ ICMP трафика:</strong> smlog monitor для real-time анализа</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Мониторинг SSH over unusual protocols:</strong> smssh monitor</li>
+        <li><strong>Защита от protocol abuse:</strong> smssh apply /etc/ssh/sshd_config</li>
+        <li><strong>Анализ сетевой активности:</strong> smssh parse-log /var/log/auth.log</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Настройка firewall для ограничения протоколов</li>
+        <li>Использование IDS/IPS с поддержкой protocol analysis</li>
+        <li>Мониторинг DNS трафика на туннелирование</li>
+        <li>Отключение неиспользуемых протоколов</li>
+        <li>Регулярный анализ сетевого трафика</li>
+        <li>Использование DPI (Deep Packet Inspection)</li>
+        <li>Настройка rate limiting для ICMP/DNS</li>
+        <li>Мониторинг на protocol abuse patterns</li>
+    </ul>
+
+    <h2>Пример обнаружения</h2>
+    <pre>
+$ smnet stats
+Network Statistics:
+  ICMP packets: 1502 (unusually high)
+  DNS queries: 4502 (possible tunneling)
+  NTP requests: 320 (amplification pattern)
+  SNMP traps: 89 (monitoring traffic)
+
+$ smlog search "icmp" /var/log/kern.log
+[2026-01-04 17:15:22] kernel: ICMP tunnel detected from 192.168.1.100
+[2026-01-04 17:15:25] kernel: Large ICMP payload: 2048 bytes
+[2026-01-04 17:16:01] kernel: ICMP rate limit exceeded
+
+$ smnet connection | grep icmp
+icmp 192.168.1.100 -> 203.0.113.1    (Large payload detected)
+icmp 192.168.1.100 -> 198.51.100.1   (Suspicious pattern)
+    </pre>
+</body>
+</html>

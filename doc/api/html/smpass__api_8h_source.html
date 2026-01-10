@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Исходный файл api/include/smpass_api.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('smpass__api_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">smpass_api.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="smpass__api_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SMPASS_API_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SMPASS_API_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceSecurityManager.html">SecurityManager</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">   21</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">PasswordError</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9ad0749aaba8b833466dfcbb0428e4f89c">   23</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a> = 0,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9acd54d99c8efb3c2db794197045f5b83c">   24</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76acd54d99c8efb3c2db794197045f5b83c">FILE_NOT_FOUND</a> = 1,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a255df50c140519133f1489ab44a389d9">   25</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9">PERMISSION_DENIED</a> = 2,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9af295a0c3e37c94f078e1c5476479132d">   26</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d">INVALID_ARGUMENT</a> = 3,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a201c6bb72da0325054ce69d755dafbe5">   27</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a201c6bb72da0325054ce69d755dafbe5">ENCRYPTION_ERROR</a> = 5,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a7ae7f2a13f0d5a18b0db91af9c5aef34">   28</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a7ae7f2a13f0d5a18b0db91af9c5aef34">STORAGE_ERROR</a> = 6</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html">   35</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="structSecurityManager_1_1PasswordResult.html#ae2505bf7e2dea5222763d2212fb82fd2">PasswordResult</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html#ab22375347306eb3a29380a380e0dd74f">   37</a></span>        <a class="code hl_enumeration" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">PasswordError</a> <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#ab22375347306eb3a29380a380e0dd74f">code</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html#aa3ae6d3334bbe50466d618fddcb7270d">   38</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#aa3ae6d3334bbe50466d618fddcb7270d">message</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html#a11e0d7ada7e464600e1995251547afd3">   39</a></span>        T <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#a11e0d7ada7e464600e1995251547afd3">data</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html#ae2505bf7e2dea5222763d2212fb82fd2">   41</a></span>        <a class="code hl_function" href="structSecurityManager_1_1PasswordResult.html#ae2505bf7e2dea5222763d2212fb82fd2">PasswordResult</a>() : <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#ab22375347306eb3a29380a380e0dd74f">code</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">PasswordError</a>::<a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a>) {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html#a0784cbb52dbb18e95e090986abf1f3c4">   42</a></span>        <a class="code hl_function" href="structSecurityManager_1_1PasswordResult.html#a0784cbb52dbb18e95e090986abf1f3c4">PasswordResult</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">PasswordError</a> c, <span class="keyword">const</span> std::string&amp; msg) : <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#ab22375347306eb3a29380a380e0dd74f">code</a>(c), <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#aa3ae6d3334bbe50466d618fddcb7270d">message</a>(msg) {}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html#a0cc213ba9d0f3ecf95d4e619b99f28b0">   43</a></span>        <a class="code hl_function" href="structSecurityManager_1_1PasswordResult.html#a0cc213ba9d0f3ecf95d4e619b99f28b0">PasswordResult</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">PasswordError</a> c, <span class="keyword">const</span> std::string&amp; msg, <span class="keyword">const</span> T&amp; d) : <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#ab22375347306eb3a29380a380e0dd74f">code</a>(c), <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#aa3ae6d3334bbe50466d618fddcb7270d">message</a>(msg), <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#a11e0d7ada7e464600e1995251547afd3">data</a>(d) {}</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html#a5039977b0cec1d2cfd7d1ee4b1d0c472">   45</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="structSecurityManager_1_1PasswordResult.html#a5039977b0cec1d2cfd7d1ee4b1d0c472">success</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structSecurityManager_1_1PasswordResult.html#ab22375347306eb3a29380a380e0dd74f">code</a> == <a class="code hl_enumvalue" href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9ad0749aaba8b833466dfcbb0428e4f89c">PasswordError::SUCCESS</a>; }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordResult.html#acd9d7aa321570ea895661922afcf9a09">   46</a></span>        <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="structSecurityManager_1_1PasswordResult.html#a5039977b0cec1d2cfd7d1ee4b1d0c472">success</a>(); }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3">   52</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3">HashAlgorithm</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3ab505df5aa812b4f320420b8a952f20e5">   54</a></span>        <a class="code hl_class" href="classSHA256.html">SHA256</a>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3a91a6b83597d72bb96fe15edf9688bc2d">   55</a></span>        <a class="code hl_class" href="classAES256.html">AES256</a></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordEntry.html">   61</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSecurityManager_1_1PasswordEntry.html">PasswordEntry</a></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordEntry.html#ac2e4bd275f70688cc1cd9382aa2c12a5">   63</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PasswordEntry.html#ac2e4bd275f70688cc1cd9382aa2c12a5">service</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordEntry.html#ae4e83683fe6d6b6ef41cce89eb0b8957">   64</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PasswordEntry.html#ae4e83683fe6d6b6ef41cce89eb0b8957">username</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordEntry.html#a28745ab58b2e77bceb408bd7ff8df80b">   65</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PasswordEntry.html#a28745ab58b2e77bceb408bd7ff8df80b">password</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordEntry.html#af202bd75ebc6ba7488fe6bb8cc8e2156">   66</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PasswordEntry.html#af202bd75ebc6ba7488fe6bb8cc8e2156">created_date</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PasswordEntry.html#a9d549f80eef6c3d0ae8baff806fbea06">   67</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PasswordEntry.html#a9d549f80eef6c3d0ae8baff806fbea06">last_modified</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="};">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classSecurityManager_1_1PasswordManager.html">   73</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a816ddd5cebc4c4ce6b6c43a1a97062b4">PasswordManager</a></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a816ddd5cebc4c4ce6b6c43a1a97062b4">PasswordManager</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classSecurityManager_1_1PasswordManager.html#a2b4e44da19a12ad9aa18a26df6e708d9">   77</a></span>        <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a2b4e44da19a12ad9aa18a26df6e708d9">~PasswordManager</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_struct" href="structSecurityManager_1_1PasswordResult.html">PasswordResult&lt;std::string&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a35ced825728ba7c9faf98022c59bbf49">hashString</a>(<span class="keyword">const</span> std::string&amp; input, <a class="code hl_enumeration" href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3">HashAlgorithm</a> algorithm);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_struct" href="structSecurityManager_1_1PasswordResult.html">PasswordResult&lt;bool&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a5a13477fb3dea3075280fd1aa3590d43">addPassword</a>(<span class="keyword">const</span> std::string&amp; service, <span class="keyword">const</span> std::string&amp; username, <span class="keyword">const</span> std::string&amp; password, <span class="keyword">const</span> std::string&amp; description = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_struct" href="structSecurityManager_1_1PasswordResult.html">PasswordResult&lt;PasswordEntry&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a8c08083999eea359ee38df89ec20e28e">getPassword</a>(<span class="keyword">const</span> std::string&amp; service);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_struct" href="structSecurityManager_1_1PasswordResult.html">PasswordResult&lt;bool&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a151abd49d6f70f26fd477b7daa81ffb9">updatePassword</a>(<span class="keyword">const</span> std::string&amp; service, <span class="keyword">const</span> std::string&amp; new_password);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_struct" href="structSecurityManager_1_1PasswordResult.html">PasswordResult&lt;bool&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a2a631baf12bd78c9a060192dab39ca59">deletePassword</a>(<span class="keyword">const</span> std::string&amp; service);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_struct" href="structSecurityManager_1_1PasswordResult.html">PasswordResult&lt;std::vector&lt;std::string&gt;</a>&gt; <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a65315c876b25890f63ae805224b1462f">listServices</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_struct" href="structSecurityManager_1_1PasswordResult.html">PasswordResult&lt;std::vector&lt;PasswordEntry&gt;</a>&gt; <a class="code hl_function" href="classSecurityManager_1_1PasswordManager.html#a6381b141793ca5c7d9e178b7b07c3a3d">searchPasswords</a>(<span class="keyword">const</span> std::string&amp; keyword);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keyword">class </span><a class="code hl_class" href="classSecurityManager_1_1PasswordManager_1_1Impl.html">Impl</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        std::unique_ptr&lt;Impl&gt; impl_;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    };</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>}</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassAES256_html"><div class="ttname"><a href="classAES256.html">AES256</a></div><div class="ttdoc">Класс шифрования/дешифрования AES-256 с использованием OpenSSL.</div><div class="ttdef"><b>Определения</b> aes256.h:29</div></div>
+<div class="ttc" id="aclassSHA256_html"><div class="ttname"><a href="classSHA256.html">SHA256</a></div><div class="ttdoc">Класс хэширования SHA-256 с поддержкой соли</div><div class="ttdef"><b>Определения</b> sha256.h:25</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_1_1Impl_html"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager_1_1Impl.html">SecurityManager::PasswordManager::Impl</a></div><div class="ttdef"><b>Определения</b> smpass_api.cpp:19</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a151abd49d6f70f26fd477b7daa81ffb9"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a151abd49d6f70f26fd477b7daa81ffb9">SecurityManager::PasswordManager::updatePassword</a></div><div class="ttdeci">PasswordResult&lt; bool &gt; updatePassword(const std::string &amp;service, const std::string &amp;new_password)</div><div class="ttdoc">Обновить существующий пароль</div><div class="ttdef"><b>Определения</b> smpass_api.cpp:266</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a2a631baf12bd78c9a060192dab39ca59"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a2a631baf12bd78c9a060192dab39ca59">SecurityManager::PasswordManager::deletePassword</a></div><div class="ttdeci">PasswordResult&lt; bool &gt; deletePassword(const std::string &amp;service)</div><div class="ttdoc">Удалить пароль</div><div class="ttdef"><b>Определения</b> smpass_api.cpp:285</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a2b4e44da19a12ad9aa18a26df6e708d9"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a2b4e44da19a12ad9aa18a26df6e708d9">SecurityManager::PasswordManager::~PasswordManager</a></div><div class="ttdeci">~PasswordManager()</div><div class="ttdoc">Деструктор</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a35ced825728ba7c9faf98022c59bbf49"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a35ced825728ba7c9faf98022c59bbf49">SecurityManager::PasswordManager::hashString</a></div><div class="ttdeci">PasswordResult&lt; std::string &gt; hashString(const std::string &amp;input, HashAlgorithm algorithm)</div><div class="ttdoc">Хешировать строку нужных алгоритмом</div><div class="ttdef"><b>Определения</b> smpass_api.cpp:191</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a5a13477fb3dea3075280fd1aa3590d43"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a5a13477fb3dea3075280fd1aa3590d43">SecurityManager::PasswordManager::addPassword</a></div><div class="ttdeci">PasswordResult&lt; bool &gt; addPassword(const std::string &amp;service, const std::string &amp;username, const std::string &amp;password, const std::string &amp;description=&quot;&quot;)</div><div class="ttdoc">Добавить новый пароль</div><div class="ttdef"><b>Определения</b> smpass_api.cpp:223</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a6381b141793ca5c7d9e178b7b07c3a3d"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a6381b141793ca5c7d9e178b7b07c3a3d">SecurityManager::PasswordManager::searchPasswords</a></div><div class="ttdeci">PasswordResult&lt; std::vector&lt; PasswordEntry &gt; &gt; searchPasswords(const std::string &amp;keyword)</div><div class="ttdoc">Поиск пароля по ключевому слову</div><div class="ttdef"><b>Определения</b> smpass_api.cpp:321</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a65315c876b25890f63ae805224b1462f"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a65315c876b25890f63ae805224b1462f">SecurityManager::PasswordManager::listServices</a></div><div class="ttdeci">PasswordResult&lt; std::vector&lt; std::string &gt; &gt; listServices()</div><div class="ttdoc">Получить список всех сервисов в хранилище</div><div class="ttdef"><b>Определения</b> smpass_api.cpp:303</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a816ddd5cebc4c4ce6b6c43a1a97062b4"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a816ddd5cebc4c4ce6b6c43a1a97062b4">SecurityManager::PasswordManager::PasswordManager</a></div><div class="ttdeci">PasswordManager()</div><div class="ttdoc">Конструктор - инициализирует менеджер паролей</div><div class="ttdef"><b>Определения</b> smpass_api.cpp:176</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1PasswordManager_html_a8c08083999eea359ee38df89ec20e28e"><div class="ttname"><a href="classSecurityManager_1_1PasswordManager.html#a8c08083999eea359ee38df89ec20e28e">SecurityManager::PasswordManager::getPassword</a></div><div class="ttdeci">PasswordResult&lt; PasswordEntry &gt; getPassword(const std::string &amp;service)</div><div class="ttdoc">Получить пароль по сервису</div><div class="ttdef"><b>Определения</b> smpass_api.cpp:245</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html"><div class="ttname"><a href="namespaceSecurityManager.html">SecurityManager</a></div><div class="ttdef"><b>Определения</b> securitymanager.h:18</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_a332c3b1c0062e31f9be29430014bf8f9"><div class="ttname"><a href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9">SecurityManager::PasswordError</a></div><div class="ttdeci">PasswordError</div><div class="ttdoc">Коды ошибок</div><div class="ttdef"><b>Определения</b> smpass_api.h:22</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_a332c3b1c0062e31f9be29430014bf8f9a201c6bb72da0325054ce69d755dafbe5"><div class="ttname"><a href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a201c6bb72da0325054ce69d755dafbe5">SecurityManager::PasswordError::ENCRYPTION_ERROR</a></div><div class="ttdeci">@ ENCRYPTION_ERROR</div><div class="ttdef"><b>Определения</b> smpass_api.h:27</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_a332c3b1c0062e31f9be29430014bf8f9a7ae7f2a13f0d5a18b0db91af9c5aef34"><div class="ttname"><a href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9a7ae7f2a13f0d5a18b0db91af9c5aef34">SecurityManager::PasswordError::STORAGE_ERROR</a></div><div class="ttdeci">@ STORAGE_ERROR</div><div class="ttdef"><b>Определения</b> smpass_api.h:28</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_a332c3b1c0062e31f9be29430014bf8f9ad0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9ad0749aaba8b833466dfcbb0428e4f89c">SecurityManager::PasswordError::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Определения</b> smpass_api.h:23</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76acd54d99c8efb3c2db794197045f5b83c"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76acd54d99c8efb3c2db794197045f5b83c">SecurityManager::DatabaseError::FILE_NOT_FOUND</a></div><div class="ttdeci">@ FILE_NOT_FOUND</div><div class="ttdef"><b>Определения</b> smdb_api.h:25</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SecurityManager::DatabaseError::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Определения</b> smdb_api.h:23</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d">SecurityManager::DatabaseError::INVALID_ARGUMENT</a></div><div class="ttdeci">@ INVALID_ARGUMENT</div><div class="ttdef"><b>Определения</b> smdb_api.h:27</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_aea837ea823c05b3e6a327dcaad62d7b3"><div class="ttname"><a href="namespaceSecurityManager.html#aea837ea823c05b3e6a327dcaad62d7b3">SecurityManager::HashAlgorithm</a></div><div class="ttdeci">HashAlgorithm</div><div class="ttdoc">Доступные алгоритмы хеширования</div><div class="ttdef"><b>Определения</b> smpass_api.h:53</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9"><div class="ttname"><a href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9">SecurityManager::LogError::PERMISSION_DENIED</a></div><div class="ttdeci">@ PERMISSION_DENIED</div><div class="ttdef"><b>Определения</b> smlog_api.h:24</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordEntry_html"><div class="ttname"><a href="structSecurityManager_1_1PasswordEntry.html">SecurityManager::PasswordEntry</a></div><div class="ttdoc">Структура строки пароля</div><div class="ttdef"><b>Определения</b> smpass_api.h:62</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordEntry_html_a28745ab58b2e77bceb408bd7ff8df80b"><div class="ttname"><a href="structSecurityManager_1_1PasswordEntry.html#a28745ab58b2e77bceb408bd7ff8df80b">SecurityManager::PasswordEntry::password</a></div><div class="ttdeci">std::string password</div><div class="ttdef"><b>Определения</b> smpass_api.h:65</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordEntry_html_a9d549f80eef6c3d0ae8baff806fbea06"><div class="ttname"><a href="structSecurityManager_1_1PasswordEntry.html#a9d549f80eef6c3d0ae8baff806fbea06">SecurityManager::PasswordEntry::last_modified</a></div><div class="ttdeci">std::string last_modified</div><div class="ttdef"><b>Определения</b> smpass_api.h:67</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordEntry_html_ac2e4bd275f70688cc1cd9382aa2c12a5"><div class="ttname"><a href="structSecurityManager_1_1PasswordEntry.html#ac2e4bd275f70688cc1cd9382aa2c12a5">SecurityManager::PasswordEntry::service</a></div><div class="ttdeci">std::string service</div><div class="ttdef"><b>Определения</b> smpass_api.h:63</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordEntry_html_ae4e83683fe6d6b6ef41cce89eb0b8957"><div class="ttname"><a href="structSecurityManager_1_1PasswordEntry.html#ae4e83683fe6d6b6ef41cce89eb0b8957">SecurityManager::PasswordEntry::username</a></div><div class="ttdeci">std::string username</div><div class="ttdef"><b>Определения</b> smpass_api.h:64</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordEntry_html_af202bd75ebc6ba7488fe6bb8cc8e2156"><div class="ttname"><a href="structSecurityManager_1_1PasswordEntry.html#af202bd75ebc6ba7488fe6bb8cc8e2156">SecurityManager::PasswordEntry::created_date</a></div><div class="ttdeci">std::string created_date</div><div class="ttdef"><b>Определения</b> smpass_api.h:66</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordResult_html"><div class="ttname"><a href="structSecurityManager_1_1PasswordResult.html">SecurityManager::PasswordResult</a></div><div class="ttdoc">Обвертка результатов работы с паролями</div><div class="ttdef"><b>Определения</b> smpass_api.h:36</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordResult_html_a0784cbb52dbb18e95e090986abf1f3c4"><div class="ttname"><a href="structSecurityManager_1_1PasswordResult.html#a0784cbb52dbb18e95e090986abf1f3c4">SecurityManager::PasswordResult::PasswordResult</a></div><div class="ttdeci">PasswordResult(PasswordError c, const std::string &amp;msg)</div><div class="ttdef"><b>Определения</b> smpass_api.h:42</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordResult_html_a0cc213ba9d0f3ecf95d4e619b99f28b0"><div class="ttname"><a href="structSecurityManager_1_1PasswordResult.html#a0cc213ba9d0f3ecf95d4e619b99f28b0">SecurityManager::PasswordResult::PasswordResult</a></div><div class="ttdeci">PasswordResult(PasswordError c, const std::string &amp;msg, const T &amp;d)</div><div class="ttdef"><b>Определения</b> smpass_api.h:43</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordResult_html_a11e0d7ada7e464600e1995251547afd3"><div class="ttname"><a href="structSecurityManager_1_1PasswordResult.html#a11e0d7ada7e464600e1995251547afd3">SecurityManager::PasswordResult::data</a></div><div class="ttdeci">T data</div><div class="ttdef"><b>Определения</b> smpass_api.h:39</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordResult_html_a5039977b0cec1d2cfd7d1ee4b1d0c472"><div class="ttname"><a href="structSecurityManager_1_1PasswordResult.html#a5039977b0cec1d2cfd7d1ee4b1d0c472">SecurityManager::PasswordResult::success</a></div><div class="ttdeci">bool success() const</div><div class="ttdef"><b>Определения</b> smpass_api.h:45</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordResult_html_aa3ae6d3334bbe50466d618fddcb7270d"><div class="ttname"><a href="structSecurityManager_1_1PasswordResult.html#aa3ae6d3334bbe50466d618fddcb7270d">SecurityManager::PasswordResult::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Определения</b> smpass_api.h:38</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordResult_html_ab22375347306eb3a29380a380e0dd74f"><div class="ttname"><a href="structSecurityManager_1_1PasswordResult.html#ab22375347306eb3a29380a380e0dd74f">SecurityManager::PasswordResult::code</a></div><div class="ttdeci">PasswordError code</div><div class="ttdef"><b>Определения</b> smpass_api.h:37</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PasswordResult_html_ae2505bf7e2dea5222763d2212fb82fd2"><div class="ttname"><a href="structSecurityManager_1_1PasswordResult.html#ae2505bf7e2dea5222763d2212fb82fd2">SecurityManager::PasswordResult::PasswordResult</a></div><div class="ttdeci">PasswordResult()</div><div class="ttdef"><b>Определения</b> smpass_api.h:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_0188a3e6da905bc60aceb35bf790b8c9.html">api</a></li><li class="navelem"><a href="dir_cf4c4a12eb9d2821032e40f1ddeaaf89.html">include</a></li><li class="navelem"><a href="smpass__api_8h.html">smpass_api.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

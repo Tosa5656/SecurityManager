@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Класс SecurityManager::AttackDatabase::Impl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classSecurityManager_1_1AttackDatabase_1_1Impl.html','','classSecurityManager_1_1AttackDatabase_1_1Impl-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс SecurityManager::AttackDatabase::Impl</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Реализация для класса <a class="el" href="classSecurityManager_1_1AttackDatabase.html" title="Основной класс базы данных">AttackDatabase</a>.  
+ <a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a5bafb650f046c469c1fe7e1727c31da4" id="r_a5bafb650f046c469c1fe7e1727c31da4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bafb650f046c469c1fe7e1727c31da4">Impl</a> ()</td></tr>
+<tr class="memitem:a40e0a8ecaaeec427d6eedb3a9d15b3b4" id="r_a40e0a8ecaaeec427d6eedb3a9d15b3b4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structSecurityManager_1_1AttackSearchResult.html">AttackSearchResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e0a8ecaaeec427d6eedb3a9d15b3b4">searchAttacks</a> (const std::string &amp;keyword, const std::string &amp;tactic, const std::string &amp;platform)</td></tr>
+<tr class="memitem:aac935e796c0cc14e33d1e24bdbf7f9fa" id="r_aac935e796c0cc14e33d1e24bdbf7f9fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1AttackInfo.html">AttackInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac935e796c0cc14e33d1e24bdbf7f9fa">getAttackInfo</a> (const std::string &amp;attack_id)</td></tr>
+<tr class="memitem:a061aade5265e0b68b434b01bdbccc9e0" id="r_a061aade5265e0b68b434b01bdbccc9e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1ProtectionGuidance.html">ProtectionGuidance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a061aade5265e0b68b434b01bdbccc9e0">getProtectionGuidance</a> (const std::string &amp;attack_id)</td></tr>
+<tr class="memitem:a6875b26652f82acff005d28ef4ee7b87" id="r_a6875b26652f82acff005d28ef4ee7b87"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6875b26652f82acff005d28ef4ee7b87">getAttacksByTactic</a> (const std::string &amp;tactic)</td></tr>
+<tr class="memitem:ab1ef10109543be3353c3c8ca269b0e66" id="r_ab1ef10109543be3353c3c8ca269b0e66"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1ef10109543be3353c3c8ca269b0e66">getAttacksByPlatform</a> (const std::string &amp;platform)</td></tr>
+<tr class="memitem:ab1170fe4108eb7be1223cabeaa821fe9" id="r_ab1170fe4108eb7be1223cabeaa821fe9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1170fe4108eb7be1223cabeaa821fe9">listAllAttacks</a> ()</td></tr>
+<tr class="memitem:a695b76e3e317d1323f5f9fa329d5ace2" id="r_a695b76e3e317d1323f5f9fa329d5ace2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSecurityManager_1_1DatabaseStats.html">DatabaseStats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a695b76e3e317d1323f5f9fa329d5ace2">getDatabaseStats</a> ()</td></tr>
+<tr class="memitem:a9cff5a51d7a21ddc309135fadcd6d59e" id="r_a9cff5a51d7a21ddc309135fadcd6d59e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cff5a51d7a21ddc309135fadcd6d59e">exportAttackInfo</a> (const std::string &amp;attack_id, const std::string &amp;format, const std::string &amp;output_file)</td></tr>
+<tr class="memitem:a97e453395abc32809d56af90d086b581" id="r_a97e453395abc32809d56af90d086b581"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97e453395abc32809d56af90d086b581">getRelatedAttacks</a> (const std::string &amp;attack_id)</td></tr>
+<tr class="memitem:ad47a50d54381b25a815d6383c09ac93c" id="r_ad47a50d54381b25a815d6383c09ac93c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad47a50d54381b25a815d6383c09ac93c">getMitigationStrategies</a> (const std::string &amp;attack_id)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Реализация для класса <a class="el" href="classSecurityManager_1_1AttackDatabase.html" title="Основной класс базы данных">AttackDatabase</a>. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a5bafb650f046c469c1fe7e1727c31da4" name="a5bafb650f046c469c1fe7e1727c31da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bafb650f046c469c1fe7e1727c31da4">&#9670;&#160;</a></span>Impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SecurityManager::AttackDatabase::Impl::Impl </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a9cff5a51d7a21ddc309135fadcd6d59e" name="a9cff5a51d7a21ddc309135fadcd6d59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cff5a51d7a21ddc309135fadcd6d59e">&#9670;&#160;</a></span>exportAttackInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityManager::AttackDatabase::Impl::exportAttackInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>attack_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac935e796c0cc14e33d1e24bdbf7f9fa" name="aac935e796c0cc14e33d1e24bdbf7f9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac935e796c0cc14e33d1e24bdbf7f9fa">&#9670;&#160;</a></span>getAttackInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1AttackInfo.html">AttackInfo</a> SecurityManager::AttackDatabase::Impl::getAttackInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>attack_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1ef10109543be3353c3c8ca269b0e66" name="ab1ef10109543be3353c3c8ca269b0e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ef10109543be3353c3c8ca269b0e66">&#9670;&#160;</a></span>getAttacksByPlatform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SecurityManager::AttackDatabase::Impl::getAttacksByPlatform </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>platform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6875b26652f82acff005d28ef4ee7b87" name="a6875b26652f82acff005d28ef4ee7b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6875b26652f82acff005d28ef4ee7b87">&#9670;&#160;</a></span>getAttacksByTactic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SecurityManager::AttackDatabase::Impl::getAttacksByTactic </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>tactic</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a695b76e3e317d1323f5f9fa329d5ace2" name="a695b76e3e317d1323f5f9fa329d5ace2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695b76e3e317d1323f5f9fa329d5ace2">&#9670;&#160;</a></span>getDatabaseStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1DatabaseStats.html">DatabaseStats</a> SecurityManager::AttackDatabase::Impl::getDatabaseStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad47a50d54381b25a815d6383c09ac93c" name="ad47a50d54381b25a815d6383c09ac93c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad47a50d54381b25a815d6383c09ac93c">&#9670;&#160;</a></span>getMitigationStrategies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SecurityManager::AttackDatabase::Impl::getMitigationStrategies </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>attack_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a061aade5265e0b68b434b01bdbccc9e0" name="a061aade5265e0b68b434b01bdbccc9e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061aade5265e0b68b434b01bdbccc9e0">&#9670;&#160;</a></span>getProtectionGuidance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSecurityManager_1_1ProtectionGuidance.html">ProtectionGuidance</a> SecurityManager::AttackDatabase::Impl::getProtectionGuidance </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>attack_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97e453395abc32809d56af90d086b581" name="a97e453395abc32809d56af90d086b581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e453395abc32809d56af90d086b581">&#9670;&#160;</a></span>getRelatedAttacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SecurityManager::AttackDatabase::Impl::getRelatedAttacks </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>attack_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1170fe4108eb7be1223cabeaa821fe9" name="ab1170fe4108eb7be1223cabeaa821fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1170fe4108eb7be1223cabeaa821fe9">&#9670;&#160;</a></span>listAllAttacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; SecurityManager::AttackDatabase::Impl::listAllAttacks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40e0a8ecaaeec427d6eedb3a9d15b3b4" name="a40e0a8ecaaeec427d6eedb3a9d15b3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e0a8ecaaeec427d6eedb3a9d15b3b4">&#9670;&#160;</a></span>searchAttacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structSecurityManager_1_1AttackSearchResult.html">AttackSearchResult</a> &gt; SecurityManager::AttackDatabase::Impl::searchAttacks </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>keyword</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>tactic</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>platform</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>api/src/<a class="el" href="smdb__api_8cpp.html">smdb_api.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceSecurityManager.html">SecurityManager</a></li><li class="navelem"><a href="classSecurityManager_1_1AttackDatabase.html">AttackDatabase</a></li><li class="navelem"><a href="classSecurityManager_1_1AttackDatabase_1_1Impl.html">Impl</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

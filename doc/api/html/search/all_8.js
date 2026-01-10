@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['icmp_5fpackets_0',['icmp_packets',['../structStats.html#ae469589fc7e6ff8bc65bd9c7bc1949d3',1,'Stats']]],
+  ['id_1',['id',['../structSecurityManager_1_1AttackInfo.html#aa0106e9e8a8e8325a5005e1673dbf97d',1,'SecurityManager::AttackInfo']]],
+  ['impact_2',['impact',['../structSecurityManager_1_1AttackInfo.html#a7d3dd19f1344012a135cb9daa0c51ddb',1,'SecurityManager::AttackInfo::impact'],['../structSecurityManager_1_1SSHSecurityRecommendation.html#a6f2d04fa477fa63ecca8ae21b5a81ee8',1,'SecurityManager::SSHSecurityRecommendation::impact']]],
+  ['impl_3',['Impl',['../classSecurityManager_1_1AttackDatabase_1_1Impl.html',1,'SecurityManager::AttackDatabase::Impl'],['../classSecurityManager_1_1LogAnalyzer_1_1Impl.html',1,'SecurityManager::LogAnalyzer::Impl'],['../classSecurityManager_1_1NetworkMonitor_1_1Impl.html',1,'SecurityManager::NetworkMonitor::Impl'],['../classSecurityManager_1_1PasswordManager_1_1Impl.html',1,'SecurityManager::PasswordManager::Impl'],['../classSecurityManager_1_1SSHSecurity_1_1Impl.html',1,'SecurityManager::SSHSecurity::Impl'],['../classSecurityManager_1_1AttackDatabase_1_1Impl.html#a5bafb650f046c469c1fe7e1727c31da4',1,'SecurityManager::AttackDatabase::Impl::Impl()']]],
+  ['info_5fcount_4',['info_count',['../structSecurityManager_1_1LogStats.html#ac1613cb1abb197cc352eaf5584386437',1,'SecurityManager::LogStats']]],
+  ['initialize_5',['initialize',['../classSystemLogger.html#a29a901d14bf4595cafc76583d2616f0b',1,'SystemLogger::initialize()'],['../namespaceSecurityManager.html#ada561e6dbc29aba942b9732ab06dcb07',1,'SecurityManager::initialize()']]],
+  ['interfaceinfo_6',['InterfaceInfo',['../structSecurityManager_1_1InterfaceInfo.html',1,'SecurityManager']]],
+  ['interfaces_7',['interfaces',['../structSecurityManager_1_1NetworkStats.html#a2e6d70056538954b8ed83b46e981c647',1,'SecurityManager::NetworkStats']]],
+  ['invalid_5fargument_8',['INVALID_ARGUMENT',['../namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d',1,'SecurityManager::INVALID_ARGUMENT'],['../namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aaf295a0c3e37c94f078e1c5476479132d',1,'SecurityManager::INVALID_ARGUMENT'],['../namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63af295a0c3e37c94f078e1c5476479132d',1,'SecurityManager::INVALID_ARGUMENT'],['../namespaceSecurityManager.html#a332c3b1c0062e31f9be29430014bf8f9af295a0c3e37c94f078e1c5476479132d',1,'SecurityManager::INVALID_ARGUMENT']]],
+  ['invalid_5fconfig_9',['INVALID_CONFIG',['../namespaceSecurityManager.html#a96e40123050b14c96adf0c9170216412a2188ade13df339354cd8c383dda3f8bb',1,'SecurityManager']]],
+  ['ip_10',['ip',['../structSSHConnection.html#a14870098bea4160c25b8a7330b98249b',1,'SSHConnection::ip'],['../structAttackAlert.html#a602575b5637b016e1ce2d89907e84c29',1,'AttackAlert::ip']]],
+  ['ip_5faddress_11',['ip_address',['../structSecurityManager_1_1SSHConnectionAttempt.html#aeaaba1aad50684060dac8197a2f3f9a0',1,'SecurityManager::SSHConnectionAttempt::ip_address'],['../structSecurityManager_1_1SSHAttackAlert.html#aa3f56463fece9c3dd1ba7aa9eccbf3a0',1,'SecurityManager::SSHAttackAlert::ip_address']]],
+  ['is_5fcompliant_12',['is_compliant',['../structSecurityManager_1_1SSHConfigIssue.html#af8f3983ae6c9c50b8279952d67a88c80',1,'SecurityManager::SSHConfigIssue']]],
+  ['is_5fset_13',['is_set',['../structSSHSecurityRecommendation.html#afae8a3f46c1f8d57f9346a586a613094',1,'SSHSecurityRecommendation']]],
+  ['is_5fup_14',['is_up',['../structSecurityManager_1_1InterfaceInfo.html#a8bb4c9886b1299aad4a6c29480183cfa',1,'SecurityManager::InterfaceInfo']]],
+  ['islogfile_15',['isLogFile',['../classSystemLogger.html#a0bd12ca09e40e0fdc3ad116797826ceb',1,'SystemLogger']]],
+  ['ismonitoring_16',['isMonitoring',['../classSystemLogger.html#a5bd027921552771603f5a4ad1cc15caa',1,'SystemLogger']]],
+  ['isportopen_17',['isPortOpen',['../classSecurityManager_1_1NetworkMonitor.html#a90ae3214141cb3c85f516b973698c553',1,'SecurityManager::NetworkMonitor::isPortOpen()'],['../classSecurityManager_1_1NetworkMonitor_1_1Impl.html#ac53a3a48a08085f16779bf3cf5fcc842',1,'SecurityManager::NetworkMonitor::Impl::isPortOpen()']]],
+  ['isrunning_18',['isRunning',['../classSystemLogger.html#a5db8c9d4a6eb438661b33bc3c429aebc',1,'SystemLogger']]],
+  ['issues_19',['issues',['../structSecurityManager_1_1SSHSecurityReport.html#ac6bf47c5c57a12b9e916fb4910a37da1',1,'SecurityManager::SSHSecurityReport']]]
+];

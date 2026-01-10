@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Класс NetworkStats</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classNetworkStats.html','','classNetworkStats-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс NetworkStats</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс мониторинга сетевой статистики  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="networkStats_8h_source.html">networkStats.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a38aae1d4ad2a19442f388a7cb9759bc6" id="r_a38aae1d4ad2a19442f388a7cb9759bc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38aae1d4ad2a19442f388a7cb9759bc6">NetworkStats</a> ()=default</td></tr>
+<tr class="memdesc:a38aae1d4ad2a19442f388a7cb9759bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:a23241e2f831ebb9dcab316b58cdc6d89" id="r_a23241e2f831ebb9dcab316b58cdc6d89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23241e2f831ebb9dcab316b58cdc6d89">~NetworkStats</a> ()</td></tr>
+<tr class="memdesc:a23241e2f831ebb9dcab316b58cdc6d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor - stops monitoring if running.  <br /></td></tr>
+<tr class="memitem:a1d5232121c141fd5d9fc0788d02b82e6" id="r_a1d5232121c141fd5d9fc0788d02b82e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d5232121c141fd5d9fc0788d02b82e6">StartMonitoring</a> (int update_interval_ms=1000)</td></tr>
+<tr class="memdesc:a1d5232121c141fd5d9fc0788d02b82e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start real-time monitoring of network statistics.  <br /></td></tr>
+<tr class="memitem:ab94693aba0de762a116a4892abdb49ca" id="r_ab94693aba0de762a116a4892abdb49ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab94693aba0de762a116a4892abdb49ca">StopMonitoring</a> ()</td></tr>
+<tr class="memdesc:ab94693aba0de762a116a4892abdb49ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop real-time monitoring.  <br /></td></tr>
+<tr class="memitem:a2e34ff1ac38eac14e61f1a6f1aff0f57" id="r_a2e34ff1ac38eac14e61f1a6f1aff0f57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e34ff1ac38eac14e61f1a6f1aff0f57">RefreshStats</a> ()</td></tr>
+<tr class="memdesc:a2e34ff1ac38eac14e61f1a6f1aff0f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually refresh network statistics.  <br /></td></tr>
+<tr class="memitem:ad09f839cebbbe16e343fdd9fdc3ab22d" id="r_ad09f839cebbbe16e343fdd9fdc3ab22d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad09f839cebbbe16e343fdd9fdc3ab22d">GetInterfaces</a> () const</td></tr>
+<tr class="memdesc:ad09f839cebbbe16e343fdd9fdc3ab22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of all network interfaces.  <br /></td></tr>
+<tr class="memitem:a4121ef29ea06caa79681915495cdf791" id="r_a4121ef29ea06caa79681915495cdf791"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4121ef29ea06caa79681915495cdf791">GetInterfaceStats</a> (const std::string &amp;interface_name) const</td></tr>
+<tr class="memitem:ae3a29a32357ac0823b4d9cf1b93f71fd" id="r_ae3a29a32357ac0823b4d9cf1b93f71fd"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a29a32357ac0823b4d9cf1b93f71fd">GetInterfaceSpeed</a> (const std::string &amp;interface_name) const</td></tr>
+<tr class="memitem:a47d96c220bed654b122844f6b3800389" id="r_a47d96c220bed654b122844f6b3800389"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47d96c220bed654b122844f6b3800389">GetProtocolStats</a> (const std::string &amp;protocol) const</td></tr>
+<tr class="memitem:ac375ab179c7aa00c8c44ce0ffd23d2a8" id="r_ac375ab179c7aa00c8c44ce0ffd23d2a8"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac375ab179c7aa00c8c44ce0ffd23d2a8">GetProtocolRate</a> (const std::string &amp;protocol) const</td></tr>
+<tr class="memitem:a400756d0f9b703058e59a2e976f2f959" id="r_a400756d0f9b703058e59a2e976f2f959"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a400756d0f9b703058e59a2e976f2f959">GetTotalStats</a> () const</td></tr>
+<tr class="memitem:a92f220ca7461940851fda324e430ddd4" id="r_a92f220ca7461940851fda324e430ddd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92f220ca7461940851fda324e430ddd4">PrintInterfaceStatsTable</a> (bool show_speed=false) const</td></tr>
+<tr class="memitem:a1a888cae1b1fb11dad3884a5cdf0cc8a" id="r_a1a888cae1b1fb11dad3884a5cdf0cc8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a888cae1b1fb11dad3884a5cdf0cc8a">PrintProtocolStatsTable</a> (bool show_rate=false) const</td></tr>
+<tr class="memitem:a2c493bcd86fe6cf8528c3421792c9e86" id="r_a2c493bcd86fe6cf8528c3421792c9e86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c493bcd86fe6cf8528c3421792c9e86">PrintTopInterfaces</a> (int limit=5, bool by_bytes=true) const</td></tr>
+<tr class="memitem:a829524016855db4aa8edc57c29daa732" id="r_a829524016855db4aa8edc57c29daa732"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a829524016855db4aa8edc57c29daa732">PrintSummary</a> () const</td></tr>
+<tr class="memitem:abccda8019e2d11af32d6d402da4cad80" id="r_abccda8019e2d11af32d6d402da4cad80"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abccda8019e2d11af32d6d402da4cad80">ToJson</a> () const</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс мониторинга сетевой статистики </p>
+<p>Мониторит статистику сетевых интерфейсов включая использование полосы пропускания, счетчики пакетов, ошибки и рассчитывает скорости передачи. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a38aae1d4ad2a19442f388a7cb9759bc6" name="a38aae1d4ad2a19442f388a7cb9759bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38aae1d4ad2a19442f388a7cb9759bc6">&#9670;&#160;</a></span>NetworkStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NetworkStats::NetworkStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
+<a id="a23241e2f831ebb9dcab316b58cdc6d89" name="a23241e2f831ebb9dcab316b58cdc6d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23241e2f831ebb9dcab316b58cdc6d89">&#9670;&#160;</a></span>~NetworkStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NetworkStats::~NetworkStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor - stops monitoring if running. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ad09f839cebbbe16e343fdd9fdc3ab22d" name="ad09f839cebbbe16e343fdd9fdc3ab22d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09f839cebbbe16e343fdd9fdc3ab22d">&#9670;&#160;</a></span>GetInterfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; NetworkStats::GetInterfaces </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get list of all network interfaces. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Vector of interface names </dd></dl>
+
+</div>
+</div>
+<a id="ae3a29a32357ac0823b4d9cf1b93f71fd" name="ae3a29a32357ac0823b4d9cf1b93f71fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a29a32357ac0823b4d9cf1b93f71fd">&#9670;&#160;</a></span>GetInterfaceSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, double &gt; NetworkStats::GetInterfaceSpeed </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>interface_name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4121ef29ea06caa79681915495cdf791" name="a4121ef29ea06caa79681915495cdf791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4121ef29ea06caa79681915495cdf791">&#9670;&#160;</a></span>GetInterfaceStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, uint64_t &gt; NetworkStats::GetInterfaceStats </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>interface_name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac375ab179c7aa00c8c44ce0ffd23d2a8" name="ac375ab179c7aa00c8c44ce0ffd23d2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac375ab179c7aa00c8c44ce0ffd23d2a8">&#9670;&#160;</a></span>GetProtocolRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, double &gt; NetworkStats::GetProtocolRate </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>protocol</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47d96c220bed654b122844f6b3800389" name="a47d96c220bed654b122844f6b3800389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47d96c220bed654b122844f6b3800389">&#9670;&#160;</a></span>GetProtocolStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, uint64_t &gt; NetworkStats::GetProtocolStats </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>protocol</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a400756d0f9b703058e59a2e976f2f959" name="a400756d0f9b703058e59a2e976f2f959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400756d0f9b703058e59a2e976f2f959">&#9670;&#160;</a></span>GetTotalStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, uint64_t &gt; NetworkStats::GetTotalStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92f220ca7461940851fda324e430ddd4" name="a92f220ca7461940851fda324e430ddd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f220ca7461940851fda324e430ddd4">&#9670;&#160;</a></span>PrintInterfaceStatsTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkStats::PrintInterfaceStatsTable </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>show_speed</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a888cae1b1fb11dad3884a5cdf0cc8a" name="a1a888cae1b1fb11dad3884a5cdf0cc8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a888cae1b1fb11dad3884a5cdf0cc8a">&#9670;&#160;</a></span>PrintProtocolStatsTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkStats::PrintProtocolStatsTable </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>show_rate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a829524016855db4aa8edc57c29daa732" name="a829524016855db4aa8edc57c29daa732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829524016855db4aa8edc57c29daa732">&#9670;&#160;</a></span>PrintSummary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkStats::PrintSummary </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c493bcd86fe6cf8528c3421792c9e86" name="a2c493bcd86fe6cf8528c3421792c9e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c493bcd86fe6cf8528c3421792c9e86">&#9670;&#160;</a></span>PrintTopInterfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkStats::PrintTopInterfaces </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">5</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>by_bytes</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e34ff1ac38eac14e61f1a6f1aff0f57" name="a2e34ff1ac38eac14e61f1a6f1aff0f57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e34ff1ac38eac14e61f1a6f1aff0f57">&#9670;&#160;</a></span>RefreshStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkStats::RefreshStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manually refresh network statistics. </p>
+
+</div>
+</div>
+<a id="a1d5232121c141fd5d9fc0788d02b82e6" name="a1d5232121c141fd5d9fc0788d02b82e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d5232121c141fd5d9fc0788d02b82e6">&#9670;&#160;</a></span>StartMonitoring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkStats::StartMonitoring </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>update_interval_ms</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1000</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start real-time monitoring of network statistics. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">update_interval_ms</td><td>Update interval in milliseconds (default 1000ms) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab94693aba0de762a116a4892abdb49ca" name="ab94693aba0de762a116a4892abdb49ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab94693aba0de762a116a4892abdb49ca">&#9670;&#160;</a></span>StopMonitoring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkStats::StopMonitoring </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop real-time monitoring. </p>
+
+</div>
+</div>
+<a id="abccda8019e2d11af32d6d402da4cad80" name="abccda8019e2d11af32d6d402da4cad80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abccda8019e2d11af32d6d402da4cad80">&#9670;&#160;</a></span>ToJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string NetworkStats::ToJson </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>smnet/<a class="el" href="networkStats_8h_source.html">networkStats.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classNetworkStats.html">NetworkStats</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

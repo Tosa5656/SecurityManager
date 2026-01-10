@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Структура SecurityManager::LogEntry</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('structSecurityManager_1_1LogEntry.html','','structSecurityManager_1_1LogEntry-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура SecurityManager::LogEntry</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура лога  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="smlog__api_8h_source.html">smlog_api.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aedf5c24deb35b157933acecacea3d29a" id="r_aedf5c24deb35b157933acecacea3d29a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedf5c24deb35b157933acecacea3d29a">timestamp</a></td></tr>
+<tr class="memitem:aae78b4734c1aa2197ddfd50e10dc822c" id="r_aae78b4734c1aa2197ddfd50e10dc822c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae78b4734c1aa2197ddfd50e10dc822c">level</a></td></tr>
+<tr class="memitem:a0f2bf0113591e5d18ad747f8dfb9309b" id="r_a0f2bf0113591e5d18ad747f8dfb9309b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f2bf0113591e5d18ad747f8dfb9309b">source</a></td></tr>
+<tr class="memitem:ac149c18e7feb48defba35a075633e5d3" id="r_ac149c18e7feb48defba35a075633e5d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac149c18e7feb48defba35a075633e5d3">message</a></td></tr>
+<tr class="memitem:a5e56ce5ad7bb171c13cfe50d85401871" id="r_a5e56ce5ad7bb171c13cfe50d85401871"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e56ce5ad7bb171c13cfe50d85401871">raw_line</a></td></tr>
+<tr class="memitem:af88aaf8fdf2948137c23506d0aaab69b" id="r_af88aaf8fdf2948137c23506d0aaab69b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af88aaf8fdf2948137c23506d0aaab69b">facility</a></td></tr>
+<tr class="memitem:a2d6fef7f41103c11df0200e72c98e55e" id="r_a2d6fef7f41103c11df0200e72c98e55e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d6fef7f41103c11df0200e72c98e55e">priority</a></td></tr>
+<tr class="memitem:ac5595d3990fa9b24384ec5a51dfac4cb" id="r_ac5595d3990fa9b24384ec5a51dfac4cb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5595d3990fa9b24384ec5a51dfac4cb">hostname</a></td></tr>
+<tr class="memitem:aafcdeaae12a47d4e89c49d029cc25593" id="r_aafcdeaae12a47d4e89c49d029cc25593"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafcdeaae12a47d4e89c49d029cc25593">process_name</a></td></tr>
+<tr class="memitem:a3d5431d5e2402cbe8f1068f780da2b99" id="r_a3d5431d5e2402cbe8f1068f780da2b99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d5431d5e2402cbe8f1068f780da2b99">process_id</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Структура лога </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="af88aaf8fdf2948137c23506d0aaab69b" name="af88aaf8fdf2948137c23506d0aaab69b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88aaf8fdf2948137c23506d0aaab69b">&#9670;&#160;</a></span>facility</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SecurityManager::LogEntry::facility</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5595d3990fa9b24384ec5a51dfac4cb" name="ac5595d3990fa9b24384ec5a51dfac4cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5595d3990fa9b24384ec5a51dfac4cb">&#9670;&#160;</a></span>hostname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SecurityManager::LogEntry::hostname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae78b4734c1aa2197ddfd50e10dc822c" name="aae78b4734c1aa2197ddfd50e10dc822c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae78b4734c1aa2197ddfd50e10dc822c">&#9670;&#160;</a></span>level</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SecurityManager::LogEntry::level</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac149c18e7feb48defba35a075633e5d3" name="ac149c18e7feb48defba35a075633e5d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac149c18e7feb48defba35a075633e5d3">&#9670;&#160;</a></span>message</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SecurityManager::LogEntry::message</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d6fef7f41103c11df0200e72c98e55e" name="a2d6fef7f41103c11df0200e72c98e55e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6fef7f41103c11df0200e72c98e55e">&#9670;&#160;</a></span>priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SecurityManager::LogEntry::priority</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d5431d5e2402cbe8f1068f780da2b99" name="a3d5431d5e2402cbe8f1068f780da2b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d5431d5e2402cbe8f1068f780da2b99">&#9670;&#160;</a></span>process_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SecurityManager::LogEntry::process_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafcdeaae12a47d4e89c49d029cc25593" name="aafcdeaae12a47d4e89c49d029cc25593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafcdeaae12a47d4e89c49d029cc25593">&#9670;&#160;</a></span>process_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SecurityManager::LogEntry::process_name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e56ce5ad7bb171c13cfe50d85401871" name="a5e56ce5ad7bb171c13cfe50d85401871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e56ce5ad7bb171c13cfe50d85401871">&#9670;&#160;</a></span>raw_line</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SecurityManager::LogEntry::raw_line</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f2bf0113591e5d18ad747f8dfb9309b" name="a0f2bf0113591e5d18ad747f8dfb9309b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2bf0113591e5d18ad747f8dfb9309b">&#9670;&#160;</a></span>source</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SecurityManager::LogEntry::source</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedf5c24deb35b157933acecacea3d29a" name="aedf5c24deb35b157933acecacea3d29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf5c24deb35b157933acecacea3d29a">&#9670;&#160;</a></span>timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SecurityManager::LogEntry::timestamp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>api/include/<a class="el" href="smlog__api_8h_source.html">smlog_api.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceSecurityManager.html">SecurityManager</a></li><li class="navelem"><a href="structSecurityManager_1_1LogEntry.html">LogEntry</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

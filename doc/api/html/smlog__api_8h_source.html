@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Исходный файл api/include/smlog_api.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('smlog__api_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">smlog_api.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="smlog__api_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SMLOG_API_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SMLOG_API_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceSecurityManager.html">SecurityManager</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8a">   21</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8a">LogError</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aad0749aaba8b833466dfcbb0428e4f89c">   22</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a> = 0,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aacd54d99c8efb3c2db794197045f5b83c">   23</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76acd54d99c8efb3c2db794197045f5b83c">FILE_NOT_FOUND</a> = 1,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9">   24</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9">PERMISSION_DENIED</a> = 2,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa551530ec1af53eaa77c1bde0ca457b4b">   25</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76a551530ec1af53eaa77c1bde0ca457b4b">PARSE_ERROR</a> = 3,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aaf295a0c3e37c94f078e1c5476479132d">   26</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d">INVALID_ARGUMENT</a> = 4</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    };</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html">   33</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="structSecurityManager_1_1LogResult.html#aa457926f74e8dcbfd272ea992e51e978">LogResult</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html#a4f770c7843e60f6a941b01e596a7fdc7">   35</a></span>        <a class="code hl_enumeration" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8a">LogError</a> <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#a4f770c7843e60f6a941b01e596a7fdc7">code</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html#af4cd06ca19efa72f52e500aa82614de8">   36</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#af4cd06ca19efa72f52e500aa82614de8">message</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html#acad590c431474a7784a51f3d289ae585">   37</a></span>        T <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#acad590c431474a7784a51f3d289ae585">data</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html#aa457926f74e8dcbfd272ea992e51e978">   39</a></span>        <a class="code hl_function" href="structSecurityManager_1_1LogResult.html#aa457926f74e8dcbfd272ea992e51e978">LogResult</a>() : <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#a4f770c7843e60f6a941b01e596a7fdc7">code</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8a">LogError</a>::<a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a>) {}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html#aa256da0d464dc70af3322fd8b35e0d24">   40</a></span>        <a class="code hl_function" href="structSecurityManager_1_1LogResult.html#aa256da0d464dc70af3322fd8b35e0d24">LogResult</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8a">LogError</a> c, <span class="keyword">const</span> std::string&amp; msg) : <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#a4f770c7843e60f6a941b01e596a7fdc7">code</a>(c), <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#af4cd06ca19efa72f52e500aa82614de8">message</a>(msg) {}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html#ab9aebe0d503bb71dc0bcdd3bb382ff4c">   41</a></span>        <a class="code hl_function" href="structSecurityManager_1_1LogResult.html#ab9aebe0d503bb71dc0bcdd3bb382ff4c">LogResult</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8a">LogError</a> c, <span class="keyword">const</span> std::string&amp; msg, <span class="keyword">const</span> T&amp; d) : <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#a4f770c7843e60f6a941b01e596a7fdc7">code</a>(c), <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#af4cd06ca19efa72f52e500aa82614de8">message</a>(msg), <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#acad590c431474a7784a51f3d289ae585">data</a>(d) {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html#a71db5c791367ed641b69861dfdf739e2">   43</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="structSecurityManager_1_1LogResult.html#a71db5c791367ed641b69861dfdf739e2">success</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structSecurityManager_1_1LogResult.html#a4f770c7843e60f6a941b01e596a7fdc7">code</a> == <a class="code hl_enumvalue" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aad0749aaba8b833466dfcbb0428e4f89c">LogError::SUCCESS</a>; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogResult.html#a7253c92b63943975145b875f41623819">   44</a></span>        <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="structSecurityManager_1_1LogResult.html#a71db5c791367ed641b69861dfdf739e2">success</a>(); }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html">   50</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSecurityManager_1_1LogEntry.html">LogEntry</a></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#aedf5c24deb35b157933acecacea3d29a">   52</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#aedf5c24deb35b157933acecacea3d29a">timestamp</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#aae78b4734c1aa2197ddfd50e10dc822c">   53</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#aae78b4734c1aa2197ddfd50e10dc822c">level</a>;      <span class="comment">// INFO, WARNING, ERROR, DEBUG</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#a0f2bf0113591e5d18ad747f8dfb9309b">   54</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#a0f2bf0113591e5d18ad747f8dfb9309b">source</a>;     <span class="comment">// systemd, sshd, kernel и другие</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#ac149c18e7feb48defba35a075633e5d3">   55</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#ac149c18e7feb48defba35a075633e5d3">message</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#a5e56ce5ad7bb171c13cfe50d85401871">   56</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#a5e56ce5ad7bb171c13cfe50d85401871">raw_line</a>;   <span class="comment">// Оригинальная строка</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="comment">// Метаданные</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#af88aaf8fdf2948137c23506d0aaab69b">   59</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#af88aaf8fdf2948137c23506d0aaab69b">facility</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#a2d6fef7f41103c11df0200e72c98e55e">   60</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#a2d6fef7f41103c11df0200e72c98e55e">priority</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#ac5595d3990fa9b24384ec5a51dfac4cb">   61</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#ac5595d3990fa9b24384ec5a51dfac4cb">hostname</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#aafcdeaae12a47d4e89c49d029cc25593">   62</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#aafcdeaae12a47d4e89c49d029cc25593">process_name</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogEntry.html#a3d5431d5e2402cbe8f1068f780da2b99">   63</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structSecurityManager_1_1LogEntry.html#a3d5431d5e2402cbe8f1068f780da2b99">process_id</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogFilter.html">   69</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSecurityManager_1_1LogFilter.html">LogFilter</a></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogFilter.html#ae162f8c9e403883fc88f3bdb182c79c1">   71</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogFilter.html#ae162f8c9e403883fc88f3bdb182c79c1">start_time</a>;     <span class="comment">// ISO формат: 2026-01-01T00:00:00</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogFilter.html#a203d7c32921c8cd114c8811ca7062e04">   72</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogFilter.html#a203d7c32921c8cd114c8811ca7062e04">end_time</a>;       <span class="comment">// ISO формат: 2026-01-01T23:59:59</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogFilter.html#ae5f20d2c2d83769c39d9505ccb8f777e">   73</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogFilter.html#ae5f20d2c2d83769c39d9505ccb8f777e">level</a>;          <span class="comment">// Фильтр по уровню(INFO, WARNING, ERROR, DEBUG)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogFilter.html#a35f8610de23d1d33550dd90e56931e99">   74</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogFilter.html#a35f8610de23d1d33550dd90e56931e99">source</a>;         <span class="comment">// Фильтр по отправителю (sshd, kernel и другие)</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogFilter.html#a34cc9d2ec27467c35f90e0ba8447773d">   75</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogFilter.html#a34cc9d2ec27467c35f90e0ba8447773d">keyword</a>;        <span class="comment">// По ключевому слову</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogFilter.html#a76030efa5129bfcea48910c8ab82a073">   76</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structSecurityManager_1_1LogFilter.html#a76030efa5129bfcea48910c8ab82a073">min_priority</a> = -1;      <span class="comment">// Минимальная важность (0-7)</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogFilter.html#a79f6553443be284d92fc3a52b66da195">   77</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structSecurityManager_1_1LogFilter.html#a79f6553443be284d92fc3a52b66da195">max_priority</a> = -1;      <span class="comment">// Максимальная важность (0-7)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    };</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="};">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogStats.html">   83</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSecurityManager_1_1LogStats.html">LogStats</a></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogStats.html#a3cb41b60855e9fa512d600a9ca6c40d1">   85</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1LogStats.html#a3cb41b60855e9fa512d600a9ca6c40d1">total_entries</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogStats.html#a91092c5de09f1e3480de2738366d65f0">   86</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1LogStats.html#a91092c5de09f1e3480de2738366d65f0">error_count</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogStats.html#ac9170514acccbafec63a18b3248df10c">   87</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1LogStats.html#ac9170514acccbafec63a18b3248df10c">warning_count</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogStats.html#ac1613cb1abb197cc352eaf5584386437">   88</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1LogStats.html#ac1613cb1abb197cc352eaf5584386437">info_count</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogStats.html#af820029324467f98ebe82faf74c5e949">   89</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogStats.html#af820029324467f98ebe82faf74c5e949">time_range_start</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogStats.html#ae2a22aec9f115a8c95ea663ba80d6528">   90</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1LogStats.html#ae2a22aec9f115a8c95ea663ba80d6528">time_range_end</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1LogStats.html#a5714600851566b66592b3cc898044b50">   91</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="structSecurityManager_1_1LogStats.html#a5714600851566b66592b3cc898044b50">sources</a>;  <span class="comment">// Уникальные источники</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    };</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="};">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classSecurityManager_1_1LogAnalyzer.html">   97</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#a1a5c3ad591abae6132e014235dafd144">LogAnalyzer</a></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#a1a5c3ad591abae6132e014235dafd144">LogAnalyzer</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#aaf3ad81fc9c35a54782bef43b145daa0">~LogAnalyzer</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_struct" href="structSecurityManager_1_1LogResult.html">LogResult&lt;std::vector&lt;LogEntry&gt;</a>&gt; <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#a8decca912b56285c33f81a64b76df895">readLogFile</a>(<span class="keyword">const</span> std::string&amp; filepath, <span class="keyword">const</span> <a class="code hl_struct" href="structSecurityManager_1_1LogFilter.html">LogFilter</a>&amp; filter = {}, <span class="keywordtype">size_t</span> max_lines = 0);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_struct" href="structSecurityManager_1_1LogResult.html">LogResult&lt;std::vector&lt;LogEntry&gt;</a>&gt; <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#a440b9ee009c81fbdf787b163658de63a">searchLogFile</a>(<span class="keyword">const</span> std::string&amp; filepath, <span class="keyword">const</span> std::string&amp; keyword, <span class="keyword">const</span> <a class="code hl_struct" href="structSecurityManager_1_1LogFilter.html">LogFilter</a>&amp; filter = {});</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_struct" href="structSecurityManager_1_1LogResult.html">LogResult&lt;LogStats&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#a3af6af73f3f4f80fbf84aea92a5c06d3">getLogStats</a>(<span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_struct" href="structSecurityManager_1_1LogResult.html">LogResult&lt;bool&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#ab205dd43aa0216161156be1dfaedd173">monitorLogFile</a>(<span class="keyword">const</span> std::string&amp; filepath, std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> <a class="code hl_struct" href="structSecurityManager_1_1LogEntry.html">LogEntry</a>&amp;)&gt; callback);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_struct" href="structSecurityManager_1_1LogResult.html">LogResult&lt;bool&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#a0f0c5a37b68e2490f097fa19fff85f02">stopMonitoring</a>(<span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <a class="code hl_struct" href="structSecurityManager_1_1LogResult.html">LogResult&lt;std::vector&lt;LogEntry&gt;</a>&gt; <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#aabe0bf81e471fe5dac2bacc6aea34a66">readJournal</a>(<span class="keyword">const</span> std::string&amp; unit = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> <a class="code hl_struct" href="structSecurityManager_1_1LogFilter.html">LogFilter</a>&amp; filter = {}, <span class="keywordtype">size_t</span> max_lines = 100);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <a class="code hl_struct" href="structSecurityManager_1_1LogResult.html">LogResult&lt;bool&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#adfb7b09c18fef20dd537a79dd9b962e2">exportLogs</a>(<span class="keyword">const</span> std::vector&lt;LogEntry&gt;&amp; entries, <span class="keyword">const</span> std::string&amp; format, <span class="keyword">const</span> std::string&amp; output_file);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <a class="code hl_struct" href="structSecurityManager_1_1LogResult.html">LogResult&lt;bool&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1LogAnalyzer.html#ae26778c775029735b6380bb509b88e19">stopAllMonitoring</a>();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keyword">class </span><a class="code hl_class" href="classSecurityManager_1_1LogAnalyzer_1_1Impl.html">Impl</a>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        std::unique_ptr&lt;Impl&gt; impl_;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    };</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_1_1Impl_html"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer_1_1Impl.html">SecurityManager::LogAnalyzer::Impl</a></div><div class="ttdoc">Реализация для LogAnalyzer.</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:25</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_a0f0c5a37b68e2490f097fa19fff85f02"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#a0f0c5a37b68e2490f097fa19fff85f02">SecurityManager::LogAnalyzer::stopMonitoring</a></div><div class="ttdeci">LogResult&lt; bool &gt; stopMonitoring(const std::string &amp;filepath)</div><div class="ttdoc">Остановка мониторинга лога</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:504</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_a1a5c3ad591abae6132e014235dafd144"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#a1a5c3ad591abae6132e014235dafd144">SecurityManager::LogAnalyzer::LogAnalyzer</a></div><div class="ttdeci">LogAnalyzer()</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:415</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_a3af6af73f3f4f80fbf84aea92a5c06d3"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#a3af6af73f3f4f80fbf84aea92a5c06d3">SecurityManager::LogAnalyzer::getLogStats</a></div><div class="ttdeci">LogResult&lt; LogStats &gt; getLogStats(const std::string &amp;filepath)</div><div class="ttdoc">Получить статистику по логу</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:467</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_a440b9ee009c81fbdf787b163658de63a"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#a440b9ee009c81fbdf787b163658de63a">SecurityManager::LogAnalyzer::searchLogFile</a></div><div class="ttdeci">LogResult&lt; std::vector&lt; LogEntry &gt; &gt; searchLogFile(const std::string &amp;filepath, const std::string &amp;keyword, const LogFilter &amp;filter={})</div><div class="ttdoc">Поиск в лог файле</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:449</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_a8decca912b56285c33f81a64b76df895"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#a8decca912b56285c33f81a64b76df895">SecurityManager::LogAnalyzer::readLogFile</a></div><div class="ttdeci">LogResult&lt; std::vector&lt; LogEntry &gt; &gt; readLogFile(const std::string &amp;filepath, const LogFilter &amp;filter={}, size_t max_lines=0)</div><div class="ttdoc">Прочитать лог файл с фильтрами</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:429</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_aabe0bf81e471fe5dac2bacc6aea34a66"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#aabe0bf81e471fe5dac2bacc6aea34a66">SecurityManager::LogAnalyzer::readJournal</a></div><div class="ttdeci">LogResult&lt; std::vector&lt; LogEntry &gt; &gt; readJournal(const std::string &amp;unit=&quot;&quot;, const LogFilter &amp;filter={}, size_t max_lines=100)</div><div class="ttdoc">Парс systemd журнала</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:540</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_aaf3ad81fc9c35a54782bef43b145daa0"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#aaf3ad81fc9c35a54782bef43b145daa0">SecurityManager::LogAnalyzer::~LogAnalyzer</a></div><div class="ttdeci">~LogAnalyzer()</div><div class="ttdoc">Деструктор</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:420</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_ab205dd43aa0216161156be1dfaedd173"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#ab205dd43aa0216161156be1dfaedd173">SecurityManager::LogAnalyzer::monitorLogFile</a></div><div class="ttdeci">LogResult&lt; bool &gt; monitorLogFile(const std::string &amp;filepath, std::function&lt; void(const LogEntry &amp;)&gt; callback)</div><div class="ttdoc">Мониторинга лога</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:486</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_adfb7b09c18fef20dd537a79dd9b962e2"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#adfb7b09c18fef20dd537a79dd9b962e2">SecurityManager::LogAnalyzer::exportLogs</a></div><div class="ttdeci">LogResult&lt; bool &gt; exportLogs(const std::vector&lt; LogEntry &gt; &amp;entries, const std::string &amp;format, const std::string &amp;output_file)</div><div class="ttdoc">Экспорт лога</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:560</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1LogAnalyzer_html_ae26778c775029735b6380bb509b88e19"><div class="ttname"><a href="classSecurityManager_1_1LogAnalyzer.html#ae26778c775029735b6380bb509b88e19">SecurityManager::LogAnalyzer::stopAllMonitoring</a></div><div class="ttdeci">LogResult&lt; bool &gt; stopAllMonitoring()</div><div class="ttdoc">Остановка мониторинга всех логов</div><div class="ttdef"><b>Определения</b> smlog_api.cpp:521</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html"><div class="ttname"><a href="namespaceSecurityManager.html">SecurityManager</a></div><div class="ttdef"><b>Определения</b> securitymanager.h:18</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76a551530ec1af53eaa77c1bde0ca457b4b"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76a551530ec1af53eaa77c1bde0ca457b4b">SecurityManager::DatabaseError::PARSE_ERROR</a></div><div class="ttdeci">@ PARSE_ERROR</div><div class="ttdef"><b>Определения</b> smdb_api.h:26</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76acd54d99c8efb3c2db794197045f5b83c"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76acd54d99c8efb3c2db794197045f5b83c">SecurityManager::DatabaseError::FILE_NOT_FOUND</a></div><div class="ttdeci">@ FILE_NOT_FOUND</div><div class="ttdef"><b>Определения</b> smdb_api.h:25</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SecurityManager::DatabaseError::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Определения</b> smdb_api.h:23</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d">SecurityManager::DatabaseError::INVALID_ARGUMENT</a></div><div class="ttdeci">@ INVALID_ARGUMENT</div><div class="ttdef"><b>Определения</b> smdb_api.h:27</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_af33d414b348d6dccd2fe8995b0d1ef8a"><div class="ttname"><a href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8a">SecurityManager::LogError</a></div><div class="ttdeci">LogError</div><div class="ttdoc">Коды ошибок</div><div class="ttdef"><b>Определения</b> smlog_api.h:21</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9"><div class="ttname"><a href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9">SecurityManager::LogError::PERMISSION_DENIED</a></div><div class="ttdeci">@ PERMISSION_DENIED</div><div class="ttdef"><b>Определения</b> smlog_api.h:24</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_af33d414b348d6dccd2fe8995b0d1ef8aad0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aad0749aaba8b833466dfcbb0428e4f89c">SecurityManager::LogError::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Определения</b> smlog_api.h:22</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html">SecurityManager::LogEntry</a></div><div class="ttdoc">Структура лога</div><div class="ttdef"><b>Определения</b> smlog_api.h:51</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_a0f2bf0113591e5d18ad747f8dfb9309b"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#a0f2bf0113591e5d18ad747f8dfb9309b">SecurityManager::LogEntry::source</a></div><div class="ttdeci">std::string source</div><div class="ttdef"><b>Определения</b> smlog_api.h:54</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_a2d6fef7f41103c11df0200e72c98e55e"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#a2d6fef7f41103c11df0200e72c98e55e">SecurityManager::LogEntry::priority</a></div><div class="ttdeci">int priority</div><div class="ttdef"><b>Определения</b> smlog_api.h:60</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_a3d5431d5e2402cbe8f1068f780da2b99"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#a3d5431d5e2402cbe8f1068f780da2b99">SecurityManager::LogEntry::process_id</a></div><div class="ttdeci">int process_id</div><div class="ttdef"><b>Определения</b> smlog_api.h:63</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_a5e56ce5ad7bb171c13cfe50d85401871"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#a5e56ce5ad7bb171c13cfe50d85401871">SecurityManager::LogEntry::raw_line</a></div><div class="ttdeci">std::string raw_line</div><div class="ttdef"><b>Определения</b> smlog_api.h:56</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_aae78b4734c1aa2197ddfd50e10dc822c"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#aae78b4734c1aa2197ddfd50e10dc822c">SecurityManager::LogEntry::level</a></div><div class="ttdeci">std::string level</div><div class="ttdef"><b>Определения</b> smlog_api.h:53</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_aafcdeaae12a47d4e89c49d029cc25593"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#aafcdeaae12a47d4e89c49d029cc25593">SecurityManager::LogEntry::process_name</a></div><div class="ttdeci">std::string process_name</div><div class="ttdef"><b>Определения</b> smlog_api.h:62</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_ac149c18e7feb48defba35a075633e5d3"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#ac149c18e7feb48defba35a075633e5d3">SecurityManager::LogEntry::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Определения</b> smlog_api.h:55</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_ac5595d3990fa9b24384ec5a51dfac4cb"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#ac5595d3990fa9b24384ec5a51dfac4cb">SecurityManager::LogEntry::hostname</a></div><div class="ttdeci">std::string hostname</div><div class="ttdef"><b>Определения</b> smlog_api.h:61</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_aedf5c24deb35b157933acecacea3d29a"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#aedf5c24deb35b157933acecacea3d29a">SecurityManager::LogEntry::timestamp</a></div><div class="ttdeci">std::string timestamp</div><div class="ttdef"><b>Определения</b> smlog_api.h:52</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogEntry_html_af88aaf8fdf2948137c23506d0aaab69b"><div class="ttname"><a href="structSecurityManager_1_1LogEntry.html#af88aaf8fdf2948137c23506d0aaab69b">SecurityManager::LogEntry::facility</a></div><div class="ttdeci">std::string facility</div><div class="ttdef"><b>Определения</b> smlog_api.h:59</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogFilter_html"><div class="ttname"><a href="structSecurityManager_1_1LogFilter.html">SecurityManager::LogFilter</a></div><div class="ttdoc">Критерии фильтра логов</div><div class="ttdef"><b>Определения</b> smlog_api.h:70</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogFilter_html_a203d7c32921c8cd114c8811ca7062e04"><div class="ttname"><a href="structSecurityManager_1_1LogFilter.html#a203d7c32921c8cd114c8811ca7062e04">SecurityManager::LogFilter::end_time</a></div><div class="ttdeci">std::string end_time</div><div class="ttdef"><b>Определения</b> smlog_api.h:72</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogFilter_html_a34cc9d2ec27467c35f90e0ba8447773d"><div class="ttname"><a href="structSecurityManager_1_1LogFilter.html#a34cc9d2ec27467c35f90e0ba8447773d">SecurityManager::LogFilter::keyword</a></div><div class="ttdeci">std::string keyword</div><div class="ttdef"><b>Определения</b> smlog_api.h:75</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogFilter_html_a35f8610de23d1d33550dd90e56931e99"><div class="ttname"><a href="structSecurityManager_1_1LogFilter.html#a35f8610de23d1d33550dd90e56931e99">SecurityManager::LogFilter::source</a></div><div class="ttdeci">std::string source</div><div class="ttdef"><b>Определения</b> smlog_api.h:74</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogFilter_html_a76030efa5129bfcea48910c8ab82a073"><div class="ttname"><a href="structSecurityManager_1_1LogFilter.html#a76030efa5129bfcea48910c8ab82a073">SecurityManager::LogFilter::min_priority</a></div><div class="ttdeci">int min_priority</div><div class="ttdef"><b>Определения</b> smlog_api.h:76</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogFilter_html_a79f6553443be284d92fc3a52b66da195"><div class="ttname"><a href="structSecurityManager_1_1LogFilter.html#a79f6553443be284d92fc3a52b66da195">SecurityManager::LogFilter::max_priority</a></div><div class="ttdeci">int max_priority</div><div class="ttdef"><b>Определения</b> smlog_api.h:77</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogFilter_html_ae162f8c9e403883fc88f3bdb182c79c1"><div class="ttname"><a href="structSecurityManager_1_1LogFilter.html#ae162f8c9e403883fc88f3bdb182c79c1">SecurityManager::LogFilter::start_time</a></div><div class="ttdeci">std::string start_time</div><div class="ttdef"><b>Определения</b> smlog_api.h:71</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogFilter_html_ae5f20d2c2d83769c39d9505ccb8f777e"><div class="ttname"><a href="structSecurityManager_1_1LogFilter.html#ae5f20d2c2d83769c39d9505ccb8f777e">SecurityManager::LogFilter::level</a></div><div class="ttdeci">std::string level</div><div class="ttdef"><b>Определения</b> smlog_api.h:73</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogResult_html"><div class="ttname"><a href="structSecurityManager_1_1LogResult.html">SecurityManager::LogResult</a></div><div class="ttdoc">Обвертка результатов запросов</div><div class="ttdef"><b>Определения</b> smlog_api.h:34</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogResult_html_a4f770c7843e60f6a941b01e596a7fdc7"><div class="ttname"><a href="structSecurityManager_1_1LogResult.html#a4f770c7843e60f6a941b01e596a7fdc7">SecurityManager::LogResult::code</a></div><div class="ttdeci">LogError code</div><div class="ttdef"><b>Определения</b> smlog_api.h:35</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogResult_html_a71db5c791367ed641b69861dfdf739e2"><div class="ttname"><a href="structSecurityManager_1_1LogResult.html#a71db5c791367ed641b69861dfdf739e2">SecurityManager::LogResult::success</a></div><div class="ttdeci">bool success() const</div><div class="ttdef"><b>Определения</b> smlog_api.h:43</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogResult_html_aa256da0d464dc70af3322fd8b35e0d24"><div class="ttname"><a href="structSecurityManager_1_1LogResult.html#aa256da0d464dc70af3322fd8b35e0d24">SecurityManager::LogResult::LogResult</a></div><div class="ttdeci">LogResult(LogError c, const std::string &amp;msg)</div><div class="ttdef"><b>Определения</b> smlog_api.h:40</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogResult_html_aa457926f74e8dcbfd272ea992e51e978"><div class="ttname"><a href="structSecurityManager_1_1LogResult.html#aa457926f74e8dcbfd272ea992e51e978">SecurityManager::LogResult::LogResult</a></div><div class="ttdeci">LogResult()</div><div class="ttdef"><b>Определения</b> smlog_api.h:39</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogResult_html_ab9aebe0d503bb71dc0bcdd3bb382ff4c"><div class="ttname"><a href="structSecurityManager_1_1LogResult.html#ab9aebe0d503bb71dc0bcdd3bb382ff4c">SecurityManager::LogResult::LogResult</a></div><div class="ttdeci">LogResult(LogError c, const std::string &amp;msg, const T &amp;d)</div><div class="ttdef"><b>Определения</b> smlog_api.h:41</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogResult_html_acad590c431474a7784a51f3d289ae585"><div class="ttname"><a href="structSecurityManager_1_1LogResult.html#acad590c431474a7784a51f3d289ae585">SecurityManager::LogResult::data</a></div><div class="ttdeci">T data</div><div class="ttdef"><b>Определения</b> smlog_api.h:37</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogResult_html_af4cd06ca19efa72f52e500aa82614de8"><div class="ttname"><a href="structSecurityManager_1_1LogResult.html#af4cd06ca19efa72f52e500aa82614de8">SecurityManager::LogResult::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Определения</b> smlog_api.h:36</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogStats_html"><div class="ttname"><a href="structSecurityManager_1_1LogStats.html">SecurityManager::LogStats</a></div><div class="ttdoc">Статистика лога</div><div class="ttdef"><b>Определения</b> smlog_api.h:84</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogStats_html_a3cb41b60855e9fa512d600a9ca6c40d1"><div class="ttname"><a href="structSecurityManager_1_1LogStats.html#a3cb41b60855e9fa512d600a9ca6c40d1">SecurityManager::LogStats::total_entries</a></div><div class="ttdeci">unsigned long total_entries</div><div class="ttdef"><b>Определения</b> smlog_api.h:85</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogStats_html_a5714600851566b66592b3cc898044b50"><div class="ttname"><a href="structSecurityManager_1_1LogStats.html#a5714600851566b66592b3cc898044b50">SecurityManager::LogStats::sources</a></div><div class="ttdeci">std::vector&lt; std::string &gt; sources</div><div class="ttdef"><b>Определения</b> smlog_api.h:91</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogStats_html_a91092c5de09f1e3480de2738366d65f0"><div class="ttname"><a href="structSecurityManager_1_1LogStats.html#a91092c5de09f1e3480de2738366d65f0">SecurityManager::LogStats::error_count</a></div><div class="ttdeci">unsigned long error_count</div><div class="ttdef"><b>Определения</b> smlog_api.h:86</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogStats_html_ac1613cb1abb197cc352eaf5584386437"><div class="ttname"><a href="structSecurityManager_1_1LogStats.html#ac1613cb1abb197cc352eaf5584386437">SecurityManager::LogStats::info_count</a></div><div class="ttdeci">unsigned long info_count</div><div class="ttdef"><b>Определения</b> smlog_api.h:88</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogStats_html_ac9170514acccbafec63a18b3248df10c"><div class="ttname"><a href="structSecurityManager_1_1LogStats.html#ac9170514acccbafec63a18b3248df10c">SecurityManager::LogStats::warning_count</a></div><div class="ttdeci">unsigned long warning_count</div><div class="ttdef"><b>Определения</b> smlog_api.h:87</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogStats_html_ae2a22aec9f115a8c95ea663ba80d6528"><div class="ttname"><a href="structSecurityManager_1_1LogStats.html#ae2a22aec9f115a8c95ea663ba80d6528">SecurityManager::LogStats::time_range_end</a></div><div class="ttdeci">std::string time_range_end</div><div class="ttdef"><b>Определения</b> smlog_api.h:90</div></div>
+<div class="ttc" id="astructSecurityManager_1_1LogStats_html_af820029324467f98ebe82faf74c5e949"><div class="ttname"><a href="structSecurityManager_1_1LogStats.html#af820029324467f98ebe82faf74c5e949">SecurityManager::LogStats::time_range_start</a></div><div class="ttdeci">std::string time_range_start</div><div class="ttdef"><b>Определения</b> smlog_api.h:89</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_0188a3e6da905bc60aceb35bf790b8c9.html">api</a></li><li class="navelem"><a href="dir_cf4c4a12eb9d2821032e40f1ddeaaf89.html">include</a></li><li class="navelem"><a href="smlog__api_8h.html">smlog_api.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

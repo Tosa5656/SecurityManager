@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Структура SSHConnection</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('structSSHConnection.html','','structSSHConnection-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура SSHConnection</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура, представляющая попытку SSH соединения  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sshAttackDetector_8h_source.html">sshAttackDetector.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a14870098bea4160c25b8a7330b98249b" id="r_a14870098bea4160c25b8a7330b98249b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14870098bea4160c25b8a7330b98249b">ip</a></td></tr>
+<tr class="memitem:a1ffd1fd254379af841a7bff733877959" id="r_a1ffd1fd254379af841a7bff733877959"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ffd1fd254379af841a7bff733877959">username</a></td></tr>
+<tr class="memitem:a31276c577b5a322498b87c94a56ccdf9" id="r_a31276c577b5a322498b87c94a56ccdf9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31276c577b5a322498b87c94a56ccdf9">timestamp</a></td></tr>
+<tr class="memitem:a059f5a3a21025fd727287c043bcd716f" id="r_a059f5a3a21025fd727287c043bcd716f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a059f5a3a21025fd727287c043bcd716f">success</a></td></tr>
+<tr class="memitem:a8be346cbbd4aac275dbe7304288a755f" id="r_a8be346cbbd4aac275dbe7304288a755f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8be346cbbd4aac275dbe7304288a755f">port</a></td></tr>
+<tr class="memitem:a8b1cb167eea37b2a2ab46971ca5dbf85" id="r_a8b1cb167eea37b2a2ab46971ca5dbf85"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b1cb167eea37b2a2ab46971ca5dbf85">country</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Структура, представляющая попытку SSH соединения </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a8b1cb167eea37b2a2ab46971ca5dbf85" name="a8b1cb167eea37b2a2ab46971ca5dbf85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1cb167eea37b2a2ab46971ca5dbf85">&#9670;&#160;</a></span>country</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHConnection::country</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Country of origin (GeoIP) </p>
+
+</div>
+</div>
+<a id="a14870098bea4160c25b8a7330b98249b" name="a14870098bea4160c25b8a7330b98249b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14870098bea4160c25b8a7330b98249b">&#9670;&#160;</a></span>ip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHConnection::ip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>IP адрес соединения </p>
+
+</div>
+</div>
+<a id="a8be346cbbd4aac275dbe7304288a755f" name="a8be346cbbd4aac275dbe7304288a755f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8be346cbbd4aac275dbe7304288a755f">&#9670;&#160;</a></span>port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SSHConnection::port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Используемый SSH порт </p>
+
+</div>
+</div>
+<a id="a059f5a3a21025fd727287c043bcd716f" name="a059f5a3a21025fd727287c043bcd716f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059f5a3a21025fd727287c043bcd716f">&#9670;&#160;</a></span>success</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSHConnection::success</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Успешен ли вход </p>
+
+</div>
+</div>
+<a id="a31276c577b5a322498b87c94a56ccdf9" name="a31276c577b5a322498b87c94a56ccdf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31276c577b5a322498b87c94a56ccdf9">&#9670;&#160;</a></span>timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHConnection::timestamp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Временная метка соединения </p>
+
+</div>
+</div>
+<a id="a1ffd1fd254379af841a7bff733877959" name="a1ffd1fd254379af841a7bff733877959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ffd1fd254379af841a7bff733877959">&#9670;&#160;</a></span>username</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHConnection::username</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Имя пользователя, использованное при попытке входа </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>smssh/<a class="el" href="sshAttackDetector_8h_source.html">sshAttackDetector.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="structSSHConnection.html">SSHConnection</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

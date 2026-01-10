@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Исходный файл api/include/smnet_api.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('smnet__api_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">smnet_api.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="smnet__api_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SMNET_API_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SMNET_API_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceSecurityManager.html">SecurityManager</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63">   20</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63">NetworkError</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63ad0749aaba8b833466dfcbb0428e4f89c">   22</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a> = 0,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63a547ba52b62f9302ee1b6950111c36f9f">   23</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63a547ba52b62f9302ee1b6950111c36f9f">NETWORK_ERROR</a> = 1,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63a255df50c140519133f1489ab44a389d9">   24</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9">PERMISSION_DENIED</a> = 2,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63af295a0c3e37c94f078e1c5476479132d">   25</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d">INVALID_ARGUMENT</a> = 3,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63a070a0fb40f6c308ab544b227660aadff">   26</a></span>        <a class="code hl_enumvalue" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63a070a0fb40f6c308ab544b227660aadff">TIMEOUT</a> = 4</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    };</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html">   33</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="structSecurityManager_1_1NetworkResult.html#a299d07e247e7ffb549586be011c62b1f">NetworkResult</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html#a4d3625705e08348fb362580271b59fdb">   35</a></span>        <a class="code hl_enumeration" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63">NetworkError</a> <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#a4d3625705e08348fb362580271b59fdb">code</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html#a28a4c1cf426bcdf496da32b81e2580fd">   36</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#a28a4c1cf426bcdf496da32b81e2580fd">message</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html#af608c836011f9107dc33febb41fffc79">   37</a></span>        T <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#af608c836011f9107dc33febb41fffc79">data</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html#a299d07e247e7ffb549586be011c62b1f">   39</a></span>        <a class="code hl_function" href="structSecurityManager_1_1NetworkResult.html#a299d07e247e7ffb549586be011c62b1f">NetworkResult</a>() : <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#a4d3625705e08348fb362580271b59fdb">code</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63">NetworkError</a>::<a class="code hl_enumvalue" href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a>) {}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html#a30c22de384e484f8b5bffc299474f481">   40</a></span>        <a class="code hl_function" href="structSecurityManager_1_1NetworkResult.html#a30c22de384e484f8b5bffc299474f481">NetworkResult</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63">NetworkError</a> c, <span class="keyword">const</span> std::string&amp; msg) : <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#a4d3625705e08348fb362580271b59fdb">code</a>(c), <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#a28a4c1cf426bcdf496da32b81e2580fd">message</a>(msg) {}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html#a38623e8cf349a281747ba46e25ebbc48">   41</a></span>        <a class="code hl_function" href="structSecurityManager_1_1NetworkResult.html#a38623e8cf349a281747ba46e25ebbc48">NetworkResult</a>(<a class="code hl_enumeration" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63">NetworkError</a> c, <span class="keyword">const</span> std::string&amp; msg, <span class="keyword">const</span> T&amp; d) : <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#a4d3625705e08348fb362580271b59fdb">code</a>(c), <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#a28a4c1cf426bcdf496da32b81e2580fd">message</a>(msg), <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#af608c836011f9107dc33febb41fffc79">data</a>(d) {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html#ac5517007f55f9df281e8a0367404b3f0">   43</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="structSecurityManager_1_1NetworkResult.html#ac5517007f55f9df281e8a0367404b3f0">success</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structSecurityManager_1_1NetworkResult.html#a4d3625705e08348fb362580271b59fdb">code</a> == <a class="code hl_enumvalue" href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63ad0749aaba8b833466dfcbb0428e4f89c">NetworkError::SUCCESS</a>; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkResult.html#a5d11588231afe284bb28c49de895b2e0">   44</a></span>        <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="structSecurityManager_1_1NetworkResult.html#ac5517007f55f9df281e8a0367404b3f0">success</a>(); }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PortResult.html">   50</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSecurityManager_1_1PortResult.html">PortResult</a></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PortResult.html#aa5a6c0cf939d91c66ee547d7c3f0651d">   52</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structSecurityManager_1_1PortResult.html#aa5a6c0cf939d91c66ee547d7c3f0651d">port</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PortResult.html#a0fba232552aa462f7d3f32bd7ea2b7bc">   53</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PortResult.html#a0fba232552aa462f7d3f32bd7ea2b7bc">service</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PortResult.html#a63a547de024d888ad77489e563ec1cb9">   54</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PortResult.html#a63a547de024d888ad77489e563ec1cb9">state</a>; <span class="comment">// open, closed, filtered</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1PortResult.html#a98599bb30ea52e37b7e10872da3a2532">   55</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1PortResult.html#a98599bb30ea52e37b7e10872da3a2532">protocol</a>; <span class="comment">// tcp, udp</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html">   61</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSecurityManager_1_1ConnectionInfo.html">ConnectionInfo</a></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html#aa8e8f2b9ddf40af1fda74baa7505b7c4">   63</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1ConnectionInfo.html#aa8e8f2b9ddf40af1fda74baa7505b7c4">local_address</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html#a2894ccb0700b8e9f683459262b07b218">   64</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1ConnectionInfo.html#a2894ccb0700b8e9f683459262b07b218">remote_address</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html#af6410a077d202ebfb6bf6f3cf61bdd41">   65</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1ConnectionInfo.html#af6410a077d202ebfb6bf6f3cf61bdd41">protocol</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html#a307eac8dc5413b26b147a37d599b553e">   66</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1ConnectionInfo.html#a307eac8dc5413b26b147a37d599b553e">state</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html#a1cfb7da32790d557c2afdb0746392dd5">   67</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structSecurityManager_1_1ConnectionInfo.html#a1cfb7da32790d557c2afdb0746392dd5">local_port</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html#a5a442d7efdda26884c879da7a59d6cab">   68</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structSecurityManager_1_1ConnectionInfo.html#a5a442d7efdda26884c879da7a59d6cab">remote_port</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html#aa80c0000e10c884f632eb7be444a7f9b">   69</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1ConnectionInfo.html#aa80c0000e10c884f632eb7be444a7f9b">bytes_sent</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1ConnectionInfo.html#a590969c63abb75e0b298e831dd5819a2">   70</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1ConnectionInfo.html#a590969c63abb75e0b298e831dd5819a2">bytes_received</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    };</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="};">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1InterfaceInfo.html">   76</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSecurityManager_1_1InterfaceInfo.html">InterfaceInfo</a></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1InterfaceInfo.html#ab18c10fec24e1d40854676ab1e031e4d">   78</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1InterfaceInfo.html#ab18c10fec24e1d40854676ab1e031e4d">name</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1InterfaceInfo.html#a68206e11e44147943d5bad242796ecb4">   79</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1InterfaceInfo.html#a68206e11e44147943d5bad242796ecb4">address</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1InterfaceInfo.html#ab468ad6db32fa97472e6c5127f5b2c57">   80</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1InterfaceInfo.html#ab468ad6db32fa97472e6c5127f5b2c57">netmask</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1InterfaceInfo.html#afea35d2dde9370ec22f0c3f8fab2abe0">   81</a></span>        std::string <a class="code hl_variable" href="structSecurityManager_1_1InterfaceInfo.html#afea35d2dde9370ec22f0c3f8fab2abe0">mac_address</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1InterfaceInfo.html#a8bb4c9886b1299aad4a6c29480183cfa">   82</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="structSecurityManager_1_1InterfaceInfo.html#a8bb4c9886b1299aad4a6c29480183cfa">is_up</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1InterfaceInfo.html#ac70c708f916c73f171dc4301a17755c9">   83</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1InterfaceInfo.html#ac70c708f916c73f171dc4301a17755c9">rx_bytes</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1InterfaceInfo.html#a0c51b657fd766918a09caabf40784de9">   84</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1InterfaceInfo.html#a0c51b657fd766918a09caabf40784de9">tx_bytes</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    };</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="};">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkStats.html">   90</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSecurityManager_1_1NetworkStats.html">NetworkStats</a></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkStats.html#a9a223408e49a6ec8125b5a1547e88d3d">   92</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1NetworkStats.html#a9a223408e49a6ec8125b5a1547e88d3d">total_bytes_received</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkStats.html#addd3f4c970ce599a41f82dbbee4cfea4">   93</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1NetworkStats.html#addd3f4c970ce599a41f82dbbee4cfea4">total_bytes_sent</a>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkStats.html#a0daf61fffca981876dbf8c51162f2743">   94</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1NetworkStats.html#a0daf61fffca981876dbf8c51162f2743">total_packets_received</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkStats.html#ac6fa69bd2881febf2c2682ae1cd5ab1a">   95</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structSecurityManager_1_1NetworkStats.html#ac6fa69bd2881febf2c2682ae1cd5ab1a">total_packets_sent</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="structSecurityManager_1_1NetworkStats.html#a2e6d70056538954b8ed83b46e981c647">   96</a></span>        std::vector&lt;InterfaceInfo&gt; <a class="code hl_variable" href="structSecurityManager_1_1NetworkStats.html#a2e6d70056538954b8ed83b46e981c647">interfaces</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    };</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="};">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classSecurityManager_1_1NetworkMonitor.html">  102</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#a57f5248234a31910278d31660dbe61fe">NetworkMonitor</a></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#a57f5248234a31910278d31660dbe61fe">NetworkMonitor</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classSecurityManager_1_1NetworkMonitor.html#a541e2d99db90e4e24da3214cd2e153e2">  106</a></span>        <a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#a541e2d99db90e4e24da3214cd2e153e2">~NetworkMonitor</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_struct" href="structSecurityManager_1_1NetworkResult.html">NetworkResult&lt;std::vector&lt;PortResult&gt;</a>&gt; <a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#adabe4ffef214e9c64fd848d939d11cf6">scanPorts</a>(<span class="keywordtype">int</span> start_port = 1, <span class="keywordtype">int</span> end_port = 1024);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <a class="code hl_struct" href="structSecurityManager_1_1NetworkResult.html">NetworkResult&lt;std::vector&lt;ConnectionInfo&gt;</a>&gt; <a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#a10401e50a65e22874936453614010ca3">getActiveConnections</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_struct" href="structSecurityManager_1_1NetworkResult.html">NetworkResult&lt;std::vector&lt;InterfaceInfo&gt;</a>&gt; <a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#adfea9eace9ed4017d006a6388d7cd974">getNetworkInterfaces</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_struct" href="structSecurityManager_1_1NetworkResult.html">NetworkResult&lt;NetworkStats&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#aa10f3f92dee213bb6c5266efb130fbb8">getNetworkStats</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_struct" href="structSecurityManager_1_1NetworkResult.html">NetworkResult&lt;bool&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#a90ae3214141cb3c85f516b973698c553">isPortOpen</a>(<span class="keyword">const</span> std::string&amp; host, <span class="keywordtype">int</span> port);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <a class="code hl_struct" href="structSecurityManager_1_1NetworkResult.html">NetworkResult&lt;std::string&gt;</a> <a class="code hl_function" href="classSecurityManager_1_1NetworkMonitor.html#a5ecfcf1e059cb0b96308fd3fbbc311dc">resolveHostname</a>(<span class="keyword">const</span> std::string&amp; ip_address);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keyword">class </span><a class="code hl_class" href="classSecurityManager_1_1NetworkMonitor_1_1Impl.html">Impl</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        std::unique_ptr&lt;Impl&gt; impl_;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    };</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_1_1Impl_html"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor_1_1Impl.html">SecurityManager::NetworkMonitor::Impl</a></div><div class="ttdoc">Приватная реализация класса NetworkMonitor.</div><div class="ttdef"><b>Определения</b> smnet_api.cpp:31</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_html_a10401e50a65e22874936453614010ca3"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor.html#a10401e50a65e22874936453614010ca3">SecurityManager::NetworkMonitor::getActiveConnections</a></div><div class="ttdeci">NetworkResult&lt; std::vector&lt; ConnectionInfo &gt; &gt; getActiveConnections()</div><div class="ttdoc">Получить активные сетевые подключения</div><div class="ttdef"><b>Определения</b> smnet_api.cpp:330</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_html_a541e2d99db90e4e24da3214cd2e153e2"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor.html#a541e2d99db90e4e24da3214cd2e153e2">SecurityManager::NetworkMonitor::~NetworkMonitor</a></div><div class="ttdeci">~NetworkMonitor()</div><div class="ttdoc">Деструктор</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_html_a57f5248234a31910278d31660dbe61fe"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor.html#a57f5248234a31910278d31660dbe61fe">SecurityManager::NetworkMonitor::NetworkMonitor</a></div><div class="ttdeci">NetworkMonitor()</div><div class="ttdoc">Конструктор - инициализирует сетевой монитор</div><div class="ttdef"><b>Определения</b> smnet_api.cpp:298</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_html_a5ecfcf1e059cb0b96308fd3fbbc311dc"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor.html#a5ecfcf1e059cb0b96308fd3fbbc311dc">SecurityManager::NetworkMonitor::resolveHostname</a></div><div class="ttdeci">NetworkResult&lt; std::string &gt; resolveHostname(const std::string &amp;ip_address)</div><div class="ttdoc">Получить имя удаленого сервера</div><div class="ttdef"><b>Определения</b> smnet_api.cpp:401</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_html_a90ae3214141cb3c85f516b973698c553"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor.html#a90ae3214141cb3c85f516b973698c553">SecurityManager::NetworkMonitor::isPortOpen</a></div><div class="ttdeci">NetworkResult&lt; bool &gt; isPortOpen(const std::string &amp;host, int port)</div><div class="ttdoc">Проверить открыт ли порт на удаленом сервере</div><div class="ttdef"><b>Определения</b> smnet_api.cpp:383</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_html_aa10f3f92dee213bb6c5266efb130fbb8"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor.html#aa10f3f92dee213bb6c5266efb130fbb8">SecurityManager::NetworkMonitor::getNetworkStats</a></div><div class="ttdeci">NetworkResult&lt; NetworkStats &gt; getNetworkStats()</div><div class="ttdoc">Получить статистику сети</div><div class="ttdef"><b>Определения</b> smnet_api.cpp:364</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_html_adabe4ffef214e9c64fd848d939d11cf6"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor.html#adabe4ffef214e9c64fd848d939d11cf6">SecurityManager::NetworkMonitor::scanPorts</a></div><div class="ttdeci">NetworkResult&lt; std::vector&lt; PortResult &gt; &gt; scanPorts(int start_port=1, int end_port=1024)</div><div class="ttdoc">Сканирование портов на localhost.</div><div class="ttdef"><b>Определения</b> smnet_api.cpp:313</div></div>
+<div class="ttc" id="aclassSecurityManager_1_1NetworkMonitor_html_adfea9eace9ed4017d006a6388d7cd974"><div class="ttname"><a href="classSecurityManager_1_1NetworkMonitor.html#adfea9eace9ed4017d006a6388d7cd974">SecurityManager::NetworkMonitor::getNetworkInterfaces</a></div><div class="ttdeci">NetworkResult&lt; std::vector&lt; InterfaceInfo &gt; &gt; getNetworkInterfaces()</div><div class="ttdoc">Получить информацию о сетевых интерфейсах</div><div class="ttdef"><b>Определения</b> smnet_api.cpp:347</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html"><div class="ttname"><a href="namespaceSecurityManager.html">SecurityManager</a></div><div class="ttdef"><b>Определения</b> securitymanager.h:18</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_a159c865b1fb0c5defe6e514e03c26d63"><div class="ttname"><a href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63">SecurityManager::NetworkError</a></div><div class="ttdeci">NetworkError</div><div class="ttdoc">Коды ошибок</div><div class="ttdef"><b>Определения</b> smnet_api.h:21</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_a159c865b1fb0c5defe6e514e03c26d63a070a0fb40f6c308ab544b227660aadff"><div class="ttname"><a href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63a070a0fb40f6c308ab544b227660aadff">SecurityManager::NetworkError::TIMEOUT</a></div><div class="ttdeci">@ TIMEOUT</div><div class="ttdef"><b>Определения</b> smnet_api.h:26</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_a159c865b1fb0c5defe6e514e03c26d63a547ba52b62f9302ee1b6950111c36f9f"><div class="ttname"><a href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63a547ba52b62f9302ee1b6950111c36f9f">SecurityManager::NetworkError::NETWORK_ERROR</a></div><div class="ttdeci">@ NETWORK_ERROR</div><div class="ttdef"><b>Определения</b> smnet_api.h:23</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_a159c865b1fb0c5defe6e514e03c26d63ad0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="namespaceSecurityManager.html#a159c865b1fb0c5defe6e514e03c26d63ad0749aaba8b833466dfcbb0428e4f89c">SecurityManager::NetworkError::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Определения</b> smnet_api.h:22</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76ad0749aaba8b833466dfcbb0428e4f89c">SecurityManager::DatabaseError::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Определения</b> smdb_api.h:23</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d"><div class="ttname"><a href="namespaceSecurityManager.html#ae0e62640955393d6c955f3c07a7ecb76af295a0c3e37c94f078e1c5476479132d">SecurityManager::DatabaseError::INVALID_ARGUMENT</a></div><div class="ttdeci">@ INVALID_ARGUMENT</div><div class="ttdef"><b>Определения</b> smdb_api.h:27</div></div>
+<div class="ttc" id="anamespaceSecurityManager_html_af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9"><div class="ttname"><a href="namespaceSecurityManager.html#af33d414b348d6dccd2fe8995b0d1ef8aa255df50c140519133f1489ab44a389d9">SecurityManager::LogError::PERMISSION_DENIED</a></div><div class="ttdeci">@ PERMISSION_DENIED</div><div class="ttdef"><b>Определения</b> smlog_api.h:24</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html">SecurityManager::ConnectionInfo</a></div><div class="ttdoc">Информация о интернет соединении</div><div class="ttdef"><b>Определения</b> smnet_api.h:62</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html_a1cfb7da32790d557c2afdb0746392dd5"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html#a1cfb7da32790d557c2afdb0746392dd5">SecurityManager::ConnectionInfo::local_port</a></div><div class="ttdeci">int local_port</div><div class="ttdef"><b>Определения</b> smnet_api.h:67</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html_a2894ccb0700b8e9f683459262b07b218"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html#a2894ccb0700b8e9f683459262b07b218">SecurityManager::ConnectionInfo::remote_address</a></div><div class="ttdeci">std::string remote_address</div><div class="ttdef"><b>Определения</b> smnet_api.h:64</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html_a307eac8dc5413b26b147a37d599b553e"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html#a307eac8dc5413b26b147a37d599b553e">SecurityManager::ConnectionInfo::state</a></div><div class="ttdeci">std::string state</div><div class="ttdef"><b>Определения</b> smnet_api.h:66</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html_a590969c63abb75e0b298e831dd5819a2"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html#a590969c63abb75e0b298e831dd5819a2">SecurityManager::ConnectionInfo::bytes_received</a></div><div class="ttdeci">unsigned long bytes_received</div><div class="ttdef"><b>Определения</b> smnet_api.h:70</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html_a5a442d7efdda26884c879da7a59d6cab"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html#a5a442d7efdda26884c879da7a59d6cab">SecurityManager::ConnectionInfo::remote_port</a></div><div class="ttdeci">int remote_port</div><div class="ttdef"><b>Определения</b> smnet_api.h:68</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html_aa80c0000e10c884f632eb7be444a7f9b"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html#aa80c0000e10c884f632eb7be444a7f9b">SecurityManager::ConnectionInfo::bytes_sent</a></div><div class="ttdeci">unsigned long bytes_sent</div><div class="ttdef"><b>Определения</b> smnet_api.h:69</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html_aa8e8f2b9ddf40af1fda74baa7505b7c4"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html#aa8e8f2b9ddf40af1fda74baa7505b7c4">SecurityManager::ConnectionInfo::local_address</a></div><div class="ttdeci">std::string local_address</div><div class="ttdef"><b>Определения</b> smnet_api.h:63</div></div>
+<div class="ttc" id="astructSecurityManager_1_1ConnectionInfo_html_af6410a077d202ebfb6bf6f3cf61bdd41"><div class="ttname"><a href="structSecurityManager_1_1ConnectionInfo.html#af6410a077d202ebfb6bf6f3cf61bdd41">SecurityManager::ConnectionInfo::protocol</a></div><div class="ttdeci">std::string protocol</div><div class="ttdef"><b>Определения</b> smnet_api.h:65</div></div>
+<div class="ttc" id="astructSecurityManager_1_1InterfaceInfo_html"><div class="ttname"><a href="structSecurityManager_1_1InterfaceInfo.html">SecurityManager::InterfaceInfo</a></div><div class="ttdoc">Информация об интернет устройстве</div><div class="ttdef"><b>Определения</b> smnet_api.h:77</div></div>
+<div class="ttc" id="astructSecurityManager_1_1InterfaceInfo_html_a0c51b657fd766918a09caabf40784de9"><div class="ttname"><a href="structSecurityManager_1_1InterfaceInfo.html#a0c51b657fd766918a09caabf40784de9">SecurityManager::InterfaceInfo::tx_bytes</a></div><div class="ttdeci">unsigned long tx_bytes</div><div class="ttdef"><b>Определения</b> smnet_api.h:84</div></div>
+<div class="ttc" id="astructSecurityManager_1_1InterfaceInfo_html_a68206e11e44147943d5bad242796ecb4"><div class="ttname"><a href="structSecurityManager_1_1InterfaceInfo.html#a68206e11e44147943d5bad242796ecb4">SecurityManager::InterfaceInfo::address</a></div><div class="ttdeci">std::string address</div><div class="ttdef"><b>Определения</b> smnet_api.h:79</div></div>
+<div class="ttc" id="astructSecurityManager_1_1InterfaceInfo_html_a8bb4c9886b1299aad4a6c29480183cfa"><div class="ttname"><a href="structSecurityManager_1_1InterfaceInfo.html#a8bb4c9886b1299aad4a6c29480183cfa">SecurityManager::InterfaceInfo::is_up</a></div><div class="ttdeci">bool is_up</div><div class="ttdef"><b>Определения</b> smnet_api.h:82</div></div>
+<div class="ttc" id="astructSecurityManager_1_1InterfaceInfo_html_ab18c10fec24e1d40854676ab1e031e4d"><div class="ttname"><a href="structSecurityManager_1_1InterfaceInfo.html#ab18c10fec24e1d40854676ab1e031e4d">SecurityManager::InterfaceInfo::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Определения</b> smnet_api.h:78</div></div>
+<div class="ttc" id="astructSecurityManager_1_1InterfaceInfo_html_ab468ad6db32fa97472e6c5127f5b2c57"><div class="ttname"><a href="structSecurityManager_1_1InterfaceInfo.html#ab468ad6db32fa97472e6c5127f5b2c57">SecurityManager::InterfaceInfo::netmask</a></div><div class="ttdeci">std::string netmask</div><div class="ttdef"><b>Определения</b> smnet_api.h:80</div></div>
+<div class="ttc" id="astructSecurityManager_1_1InterfaceInfo_html_ac70c708f916c73f171dc4301a17755c9"><div class="ttname"><a href="structSecurityManager_1_1InterfaceInfo.html#ac70c708f916c73f171dc4301a17755c9">SecurityManager::InterfaceInfo::rx_bytes</a></div><div class="ttdeci">unsigned long rx_bytes</div><div class="ttdef"><b>Определения</b> smnet_api.h:83</div></div>
+<div class="ttc" id="astructSecurityManager_1_1InterfaceInfo_html_afea35d2dde9370ec22f0c3f8fab2abe0"><div class="ttname"><a href="structSecurityManager_1_1InterfaceInfo.html#afea35d2dde9370ec22f0c3f8fab2abe0">SecurityManager::InterfaceInfo::mac_address</a></div><div class="ttdeci">std::string mac_address</div><div class="ttdef"><b>Определения</b> smnet_api.h:81</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkResult_html"><div class="ttname"><a href="structSecurityManager_1_1NetworkResult.html">SecurityManager::NetworkResult</a></div><div class="ttdoc">Обвертка резултатов сетевых запросов</div><div class="ttdef"><b>Определения</b> smnet_api.h:34</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkResult_html_a28a4c1cf426bcdf496da32b81e2580fd"><div class="ttname"><a href="structSecurityManager_1_1NetworkResult.html#a28a4c1cf426bcdf496da32b81e2580fd">SecurityManager::NetworkResult::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Определения</b> smnet_api.h:36</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkResult_html_a299d07e247e7ffb549586be011c62b1f"><div class="ttname"><a href="structSecurityManager_1_1NetworkResult.html#a299d07e247e7ffb549586be011c62b1f">SecurityManager::NetworkResult::NetworkResult</a></div><div class="ttdeci">NetworkResult()</div><div class="ttdef"><b>Определения</b> smnet_api.h:39</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkResult_html_a30c22de384e484f8b5bffc299474f481"><div class="ttname"><a href="structSecurityManager_1_1NetworkResult.html#a30c22de384e484f8b5bffc299474f481">SecurityManager::NetworkResult::NetworkResult</a></div><div class="ttdeci">NetworkResult(NetworkError c, const std::string &amp;msg)</div><div class="ttdef"><b>Определения</b> smnet_api.h:40</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkResult_html_a38623e8cf349a281747ba46e25ebbc48"><div class="ttname"><a href="structSecurityManager_1_1NetworkResult.html#a38623e8cf349a281747ba46e25ebbc48">SecurityManager::NetworkResult::NetworkResult</a></div><div class="ttdeci">NetworkResult(NetworkError c, const std::string &amp;msg, const T &amp;d)</div><div class="ttdef"><b>Определения</b> smnet_api.h:41</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkResult_html_a4d3625705e08348fb362580271b59fdb"><div class="ttname"><a href="structSecurityManager_1_1NetworkResult.html#a4d3625705e08348fb362580271b59fdb">SecurityManager::NetworkResult::code</a></div><div class="ttdeci">NetworkError code</div><div class="ttdef"><b>Определения</b> smnet_api.h:35</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkResult_html_ac5517007f55f9df281e8a0367404b3f0"><div class="ttname"><a href="structSecurityManager_1_1NetworkResult.html#ac5517007f55f9df281e8a0367404b3f0">SecurityManager::NetworkResult::success</a></div><div class="ttdeci">bool success() const</div><div class="ttdef"><b>Определения</b> smnet_api.h:43</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkResult_html_af608c836011f9107dc33febb41fffc79"><div class="ttname"><a href="structSecurityManager_1_1NetworkResult.html#af608c836011f9107dc33febb41fffc79">SecurityManager::NetworkResult::data</a></div><div class="ttdeci">T data</div><div class="ttdef"><b>Определения</b> smnet_api.h:37</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkStats_html"><div class="ttname"><a href="structSecurityManager_1_1NetworkStats.html">SecurityManager::NetworkStats</a></div><div class="ttdoc">Сетевая статистика</div><div class="ttdef"><b>Определения</b> smnet_api.h:91</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkStats_html_a0daf61fffca981876dbf8c51162f2743"><div class="ttname"><a href="structSecurityManager_1_1NetworkStats.html#a0daf61fffca981876dbf8c51162f2743">SecurityManager::NetworkStats::total_packets_received</a></div><div class="ttdeci">unsigned long long total_packets_received</div><div class="ttdef"><b>Определения</b> smnet_api.h:94</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkStats_html_a2e6d70056538954b8ed83b46e981c647"><div class="ttname"><a href="structSecurityManager_1_1NetworkStats.html#a2e6d70056538954b8ed83b46e981c647">SecurityManager::NetworkStats::interfaces</a></div><div class="ttdeci">std::vector&lt; InterfaceInfo &gt; interfaces</div><div class="ttdef"><b>Определения</b> smnet_api.h:96</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkStats_html_a9a223408e49a6ec8125b5a1547e88d3d"><div class="ttname"><a href="structSecurityManager_1_1NetworkStats.html#a9a223408e49a6ec8125b5a1547e88d3d">SecurityManager::NetworkStats::total_bytes_received</a></div><div class="ttdeci">unsigned long long total_bytes_received</div><div class="ttdef"><b>Определения</b> smnet_api.h:92</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkStats_html_ac6fa69bd2881febf2c2682ae1cd5ab1a"><div class="ttname"><a href="structSecurityManager_1_1NetworkStats.html#ac6fa69bd2881febf2c2682ae1cd5ab1a">SecurityManager::NetworkStats::total_packets_sent</a></div><div class="ttdeci">unsigned long long total_packets_sent</div><div class="ttdef"><b>Определения</b> smnet_api.h:95</div></div>
+<div class="ttc" id="astructSecurityManager_1_1NetworkStats_html_addd3f4c970ce599a41f82dbbee4cfea4"><div class="ttname"><a href="structSecurityManager_1_1NetworkStats.html#addd3f4c970ce599a41f82dbbee4cfea4">SecurityManager::NetworkStats::total_bytes_sent</a></div><div class="ttdeci">unsigned long long total_bytes_sent</div><div class="ttdef"><b>Определения</b> smnet_api.h:93</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PortResult_html"><div class="ttname"><a href="structSecurityManager_1_1PortResult.html">SecurityManager::PortResult</a></div><div class="ttdoc">Результат сканирования портов</div><div class="ttdef"><b>Определения</b> smnet_api.h:51</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PortResult_html_a0fba232552aa462f7d3f32bd7ea2b7bc"><div class="ttname"><a href="structSecurityManager_1_1PortResult.html#a0fba232552aa462f7d3f32bd7ea2b7bc">SecurityManager::PortResult::service</a></div><div class="ttdeci">std::string service</div><div class="ttdef"><b>Определения</b> smnet_api.h:53</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PortResult_html_a63a547de024d888ad77489e563ec1cb9"><div class="ttname"><a href="structSecurityManager_1_1PortResult.html#a63a547de024d888ad77489e563ec1cb9">SecurityManager::PortResult::state</a></div><div class="ttdeci">std::string state</div><div class="ttdef"><b>Определения</b> smnet_api.h:54</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PortResult_html_a98599bb30ea52e37b7e10872da3a2532"><div class="ttname"><a href="structSecurityManager_1_1PortResult.html#a98599bb30ea52e37b7e10872da3a2532">SecurityManager::PortResult::protocol</a></div><div class="ttdeci">std::string protocol</div><div class="ttdef"><b>Определения</b> smnet_api.h:55</div></div>
+<div class="ttc" id="astructSecurityManager_1_1PortResult_html_aa5a6c0cf939d91c66ee547d7c3f0651d"><div class="ttname"><a href="structSecurityManager_1_1PortResult.html#aa5a6c0cf939d91c66ee547d7c3f0651d">SecurityManager::PortResult::port</a></div><div class="ttdeci">int port</div><div class="ttdef"><b>Определения</b> smnet_api.h:52</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_0188a3e6da905bc60aceb35bf790b8c9.html">api</a></li><li class="navelem"><a href="dir_cf4c4a12eb9d2821032e40f1ddeaaf89.html">include</a></li><li class="navelem"><a href="smnet__api_8h.html">smnet_api.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

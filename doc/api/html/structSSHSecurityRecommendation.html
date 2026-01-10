@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security Manager: Структура SSHSecurityRecommendation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Security Manager
+   </div>
+   <div id="projectbrief">Comprehensive Linux Security Tools Suite</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('structSSHSecurityRecommendation.html','','structSSHSecurityRecommendation-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура SSHSecurityRecommendation</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура, представляющая рекомендацию по безопасности SSH.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sshConfig_8h_source.html">sshConfig.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ad1540ab13a75370404011677883cc6bf" id="r_ad1540ab13a75370404011677883cc6bf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1540ab13a75370404011677883cc6bf">key</a></td></tr>
+<tr class="memdesc:ad1540ab13a75370404011677883cc6bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ конфигурации SSH.  <br /></td></tr>
+<tr class="memitem:a874dc54b9f29e6c2ca20e67fe7687cb2" id="r_a874dc54b9f29e6c2ca20e67fe7687cb2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a874dc54b9f29e6c2ca20e67fe7687cb2">current_value</a></td></tr>
+<tr class="memdesc:a874dc54b9f29e6c2ca20e67fe7687cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущее значение в конфигурации  <br /></td></tr>
+<tr class="memitem:ab3960124435fec15381a098aaf03c383" id="r_ab3960124435fec15381a098aaf03c383"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3960124435fec15381a098aaf03c383">recommended_value</a></td></tr>
+<tr class="memdesc:ab3960124435fec15381a098aaf03c383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рекомендуемое безопасное значение  <br /></td></tr>
+<tr class="memitem:a1e051dfcb475ddf5b3a1108c2c4ebb3e" id="r_a1e051dfcb475ddf5b3a1108c2c4ebb3e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e051dfcb475ddf5b3a1108c2c4ebb3e">description</a></td></tr>
+<tr class="memdesc:a1e051dfcb475ddf5b3a1108c2c4ebb3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Описание проблемы безопасности  <br /></td></tr>
+<tr class="memitem:a1db2adc7c881ec5c67430694168a3045" id="r_a1db2adc7c881ec5c67430694168a3045"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1db2adc7c881ec5c67430694168a3045">severity</a></td></tr>
+<tr class="memdesc:a1db2adc7c881ec5c67430694168a3045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уровень серьезности: "critical", "high", "medium", "low".  <br /></td></tr>
+<tr class="memitem:afae8a3f46c1f8d57f9346a586a613094" id="r_afae8a3f46c1f8d57f9346a586a613094"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afae8a3f46c1f8d57f9346a586a613094">is_set</a></td></tr>
+<tr class="memdesc:afae8a3f46c1f8d57f9346a586a613094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Настроен ли этот параметр в данный момент  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Структура, представляющая рекомендацию по безопасности SSH. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a874dc54b9f29e6c2ca20e67fe7687cb2" name="a874dc54b9f29e6c2ca20e67fe7687cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874dc54b9f29e6c2ca20e67fe7687cb2">&#9670;&#160;</a></span>current_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHSecurityRecommendation::current_value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Текущее значение в конфигурации </p>
+
+</div>
+</div>
+<a id="a1e051dfcb475ddf5b3a1108c2c4ebb3e" name="a1e051dfcb475ddf5b3a1108c2c4ebb3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e051dfcb475ddf5b3a1108c2c4ebb3e">&#9670;&#160;</a></span>description</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHSecurityRecommendation::description</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Описание проблемы безопасности </p>
+
+</div>
+</div>
+<a id="afae8a3f46c1f8d57f9346a586a613094" name="afae8a3f46c1f8d57f9346a586a613094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae8a3f46c1f8d57f9346a586a613094">&#9670;&#160;</a></span>is_set</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSHSecurityRecommendation::is_set</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Настроен ли этот параметр в данный момент </p>
+
+</div>
+</div>
+<a id="ad1540ab13a75370404011677883cc6bf" name="ad1540ab13a75370404011677883cc6bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1540ab13a75370404011677883cc6bf">&#9670;&#160;</a></span>key</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHSecurityRecommendation::key</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ конфигурации SSH. </p>
+
+</div>
+</div>
+<a id="ab3960124435fec15381a098aaf03c383" name="ab3960124435fec15381a098aaf03c383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3960124435fec15381a098aaf03c383">&#9670;&#160;</a></span>recommended_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHSecurityRecommendation::recommended_value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Рекомендуемое безопасное значение </p>
+
+</div>
+</div>
+<a id="a1db2adc7c881ec5c67430694168a3045" name="a1db2adc7c881ec5c67430694168a3045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db2adc7c881ec5c67430694168a3045">&#9670;&#160;</a></span>severity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SSHSecurityRecommendation::severity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уровень серьезности: "critical", "high", "medium", "low". </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>smssh/<a class="el" href="sshConfig_8h_source.html">sshConfig.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="structSSHSecurityRecommendation.html">SSHSecurityRecommendation</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

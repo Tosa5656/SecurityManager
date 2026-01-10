@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1082 - System Information Discovery</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1082 - System Information Discovery</h1>
+
+    <h2>Описание атаки</h2>
+    <p>Сбор информации о системе, конфигурации, пользователях и окружении для планирования дальнейших атак. Атакующие используют легитимные системные команды и инструменты для разведки, что затрудняет обнаружение.</p>
+
+    <h2>Принцип работы</h2>
+    <ul>
+        <li>Сбор системной информации (uname, systeminfo)</li>
+        <li>Инвентаризация пользователей (who, id, getent)</li>
+        <li>Анализ сетевой конфигурации (ifconfig, ip addr)</li>
+        <li>Поиск чувствительных файлов (find, locate)</li>
+        <li>Проверка установленных приложений</li>
+        <li>Анализ запущенных процессов (ps, top)</li>
+    </ul>
+
+    <h2>MITRE ATT&CK ссылка</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1082/" target="_blank">T1082 - System Information Discovery</a></p>
+
+    <h2>Защита с помощью Security Manager</h2>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Мониторинг системных команд:</strong> smlog search "uname|whoami|id|ps|netstat" /var/log/audit/audit.log</li>
+        <li><strong>Анализ необычных запросов:</strong> smlog monitor</li>
+        <li><strong>Отслеживание reconnaissance activity:</strong> smlog search "recon|scan|enum" /var/log/syslog</li>
+        <li><strong>Audit логи анализа:</strong> smlog read /var/log/audit/audit.log</li>
+    </ul>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>Мониторинг сетевых команд:</strong> smnet connection | grep "netstat|ss|ip"</li>
+        <li><strong>Обнаружение network scanning:</strong> smnet scan для выявления reconnaissance</li>
+        <li><strong>Анализ DNS запросов:</strong> unusual lookups могут указывать на enumeration</li>
+        <li><strong>Статистика подключений:</strong> smnet stats для baseline анализа</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>Мониторинг SSH сессий:</strong> smssh monitor на подозрительные команды</li>
+        <li><strong>Анализ command patterns:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Защита от reconnaissance:</strong> ограничение команд в SSH</li>
+    </ul>
+
+    <h2>Рекомендации</h2>
+    <ul>
+        <li>Внедрение audit logging для всех команд</li>
+        <li>Ограничение доступа к системной информации</li>
+        <li>Использование SELinux/AppArmor для контроля</li>
+        <li>Регулярный мониторинг на необычную активность</li>
+        <li>Создание baseline поведения системы</li>
+        <li>Использование EDR для поведенческого анализа</li>
+        <li>Ограничение sudo доступа</li>
+        <li>Регулярные security assessments</li>
+    </ul>
+
+    <h2>Пример обнаружения</h2>
+    <pre>
+$ smlog search "reconnaissance" /var/log/audit/audit.log
+[2026-01-04 21:05:15] audit: user 'attacker' executed 'uname -a'
+[2026-01-04 21:05:18] audit: user 'attacker' executed 'whoami'
+[2026-01-04 21:05:22] audit: user 'attacker' executed 'id'
+[2026-01-04 21:05:25] audit: user 'attacker' executed 'ps aux'
+[2026-01-04 21:05:28] audit: user 'attacker' executed 'netstat -tlnp'
+
+$ smnet scan
+Scanning local ports and services...
+Port 22/tcp: SSH (potential attack vector identified)
+Port 80/tcp: HTTP (web server detected)
+Port 443/tcp: HTTPS (secure web detected)
+Reconnaissance pattern: multiple system enumeration commands
+
+$ smlog monitor
+[2026-01-04 21:10:30] ALERT: System reconnaissance detected
+[2026-01-04 21:10:32] ALERT: Multiple system info commands executed
+[2026-01-04 21:10:35] ALERT: Potential attacker enumeration activity
+    </pre>
+</body>
+</html>

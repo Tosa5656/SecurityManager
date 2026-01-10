@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK: T1071 - Application Layer Protocol</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>T1071 - Application Layer Protocol</h1>
+
+    <h2>Description of the Attack</h2>
+    <p>Using standard application protocols (HTTP, HTTPS, FTP, SMTP, etc.) to communicate with command and control servers. Attackers disguise malicious traffic as legitimate protocols, making it harder to detect with traditional security tools.</p>
+
+    <h2>How It Works</h2>
+    <ul>
+        <li>HTTP/HTTPS for C2 communications</li>
+        <li>FTP for data exfiltration</li>
+        <li>SMTP for command delivery</li>
+        <li>DNS over HTTPS (DoH) tunneling</li>
+        <li>Protocol abuse to bypass filters</li>
+        <li>Using CDN for proxy traffic</li>
+    </ul>
+
+    <h2>MITRE ATT&CK Reference</h2>
+    <p><a href="https://attack.mitre.org/techniques/T1071/" target="_blank">T1071 - Application Layer Protocol</a></p>
+
+    <h2>Protection with Security Manager</h2>
+
+    <h3>smnet - Network Monitoring</h3>
+    <ul>
+        <li><strong>HTTP/HTTPS traffic analysis:</strong> smnet connection | grep ":80\|:443"</li>
+        <li><strong>Unusual connection monitoring:</strong> smnet stats by ports</li>
+        <li><strong>C2 pattern detection:</strong> analyze frequency of requests to suspicious domains</li>
+        <li><strong>DNS monitoring:</strong> smnet connection for DoH analysis</li>
+    </ul>
+
+    <h3>smlog - Log Analysis</h3>
+    <ul>
+        <li><strong>Web server log analysis:</strong> smlog search "POST|GET" /var/log/apache2/access.log</li>
+        <li><strong>SMTP traffic monitoring:</strong> smlog read /var/log/mail.log</li>
+        <li><strong>Suspicious request tracking:</strong> smlog search "powershell|cmd|bash" /var/log/nginx/access.log</li>
+        <li><strong>DNS logs:</strong> smlog search "query|A|AAAA" /var/log/named/query.log</li>
+    </ul>
+
+    <h3>smssh - SSH Security</h3>
+    <ul>
+        <li><strong>HTTP tunneling monitoring:</strong> smssh monitor</li>
+        <li><strong>Protection from protocol abuse:</strong> smssh apply /etc/ssh/sshd_config</li>
+        <li><strong>Network activity analysis:</strong> smssh parse-log /var/log/auth.log</li>
+    </ul>
+
+    <h2>Recommendations</h2>
+    <ul>
+        <li>Использование SSL/TLS inspection</li>
+        <li>Настройка WAF с правилами для C2 detection</li>
+        <li>Мониторинг HTTPS трафика на аномалии</li>
+        <li>Использование DLP для data exfiltration prevention</li>
+        <li>Настройка rate limiting для API endpoints</li>
+        <li>Регулярный анализ traffic patterns</li>
+        <li>Использование CDN для legitimate трафика</li>
+        <li>Мониторинг на domain generation algorithms</li>
+    </ul>
+
+    <h2>Detection Example</h2>
+    <pre>
+$ smnet connection | grep -E "(:80|:443)" | head -10
+tcp  192.168.1.100:443   -> 203.0.113.1:443    ESTABLISHED (suspicious domain)
+tcp  192.168.1.100:80    -> 198.51.100.1:80    ESTABLISHED (unusual traffic)
+tcp  192.168.1.100:443   -> 192.0.2.1:443      ESTABLISHED (high frequency)
+
+$ smlog search "POST" /var/log/apache2/access.log | tail -5
+[2026-01-04 18:10:15] 192.168.1.100 - POST /api/cmd HTTP/1.1 200
+[2026-01-04 18:10:18] 192.168.1.100 - POST /api/data HTTP/1.1 200
+[2026-01-04 18:10:22] 192.168.1.100 - POST /api/exfil HTTP/1.1 200
+[2026-01-04 18:11:01] 192.168.1.100 - POST /api/beacon HTTP/1.1 200
+
+$ smnet stats | grep -E "(HTTP|HTTPS|DNS)"
+HTTP requests: 1250 (normal: 800)
+HTTPS requests: 2100 (high: suspicious C2)
+DNS queries: 3500 (possible DoH tunneling)
+    </pre>
+</body>
+</html>

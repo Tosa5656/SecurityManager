@@ -1,0 +1,5 @@
+# Test SSH config for smssh
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+Port 22
