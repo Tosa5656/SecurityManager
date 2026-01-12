@@ -1,21 +1,21 @@
 # Security Manager API
 
-The Security Manager API provides programmatic access to all Security Manager utilities through a modern, modular C++ interface.
+Security Manager  API обеспечивает программный доступ ко всем утилитам Security Manager через код на C++.
 
-## Architecture
+## Архитектура
 
-The API is organized into separate modules for better maintainability:
+Для повышения удобства сопровождения API организован в отдельные модули:
 
 ```
 api/
-├── include/           # Public headers
-│   ├── securitymanager.h    # Main unified header
-│   ├── smpass_api.h         # Password management
-│   ├── smnet_api.h          # Network monitoring
-│   ├── smlog_api.h          # Log analysis
-│   ├── smssh_api.h          # SSH security
-│   └── smdb_api.h           # MITRE ATT&CK database
-└── src/               # Implementation files
+├── include/                 # Заголовочные файлы
+│   ├── securitymanager.h    # Основной заголовок
+│   ├── smpass_api.h         # Менеджер паролей
+│   ├── smnet_api.h          # Менеджер сети
+│   ├── smlog_api.h          # Анализ логов
+│   ├── smssh_api.h          # Менеджер безопасности SSH
+│   └── smdb_api.h           # База возможных атак
+└── src/                     # Файлы реализации
     ├── smpass_api.cpp
     ├── smnet_api.cpp
     ├── smlog_api.cpp
@@ -23,72 +23,53 @@ api/
     └── smdb_api.cpp
 ```
 
-## Features
+## Функции
 
-- **Modular Design**: Separate APIs for each utility with clear interfaces
-- **Unified Interface**: Single header includes all components
-- **Error Handling**: Comprehensive error reporting with Result<T> pattern
-- **Type Safety**: Strongly typed interfaces with modern C++ features
-- **Cross-platform**: Compatible with Linux systems
-- **MITRE ATT&CK Integration**: Access to attack database programmatically
-- **Thread Safety**: Designed for concurrent use where applicable
+- **Модульная архитектура**: Для каждой утилиты предусмотрены отдельные API с понятными интерфейсами.
+- **Отслеживание ошибок**: Комплексная система отчетности об ошибках с использованием шаблона Result.
+- **Строгая типизация**: Строго типизированные интерфейсы с современными возможностями C++
+- **Кросс-платформенность**: Совместимо с многими дистрибутивами Linux.
+- **MITRE ATT&CK интеграция**: Доступ к базе данных атак программным способом
 
-## Quick Start
+## Начало работы
 
 ```cpp
 #include <securitymanager.h>
 
 int main()
 {
-    // Initialize API
+    // Инициализация API
     SecurityManager::initialize();
 
-    // Use password manager
+    // Использование менеджера паролей
     SecurityManager::PasswordManager pwd_mgr;
     auto hash = pwd_mgr.hashString("password", SecurityManager::HashAlgorithm::SHA256);
 
-    // Use network monitor
+    // Использование менеджера сети
     SecurityManager::NetworkMonitor net_mgr;
     auto ports = net_mgr.scanPorts();
 
-    // Use ATT&CK database
+    // Использование базы возможных атак
     SecurityManager::AttackDatabase attack_db;
     auto attacks = attack_db.searchAttacks("brute force");
 
+    // Очистка данных
     SecurityManager::cleanup();
     return 0;
 }
 ```
 
-## Building the API
+## Сборка
 
-### Using Make (recommended)
 ```bash
 make libsecurity_manager.a  # Build static library
 make all                    # Build all utilities + API
 ```
 
-### Manual compilation
-```bash
-# Compile individual API modules
-g++ -std=c++20 -Iapi/include -c api/src/smpass_api.cpp -o obj/smpass_api.o
-g++ -std=c++20 -Iapi/include -c api/src/smnet_api.cpp -o obj/smnet_api.o
-g++ -std=c++20 -Iapi/include -c api/src/smlog_api.cpp -o obj/smlog_api.o
-g++ -std=c++20 -Iapi/include -c api/src/smssh_api.cpp -o obj/smssh_api.o
-g++ -std=c++20 -Iapi/include -c api/src/smdb_api.cpp -o obj/smdb_api.o
-g++ -std=c++20 -Iapi/include -c api/src/securitymanager.cpp -o obj/securitymanager.o
-
-# Create static library
-ar rcs libsecurity_manager.a obj/smpass_api.o obj/smnet_api.o obj/smlog_api.o obj/smssh_api.o obj/smdb_api.o obj/securitymanager.o [other deps]
-
-# Compile your application
-g++ -std=c++20 -Iapi/include -o my_app my_app.cpp libsecurity_manager.a -lssl -lcrypto -lpcap -lmaxminddb
-```
-
-## API Components
+## Компоненты API
 
 ### PasswordManager (`smpass_api.h`)
-Secure password storage and hashing utilities.
+Надежное средство хранения и хеширования паролей.
 
 ```cpp
 SecurityManager::PasswordManager pwd_mgr;
@@ -97,7 +78,7 @@ auto result = pwd_mgr.addPassword("service.com", "username", "password");
 ```
 
 ### NetworkMonitor (`smnet_api.h`)
-Network scanning and monitoring capabilities.
+Возможности сканирования и мониторинга сети.
 
 ```cpp
 SecurityManager::NetworkMonitor net_mgr;
@@ -106,7 +87,7 @@ auto connections = net_mgr.getActiveConnections();
 ```
 
 ### LogAnalyzer (`smlog_api.h`)
-System log parsing and analysis tools.
+Инструменты для анализа и разбора системных журналов.
 
 ```cpp
 SecurityManager::LogAnalyzer log_analyzer;
@@ -115,7 +96,7 @@ auto search_results = log_analyzer.searchLogFile("/var/log/auth.log", "sshd");
 ```
 
 ### SSHSecurity (`smssh_api.h`)
-SSH server configuration analysis and attack detection.
+Анализ конфигурации SSH-сервера и обнаружение атак.
 
 ```cpp
 SecurityManager::SSHSecurity ssh_sec;
@@ -124,7 +105,7 @@ auto attacks = ssh_sec.detectAttacks("/var/log/auth.log");
 ```
 
 ### AttackDatabase (`smdb_api.h`)
-MITRE ATT&CK framework integration and threat intelligence.
+Интеграция с MITRE ATT&CK.
 
 ```cpp
 SecurityManager::AttackDatabase attack_db;
@@ -132,9 +113,9 @@ auto attacks = attack_db.searchAttacks("brute force");
 auto info = attack_db.getAttackInfo("T1110");
 ```
 
-## Error Handling
+## Обработка ошибок
 
-All API methods return `Result<T>` objects with error codes and messages:
+Все методы API возвращают объекты `Result<T>` с кодами ошибок и сообщениями:
 
 ```cpp
 auto result = pwd_mgr.hashString("test", SecurityManager::HashAlgorithm::SHA256);
@@ -145,158 +126,25 @@ if (result.success()) {
 }
 ```
 
-## Thread Safety
-
-- API classes are not thread-safe by default
-- Create separate instances for concurrent use
-- LogAnalyzer supports monitoring from background threads
-
-## Dependencies
+## Зависимости
 
 - OpenSSL (libssl, libcrypto)
 - PCAP library (libpcap)
 - MaxMind DB library (libmaxminddb)
 - C++20 standard library
 
+## Примеры
 
-## Using the API
+Подробный пример, демонстрирующий все возможности API, можно найти в файле `api/api_example.cpp`.
 
-### Basic Usage
-```cpp
-#include <security_manager/security_manager_api.h>
-
-int main()
-{
-    // Initialize API
-    SecurityManager::initialize();
-
-    // Use password manager
-    SecurityManager::Password::Manager pwd_mgr;
-    auto hash_result = pwd_mgr.hashString("password", SecurityManager::Password::HashAlgorithm::SHA256);
-
-    if (hash_result.success())
-    {
-        std::cout << "Hash: " << hash_result.data << std::endl;
-    }
-
-    // Use network monitor
-    SecurityManager::Network::Monitor net_mgr;
-    auto ports = net_mgr.scanPorts();
-
-    // Cleanup
-    SecurityManager::cleanup();
-    return 0;
-}
-```
-
-### Error Handling
-```cpp
-auto result = pwd_mgr.hashString("test", SecurityManager::Password::HashAlgorithm::SHA256);
-
-if (result.success()) 
-{
-    // Use result.data
-    std::cout << "Success: " << result.data << std::endl;
-}
-else
-{
-    // Handle error
-    std::cerr << "Error: " << result.message << std::endl;
-}
-```
-
-## API Components
-
-### 1. Password Management
-```cpp
-SecurityManager::Password::Manager pwd_mgr;
-
-// Hash passwords
-auto sha256_hash = pwd_mgr.hashString("password", HashAlgorithm::SHA256);
-auto aes256_hash = pwd_mgr.hashString("password", HashAlgorithm::AES256);
-
-// Store and retrieve passwords
-pwd_mgr.addPassword("service", "username", "password");
-auto credentials = pwd_mgr.getPassword("service");
-```
-
-### 2. Network Monitoring
-```cpp
-SecurityManager::Network::Monitor net_mgr;
-
-// Port scanning
-auto ports = net_mgr.scanPorts();
-
-// Network connections
-auto connections = net_mgr.getConnections();
-
-// Statistics
-auto stats = net_mgr.getStatistics();
-```
-
-### 3. Log Analysis
-```cpp
-SecurityManager::Log::Analyzer log_analyzer;
-
-// Read log files
-auto entries = log_analyzer.readLogFile("/var/log/auth.log");
-
-// Search logs
-auto results = log_analyzer.searchLogFile("/var/log/syslog", "error");
-```
-
-### 4. SSH Security
-```cpp
-SecurityManager::SSH::Security ssh_sec;
-
-// Analyze configuration
-auto config_issues = ssh_sec.analyzeConfig("/etc/ssh/sshd_config");
-
-// Detect attacks
-auto attacks = ssh_sec.detectAttacks("/var/log/auth.log");
-```
-
-### 5. MITRE ATT&CK Database
-```cpp
-SecurityManager::ATTACK::Database attack_db;
-
-// Search attacks
-auto attacks = attack_db.searchAttacks("brute force");
-
-// Get attack details
-auto info = attack_db.getAttackInfo("T1110");
-
-// Get protection tools
-auto tools = attack_db.getProtectionTools("T1110");
-```
-
-## Linking with Your Application
-
-### Static Library (recommended)
-```bash
-g++ -o my_app my_app.cpp -L. -lsecurity_manager -lssl -lcrypto -lpcap -lmaxminddb
-```
-
-
-## Examples
-
-See `api/api_example.cpp` for a comprehensive example demonstrating all API features.
-
-## Running Tests
+## Запуск тестов
 
 ```bash
 make check          # Run all tests including API
 make api_test       # Run API-specific tests
 ```
 
-## Dependencies
-
-- OpenSSL (libssl, libcrypto)
-- libpcap
-- libmaxminddb (GeoIP)
-- C++20 compatible compiler
-
-## Error Codes
+## Коды ошибок
 
 - `SUCCESS`: Operation completed successfully
 - `FILE_NOT_FOUND`: Specified file does not exist
@@ -307,27 +155,23 @@ make api_test       # Run API-specific tests
 - `DATABASE_ERROR`: Database operation failed
 - `UNKNOWN_ERROR`: Unspecified error
 
-## Thread Safety
 
-The API is designed to be thread-safe for most operations. However, some components (like log monitoring) may require external synchronization.
+## Использование памяти
 
-## Memory Management
+Все API-объекты используют шаблон RAII (Resource Acquisition Is Initialization — приобретение ресурсов как инициализация). Объекты автоматически очищают ресурсы, когда те выходят из области видимости.
 
-All API objects use RAII (Resource Acquisition Is Initialization) pattern. Objects automatically clean up resources when they go out of scope.
-
-## Version Information
+## Информация о версии
 
 ```cpp
 std::string version = SecurityManager::getVersion();
-// Returns "1.0.0"
+// Вернет "1.0.0"
 ```
 
-## Contributing
+## Содействие
 
-When adding new API functions:
-
-1. Update the header file (`security_manager_api.h`)
-2. Implement in the source file (`security_manager_api.cpp`)
-3. Add tests to `api_test.cpp`
-4. Update documentation
-5. Update the example code
+При добавлении новых функций API:
+1. Обновите заголовочный файл (`security_manager_api.h`)
+2. Реализуйте в исходном файле (`security_manager_api.cpp`)
+3. Добавите тесты в `api_test.cpp`
+4. Обновите документацию
+5. Добавьте примеры кода
