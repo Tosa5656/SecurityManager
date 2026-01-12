@@ -5,7 +5,7 @@
 #include <cstring>
 #include <ctime>
 
-// =============== CONSTRUCTORS AND DESTRUCTOR ===============
+// ===============  КОСТРОКТОРЫ И ДЕСМТРУКТОРЫ ===============
 
 SystemLogger::SystemLogger() : config_path_("/etc/smlog/smlog.conf"), is_running_(false), monitoring_active_(false), has_journal_support_(false)
 {
@@ -24,7 +24,7 @@ SystemLogger::~SystemLogger()
         std::cout << "Конфигурация сохранена\n";
 }
 
-// =============== PUBLIC METHODS ===============
+// =============== ПУБЛИЧНЫЕ МЕТОДЫ ===============
 
 bool SystemLogger::initialize()
 {

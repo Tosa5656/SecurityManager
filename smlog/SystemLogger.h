@@ -36,7 +36,8 @@ namespace fs = std::filesystem;
  * Предоставляет всесторонние возможности логирования включая файловые логи,
  * журнал systemd, мониторинг в реальном времени и анализ логов.
  */
-class SystemLogger {
+class SystemLogger
+{
 public:
     /**
      * @brief Конструктор по умолчанию
@@ -481,4 +482,4 @@ private:
                       const std::string& message)> alert_callback_;
 };
 
-#endif // SYSTEMLOGGER_H
+#endif

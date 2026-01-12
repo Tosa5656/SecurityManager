@@ -4,7 +4,6 @@
  * @author Tosa5656
  * @date 4 января, 2026
  */
-
 #pragma once
 
 #include <iostream>
@@ -25,7 +24,8 @@ namespace fs = std::filesystem;
  * Предоставляет функциональность логирования с поддержкой вывода в консоль и файл.
  * Использует паттерн синглтон для обеспечения единственного экземпляра логгера.
  */
-class Logger {
+class Logger
+{
 private:
     static Logger* instance_;  ///< Singleton instance
     static std::mutex mutex_;  ///< Mutex for thread-safe singleton creation
@@ -49,9 +49,7 @@ private:
             log_file_path_ = (log_dir / "security_manager.log").string();
         }
         else
-        {
             log_file_path_ = "/tmp/security_manager.log";
-        }
 
         log_file_.open(log_file_path_, std::ios::app);
     }

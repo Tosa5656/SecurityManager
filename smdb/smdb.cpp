@@ -4,7 +4,6 @@
  * @author Tosa5656
  * @date 4 января, 2026
  */
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -103,7 +102,7 @@ std::vector<std::string> searchAttacks(const std::string& query, const std::stri
 
     if (!fs::exists(docsPath))
     {
-        LogError("Documentation path does not exist: " + docsPath);
+        LogError("Не удалось найти документацию по пути: " + docsPath);
         return results;
     }
 
@@ -174,9 +173,7 @@ void showAttackDetails(const std::string& filepath)
                     std::cout << "• " << toolMatch[1].str() << std::endl;
             }
             else if (inProtection && std::regex_search(line, protectionEnd))
-            {
                 inProtection = false;
-            }
             else if (inProtection && line.find("<li>") != std::string::npos)
             {
                 std::regex htmlTagRegex("<[^>]+>");
@@ -188,7 +185,7 @@ void showAttackDetails(const std::string& filepath)
     }
 
     std::cout << std::endl;
-    std::cout << "For more details see: " << filepath << std::endl;
+    std::cout << "Подробности смотри в: " << filepath << std::endl;
 }
 
 void listAllAttacks(const std::string& docsPath)
@@ -217,22 +214,22 @@ void listAllAttacks(const std::string& docsPath)
 // Отобразить справочную информацию
 void help(const std::string& docsPath)
 {
-    std::cout << "smdb - MITRE ATT&CK Database for Security Manager" << std::endl;
+    std::cout << "smdb - База возможных атак для Security Manager" << std::endl;
     std::cout << std::endl;
     std::cout << "Usage:" << std::endl;
-    std::cout << "  smdb help                    - show this help" << std::endl;
-    std::cout << "  smdb list                    - list all available attacks" << std::endl;
-    std::cout << "  smdb search <keyword>        - search attacks by keyword" << std::endl;
-    std::cout << "  smdb show <attack_id>        - show detailed information about attack" << std::endl;
-    std::cout << "  smdb tools <attack_id>       - show Security Manager tools for protection" << std::endl;
+    std::cout << "  smdb help                    - показать этот раздел" << std::endl;
+    std::cout << "  smdb list                    - показать все доступные атаки" << std::endl;
+    std::cout << "  smdb search <keyword>        - поиск атаки по ключевому слову" << std::endl;
+    std::cout << "  smdb show <attack_id>        - показать подробную инфорацию об атаке" << std::endl;
+    std::cout << "  smdb tools <attack_id>       - показать инструменты защиты от атаки" << std::endl;
     std::cout << std::endl;
-    std::cout << "Examples:" << std::endl;
+    std::cout << "Примеры:" << std::endl;
     std::cout << "  smdb list" << std::endl;
     std::cout << "  smdb search brute" << std::endl;
     std::cout << "  smdb show T1110" << std::endl;
     std::cout << "  smdb tools T1078" << std::endl;
     std::cout << std::endl;
-    std::cout << "Documentation: " << docsPath << "/*.html" << std::endl;
+    std::cout << "Путь к документации: " << docsPath << "/*.html" << std::endl;
 }
 
 // Главная точка входа для инструмента smdb

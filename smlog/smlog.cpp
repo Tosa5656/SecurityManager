@@ -23,15 +23,15 @@ SystemLogger* g_logger = nullptr;  ///< Глобальный экземпляр 
 void help()
 {
     std::cout << "smlog usage:" << std::endl;
-    std::cout << "smlog help - show this help message" << std::endl;
-    std::cout << "smlog list - show available log files" << std::endl;
-    std::cout << "smlog read <path> [lines] - read log file (default: 100 lines)" << std::endl;
-    std::cout << "smlog search <path> <keyword> - search for keyword in log file" << std::endl;
-    std::cout << "smlog journal [unit] [lines] - read systemd journal (default: 100 lines)" << std::endl;
-    std::cout << "smlog top-ips <path> [count] - show top IP addresses (default: 10)" << std::endl;
-    std::cout << "smlog top-users <path> [count] - show top users (default: 10)" << std::endl;
-    std::cout << "smlog report [type] - generate report (types: security, daily, system, journal, full)" << std::endl;
-    std::cout << "smlog monitor - start monitoring logs (Ctrl+C to stop)" << std::endl;
+    std::cout << "smlog help - показать этот раздел" << std::endl;
+    std::cout << "smlog list - показать доступные лог файлы" << std::endl;
+    std::cout << "smlog read <path> [lines] - прочитать лог файл (по умолчанию: 100 строк)" << std::endl;
+    std::cout << "smlog search <path> <keyword> - поиск по ключевому слову в лог файле" << std::endl;
+    std::cout << "smlog journal [unit] [lines] - прочитать systemd journal (по умолчанию: 100 строк)" << std::endl;
+    std::cout << "smlog top-ips <path> [count] - показать топ IP адресов (по умолчанию: 10)" << std::endl;
+    std::cout << "smlog top-users <path> [count] - показать ток ползователей (по умолчанию: 10)" << std::endl;
+    std::cout << "smlog report [type] - сгенерировать отчет (security, daily, system, journal, full)" << std::endl;
+    std::cout << "smlog monitor - начать мониторинг логов (Ctrl+C для выхода)" << std::endl;
 }
 
 /**
@@ -190,8 +190,8 @@ void cmd_top_ips(SystemLogger& logger, int argc, char* argv[])
 {
     if (argc < 3)
     {
-        LogError("Error: log path required");
-        LogError("Usage: smlog top-ips <path> [count]");
+        LogError("Ошибка: требуется путь к логу");
+        LogError("Использование: smlog top-ips <path> [count]");
         return;
     }
     
@@ -238,8 +238,8 @@ void cmd_top_users(SystemLogger& logger, int argc, char* argv[])
 {
     if (argc < 3)
     {
-        LogError("Error: log path required");
-        LogError("Usage: smlog top-users <path> [count]");
+        LogError("Ошибка: требуется путь к лог файлу");
+        LogError("Использование: smlog top-users <path> [count]");
         return;
     }
     
@@ -254,7 +254,7 @@ void cmd_top_users(SystemLogger& logger, int argc, char* argv[])
         }
         catch (...)
         {
-            LogError("Error: invalid count");
+            LogError("Ошибка: неверное количество");
             return;
         }
     }
@@ -307,9 +307,9 @@ void cmd_report(SystemLogger& logger, int argc, char* argv[])
     else
     {
         std::stringstream ss;
-        ss << "Error: unknown report type: " << type;
+        ss << "Ошибка: неизвестные тип отчета: " << type;
         LogError(ss.str());
-        LogError("Available types: security, daily, system, journal, full");
+        LogError("Доступные типы: security, daily, system, journal, full");
         return;
     }
     
@@ -345,13 +345,13 @@ int main(int argc, char* argv[])
     
     if (!logger.initialize())
     {
-        LogError("Error: initialization failed: " + logger.getLastError());
+        LogError("Ошибка: не удаласть инициализация: " + logger.getLastError());
         return 1;
     }
     
     if (argc == 1)
     {
-        std::cout << "Use smlog help to see how to use the program" << std::endl;
+        std::cout << "Используй smlog help чтобы посмотреть помощь по использованию программы" << std::endl;
         return 0;
     }
 
@@ -410,8 +410,8 @@ int main(int argc, char* argv[])
     }
     
     std::stringstream ss;
-    ss << "Error: unknown command: " << argv[1];
+    ss << "Ошибка: неизвестная команда: " << argv[1];
     LogError(ss.str());
-    LogError("Use smlog help to see available commands");
+    LogError("Используй smlog help чтобы посмотреть помощь по использованию программы");
     return 1;
 }
