@@ -4,7 +4,6 @@
  * @author Tosa5656
  * @date 28 декабря, 2026
  */
-
 #include "argsparser.h"
 
 ArgumentParser::ArgumentParser(int argc, char* argv[])
@@ -63,9 +62,7 @@ void ArgumentParser::processArgument(const std::string& arg)
         }
     }
     else
-    {
         positionalArgs.push_back(arg);
-    }
 }
 
 /**
