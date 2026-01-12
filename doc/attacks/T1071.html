@@ -7,65 +7,65 @@
 <body>
     <h1>T1071 - Application Layer Protocol</h1>
 
-    <h2>Description of the Attack</h2>
-    <p>Using standard application protocols (HTTP, HTTPS, FTP, SMTP, etc.) to communicate with command and control servers. Attackers disguise malicious traffic as legitimate protocols, making it harder to detect with traditional security tools.</p>
+    <h2>Описание атаки</h2>
+    <p>Использование стандартных прикладных протоколов (HTTP, HTTPS, FTP, SMTP и т.д.) для связи с серверами управления и контроля (C2). Злоумышленники маскируют вредоносный трафик под легитимные протоколы, что затрудняет его обнаружение традиционными средствами безопасности.</p>
 
-    <h2>How It Works</h2>
+    <h2>Принцип работы</h2>
     <ul>
-        <li>HTTP/HTTPS for C2 communications</li>
-        <li>FTP for data exfiltration</li>
-        <li>SMTP for command delivery</li>
-        <li>DNS over HTTPS (DoH) tunneling</li>
-        <li>Protocol abuse to bypass filters</li>
-        <li>Using CDN for proxy traffic</li>
+        <li>HTTP/HTTPS для C2-коммуникаций</li>
+        <li>FTP для эксфильтрации данных</li>
+        <li>SMTP для доставки команд</li>
+        <li>Туннелирование через DNS over HTTPS (DoH)</li>
+        <li>Злоупотребление протоколами для обхода фильтров</li>
+        <li>Использование CDN для проксирования трафика</li>
     </ul>
 
-    <h2>MITRE ATT&CK Reference</h2>
+    <h2>Ссылка на MITRE ATT&CK</h2>
     <p><a href="https://attack.mitre.org/techniques/T1071/" target="_blank">T1071 - Application Layer Protocol</a></p>
 
-    <h2>Protection with Security Manager</h2>
+    <h2>Защита с помощью Security Manager</h2>
 
-    <h3>smnet - Network Monitoring</h3>
+    <h3>smnet - Сетевой мониторинг</h3>
     <ul>
-        <li><strong>HTTP/HTTPS traffic analysis:</strong> smnet connection | grep ":80\|:443"</li>
-        <li><strong>Unusual connection monitoring:</strong> smnet stats by ports</li>
-        <li><strong>C2 pattern detection:</strong> analyze frequency of requests to suspicious domains</li>
-        <li><strong>DNS monitoring:</strong> smnet connection for DoH analysis</li>
+        <li><strong>Анализ трафика HTTP/HTTPS:</strong> smnet connection | grep ":80\|:443"</li>
+        <li><strong>Мониторинг необычных соединений:</strong> smnet stats по портам</li>
+        <li><strong>Обнаружение паттернов C2:</strong> анализ частоты запросов к подозрительным доменам</li>
+        <li><strong>Мониторинг DNS:</strong> smnet connection для анализа DoH</li>
     </ul>
 
-    <h3>smlog - Log Analysis</h3>
+    <h3>smlog - Анализ логов</h3>
     <ul>
-        <li><strong>Web server log analysis:</strong> smlog search "POST|GET" /var/log/apache2/access.log</li>
-        <li><strong>SMTP traffic monitoring:</strong> smlog read /var/log/mail.log</li>
-        <li><strong>Suspicious request tracking:</strong> smlog search "powershell|cmd|bash" /var/log/nginx/access.log</li>
-        <li><strong>DNS logs:</strong> smlog search "query|A|AAAA" /var/log/named/query.log</li>
+        <li><strong>Анализ логов веб-сервера:</strong> smlog search "POST|GET" /var/log/apache2/access.log</li>
+        <li><strong>Мониторинг SMTP-трафика:</strong> smlog read /var/log/mail.log</li>
+        <li><strong>Отслеживание подозрительных запросов:</strong> smlog search "powershell|cmd|bash" /var/log/nginx/access.log</li>
+        <li><strong>Логи DNS:</strong> smlog search "query|A|AAAA" /var/log/named/query.log</li>
     </ul>
 
-    <h3>smssh - SSH Security</h3>
+    <h3>smssh - Безопасность SSH</h3>
     <ul>
-        <li><strong>HTTP tunneling monitoring:</strong> smssh monitor</li>
-        <li><strong>Protection from protocol abuse:</strong> smssh apply /etc/ssh/sshd_config</li>
-        <li><strong>Network activity analysis:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Мониторинг HTTP-туннелирования:</strong> smssh monitor</li>
+        <li><strong>Защита от злоупотребления протоколами:</strong> smssh apply /etc/ssh/sshd_config</li>
+        <li><strong>Анализ сетевой активности:</strong> smssh parse-log /var/log/auth.log</li>
     </ul>
 
-    <h2>Recommendations</h2>
+    <h2>Рекомендации</h2>
     <ul>
         <li>Использование SSL/TLS inspection</li>
-        <li>Настройка WAF с правилами для C2 detection</li>
-        <li>Мониторинг HTTPS трафика на аномалии</li>
-        <li>Использование DLP для data exfiltration prevention</li>
-        <li>Настройка rate limiting для API endpoints</li>
-        <li>Регулярный анализ traffic patterns</li>
-        <li>Использование CDN для legitimate трафика</li>
-        <li>Мониторинг на domain generation algorithms</li>
+        <li>Настройка WAF с правилами для обнаружения C2</li>
+        <li>Мониторинг HTTPS-трафика на аномалии</li>
+        <li>Использование DLP для предотвращения эксфильтрации данных</li>
+        <li>Настройка ограничения скорости (rate limiting) для конечных точек API</li>
+        <li>Регулярный анализ паттернов трафика</li>
+        <li>Использование CDN для легитимного трафика</li>
+        <li>Мониторинг алгоритмов генерации доменов (DGA)</li>
     </ul>
 
-    <h2>Detection Example</h2>
+    <h2>Пример обнаружения</h2>
     <pre>
 $ smnet connection | grep -E "(:80|:443)" | head -10
-tcp  192.168.1.100:443   -> 203.0.113.1:443    ESTABLISHED (suspicious domain)
-tcp  192.168.1.100:80    -> 198.51.100.1:80    ESTABLISHED (unusual traffic)
-tcp  192.168.1.100:443   -> 192.0.2.1:443      ESTABLISHED (high frequency)
+tcp  192.168.1.100:443   -> 203.0.113.1:443    ESTABLISHED (подозрительный домен)
+tcp  192.168.1.100:80    -> 198.51.100.1:80    ESTABLISHED (необычный трафик)
+tcp  192.168.1.100:443   -> 192.0.2.1:443      ESTABLISHED (высокая частота)
 
 $ smlog search "POST" /var/log/apache2/access.log | tail -5
 [2026-01-04 18:10:15] 192.168.1.100 - POST /api/cmd HTTP/1.1 200
@@ -74,9 +74,9 @@ $ smlog search "POST" /var/log/apache2/access.log | tail -5
 [2026-01-04 18:11:01] 192.168.1.100 - POST /api/beacon HTTP/1.1 200
 
 $ smnet stats | grep -E "(HTTP|HTTPS|DNS)"
-HTTP requests: 1250 (normal: 800)
-HTTPS requests: 2100 (high: suspicious C2)
-DNS queries: 3500 (possible DoH tunneling)
+HTTP запросов: 1250 (норма: 800)
+HTTPS запросов: 2100 (высокое значение: подозрительно на C2)
+DNS запросов: 3500 (возможное туннелирование DoH)
     </pre>
 </body>
 </html>

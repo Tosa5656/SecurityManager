@@ -8,12 +8,11 @@
     <h1>T1003 - OS Credential Dumping</h1>
 
     <h2>Описание атаки</h2>
-    <p>Извлечение учетных данных из памяти операционной системы, реестра, файлов или других хранилищ. Атакующие используют различные инструменты для дампинга паролей, хэшей и других credential из системы после получения первоначального доступа.</p>
+    <p>Извлечение учетных данных из памяти операционной системы, реестра, файлов или других хранилищ. Атакующие используют различные инструменты для дампинга паролей, хэшей и других данных из системы после получения первоначального доступа.</p>
 
     <h2>Принцип работы</h2>
     <ul>
-        <li>LSASS memory dumping (Windows)</li>
-        <li>/etc/shadow и /etc/passwd чтение (Linux)</li>
+        <li>/etc/shadow и /etc/passwd чтение</li>
         <li>Mimikatz-like инструменты</li>
         <li>Keychain и credential manager exploitation</li>
         <li>Memory scraping атак</li>
@@ -25,48 +24,47 @@
 
     <h2>Защита с помощью Security Manager</h2>
 
-    <h3>smlog - Log Analysis</h3>
+    <h3>smlog - Анализ логов</h3>
     <ul>
-        <li><strong>Мониторинг доступа к credential файлам:</strong> smlog search "/etc/shadow|/etc/passwd" /var/log/audit/audit.log</li>
+        <li><strong>Мониторинг доступа к важным файлам:</strong> smlog search "/etc/shadow|/etc/passwd" /var/log/audit/audit.log</li>
         <li><strong>Анализ необычных процессов:</strong> smlog search "mimikatz|pwdump|memory" /var/log/syslog</li>
-        <li><strong>Отслеживание privilege escalation:</strong> smlog monitor</li>
-        <li><strong>Audit логи анализа:</strong> smlog read /var/log/audit/audit.log</li>
+        <li><strong>Отслеживание повышения привилегий:</strong> smlog monitor</li>
+        <li><strong>Аудит логов:</strong> smlog read /var/log/audit/audit.log</li>
     </ul>
 
-    <h3>smpass - Password Management</h3>
+    <h3>smpass - Менеджер паролей</h3>
     <ul>
-        <li><strong>Безопасное хранение credential:</strong> smpass add-password вместо plaintext</li>
+        <li><strong>Безопасное хранение данных:</strong> smpass add-password вместо plaintext</li>
         <li><strong>Шифрование чувствительных данных:</strong> smpass hash-aes256</li>
-        <li><strong>Регулярная ротация паролей:</strong> управление lifecycle</li>
-        <li><strong>Изоляция credential:</strong> separate storage от OS</li>
+        <li><strong>Регулярная ротация паролей:</strong> управление жизенным циклом</li>
+        <li><strong>Изоляция данных:</strong> изоляция хранилища от OS</li>
     </ul>
 
-    <h3>smssh - SSH Security</h3>
+    <h3>smssh - Безопасность SSH</h3>
     <ul>
-        <li><strong>Мониторинг SSH key access:</strong> smssh monitor</li>
-        <li><strong>Анализ key usage patterns:</strong> smssh parse-log /var/log/auth.log</li>
-        <li><strong>Генерация strong keys:</strong> smssh gen-key с 4096-bit RSA</li>
+        <li><strong>Мониторинг SSH доступа:</strong> smssh monitor</li>
+        <li><strong>Анализ логов:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Генерация ключей:</strong> smssh gen-key с 4096-bit RSA</li>
         <li><strong>Отключение password auth:</strong> smssh apply /etc/ssh/sshd_config</li>
     </ul>
 
-    <h3>smnet - Network Monitoring</h3>
+    <h3>smnet - Менеджер сети</h3>
     <ul>
-        <li><strong>Обнаружение data exfiltration:</strong> smnet stats | grep "large.*transfer"</li>
-        <li><strong>Мониторинг suspicious downloads:</strong> smnet connection</li>
-        <li><strong>Анализ traffic patterns:</strong> после credential theft</li>
+        <li><strong>Обнаружение утечки данных:</strong> smnet stats | grep "large.*transfer"</li>
+        <li><strong>Мониторинг подозрительных загрузок:</strong> smnet connection</li>
+        <li><strong>Анализ патернов трафика:</strong> после credential theft</li>
     </ul>
 
     <h2>Рекомендации</h2>
     <ul>
-        <li>Использование strong password policies</li>
+        <li>Использование политики надежных паролей</li>
         <li>Регулярная ротация учетных данных</li>
         <li>Внедрение MFA (Multi-Factor Authentication)</li>
         <li>Мониторинг доступа к чувствительным файлам</li>
         <li>Использование password managers</li>
-        <li>Регулярные security audits</li>
+        <li>Регулярные аудиты безопасности</li>
         <li>Внедрение EDR/XDR решений</li>
-        <li>Использование LSA protection (Windows)</li>
-        <li>Credential Guard implementation</li>
+        <li>Реализация Crescent Guard</li>
     </ul>
 
     <h2>Пример обнаружения</h2>

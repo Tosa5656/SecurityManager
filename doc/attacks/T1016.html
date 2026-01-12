@@ -17,7 +17,7 @@
         <li>ARP таблиц сканирование (arp -a)</li>
         <li>DNS конфигурации (resolv.conf, dig)</li>
         <li>NetworkManager и systemd-networkd анализ</li>
-        <li>Firewall правил исследование</li>
+        <li>Исследование Firewall правил</li>
     </ul>
 
     <h2>MITRE ATT&CK ссылка</h2>
@@ -27,24 +27,24 @@
 
     <h3>smnet - Network Monitoring</h3>
     <ul>
-        <li><strong>Базовый network discovery:</strong> smnet scan показывает текущую конфигурацию</li>
+        <li><strong>Базовый аудит сети:</strong> smnet scan показывает текущую конфигурацию</li>
         <li><strong>Мониторинг сетевых команд:</strong> smnet connection | grep "route\|arp\|dns"</li>
-        <li><strong>Анализ network changes:</strong> smnet stats для baseline</li>
-        <li><strong>Обнаружение enumeration:</strong> monitoring unusual network queries</li>
+        <li><strong>Анализ изменений настроек:</strong> smnet stats для baseline</li>
+        <li><strong>Обнаружение перечислений:</strong> monitoring unusual network queries</li>
     </ul>
 
     <h3>smlog - Log Analysis</h3>
     <ul>
-        <li><strong>Мониторинг network commands:</strong> smlog search "ifconfig|ip addr|route|arp" /var/log/audit/audit.log</li>
+        <li><strong>Мониторинг сетевых команд:</strong> smlog search "ifconfig|ip addr|route|arp" /var/log/audit/audit.log</li>
         <li><strong>Анализ DNS запросов:</strong> smlog read /var/log/named/query.log</li>
-        <li><strong>Отслеживание network config access:</strong> smlog search "/etc/resolv.conf|/etc/network" /var/log/syslog</li>
-        <li><strong>Real-time monitoring:</strong> smlog monitor для network enumeration</li>
+        <li><strong>Отслеживание доступа к network config:</strong> smlog search "/etc/resolv.conf|/etc/network" /var/log/syslog</li>
+        <li><strong>Real-time мониторинг:</strong> smlog monitor для network enumeration</li>
     </ul>
 
     <h3>smssh - SSH Security</h3>
     <ul>
-        <li><strong>Мониторинг network recon через SSH:</strong> smssh monitor</li>
-        <li><strong>Анализ command patterns:</strong> smssh parse-log /var/log/auth.log</li>
+        <li><strong>Мониторинг сетевой разведки через SSH:</strong> smssh monitor</li>
+        <li><strong>Анализ командных патернов:</strong> smssh parse-log /var/log/auth.log</li>
         <li><strong>Защита от lateral movement:</strong> smssh apply /etc/ssh/sshd_config</li>
     </ul>
 
@@ -52,10 +52,10 @@
     <ul>
         <li>Ограничение доступа к network configuration</li>
         <li>Использование network segmentation</li>
-        <li>Регулярный audit сетевых настроек</li>
+        <li>Регулярный аудит сетевых настроек</li>
         <li>Мониторинг на unauthorized network scanning</li>
         <li>Использование NAC (Network Access Control)</li>
-        <li>Внедрение network policy enforcement</li>
+        <li>Внедрение применение сетевой политики</li>
         <li>Регулярные network assessments</li>
         <li>Использование SIEM для correlation</li>
     </ul>

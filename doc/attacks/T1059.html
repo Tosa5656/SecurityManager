@@ -8,37 +8,37 @@
     <h1>T1059 - Command and Scripting Interpreter</h1>
 
     <h2>Описание атаки</h2>
-    <p>Использование интерпретаторов команд и скриптов для выполнения кода на целевой системе. Атакующие могут использовать различные интерпретаторы, такие как cmd.exe, PowerShell, bash, python и другие для достижения своих целей.</p>
+    <p>Использование интерпретаторов команд и скриптов для выполнения кода на целевой системе. Злоумышленники могут использовать различные интерпретаторы, такие как cmd.exe, PowerShell, bash, python и другие для достижения своих целей.</p>
 
     <h2>Принцип работы</h2>
     <ul>
         <li>Выполнение системных команд через уязвимости</li>
         <li>Использование веб-шеллов и бэкдоров</li>
         <li>Эксплуатация CGI скриптов</li>
-        <li>Command injection атаки</li>
-        <li>Использование легитимных скриптов для вредоносного кода</li>
+        <li>Атаки с внедрением команд (Command injection)</li>
+        <li>Использование легитимных скриптов для размещения вредоносного кода</li>
     </ul>
 
-    <h2>MITRE ATT&CK ссылка</h2>
+    <h2>Ссылка на MITRE ATT&CK</h2>
     <p><a href="https://attack.mitre.org/techniques/T1059/" target="_blank">T1059 - Command and Scripting Interpreter</a></p>
 
     <h2>Защита с помощью Security Manager</h2>
 
-    <h3>smlog - Log Analysis</h3>
+    <h3>smlog - Анализ логов</h3>
     <ul>
         <li><strong>Мониторинг выполнения команд:</strong> smlog search "exec" /var/log/syslog</li>
         <li><strong>Анализ необычных процессов:</strong> smlog monitor</li>
         <li><strong>Отслеживание скриптовой активности:</strong> smlog search "bash|python|perl" /var/log/auth.log</li>
     </ul>
 
-    <h3>smssh - SSH Security</h3>
+    <h3>smssh - Безопасность SSH</h3>
     <ul>
         <li><strong>Мониторинг SSH сессий:</strong> smssh monitor</li>
         <li><strong>Анализ команд в сессиях:</strong> smssh parse-log /var/log/auth.log</li>
-        <li><strong>Ограничение выполнения команд:</strong> настройка authorized_keys с command restrictions</li>
+        <li><strong>Ограничение выполнения команд:</strong> настройка authorized_keys с ограничениями команд</li>
     </ul>
 
-    <h3>smnet - Network Monitoring</h3>
+    <h3>smnet - Сетевой мониторинг</h3>
     <ul>
         <li><strong>Обнаружение необычного трафика:</strong> smnet connection</li>
         <li><strong>Мониторинг исходящих соединений:</strong> smnet stats</li>
@@ -47,9 +47,9 @@
 
     <h2>Рекомендации</h2>
     <ul>
-        <li>Ограничение прав выполнения для веб-приложений</li>
-        <li>Использование WAF (Web Application Firewall)</li>
-        <li>Валидация и фильтрация пользовательского ввода</li>
+        <li>Ограничение прав на выполнение для веб-приложений</li>
+        <li>Использование WAF (Межсетевой экран веб-приложений)</li>
+        <li>Проверка и фильтрация пользовательского ввода</li>
         <li>Отключение опасных функций в интерпретаторах</li>
         <li>Мониторинг выполнения системных команд</li>
         <li>Регулярные аудиты скриптов и конфигураций</li>
@@ -59,13 +59,13 @@
     <h2>Пример обнаружения</h2>
     <pre>
 $ smlog search "bash" /var/log/auth.log
-[2026-01-04 14:30:15] user pts/1: bash executed with suspicious arguments
-[2026-01-04 14:31:22] www-data pts/2: python script execution detected
+[2026-01-04 14:30:15] user pts/1: обнаружено выполнение bash с подозрительными аргументами
+[2026-01-04 14:31:22] www-data pts/2: обнаружено выполнение python-скрипта
 
 $ smnet connection
-Active suspicious connections:
-  tcp  192.168.1.100:80    -> 8.8.8.8:53      ESTABLISHED (DNS tunneling possible)
-  tcp  192.168.1.100:443   -> 203.0.113.1:80  ESTABLISHED (Reverse shell possible)
+Активные подозрительные соединения:
+  tcp  192.168.1.100:80    -> 8.8.8.8:53      ESTABLISHED (возможен DNS-туннелинг)
+  tcp  192.168.1.100:443   -> 203.0.113.1:80  ESTABLISHED (возможен обратный шелл)
     </pre>
 </body>
 </html>
