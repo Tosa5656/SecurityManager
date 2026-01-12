@@ -1,6 +1,6 @@
 # Security Manager
 [![GitHub](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/Tosa5656/SecurityManager)
-[![Stars](https://img.shields.io/github/stars/scverse/scanpy?style=flat&logo=GitHub&color=blue)](https://github.com/Tosa5656/SecurityManager/stargazers)
+[![Stars](https://img.shields.io/github/stars/Tosa5656/SecurityManager?style=flat&logo=GitHub&color=blue)](https://github.com/Tosa5656/SecurityManager/stargazers)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Tosa5656/SecurityManager/blob/master/LICENSE.md)
 [![Coverage](https://img.shields.io/badge/coverage-80%25-green)]()
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Tosa5656/SecurityManager)
